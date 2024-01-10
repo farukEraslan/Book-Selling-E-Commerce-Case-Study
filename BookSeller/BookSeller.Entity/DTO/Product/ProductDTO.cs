@@ -1,6 +1,4 @@
-﻿using BookSeller.Core.Entities.Abstract;
-
-namespace BookSeller.Entity.DTO.Product
+﻿namespace BookSeller.Entity.DTO.Product
 {
     public class ProductDTO : IDto
     {

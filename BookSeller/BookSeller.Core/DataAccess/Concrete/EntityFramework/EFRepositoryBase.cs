@@ -1,8 +1,4 @@
-﻿using BookSeller.Core.DataAccess.Abstract;
-using Microsoft.EntityFrameworkCore;
-using System.Linq.Expressions;
-
-namespace BookSeller.Core.DataAccess.Concrete.EntityFramework
+﻿namespace BookSeller.Core.DataAccess.Concrete.EntityFramework
 {
     public class EFRepositoryBase<TEntity, TContext> : IEntityRepository<TEntity> where TEntity : class, new() where TContext : DbContext, new()
     {

@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BookSeller.Core.DataAccess.Abstract
+﻿namespace BookSeller.Core.DataAccess.Abstract
 {
     public interface IEntityRepository<T>
     {

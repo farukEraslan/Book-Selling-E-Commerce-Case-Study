@@ -1,8 +1,4 @@
-﻿using BookSeller.Entity.Concrete;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-
-namespace BookSeller.DataAccess.Concrete.EntityFramework.Contexts
+﻿namespace BookSeller.DataAccess.Concrete.EntityFramework.Contexts
 {
     public class BookSellerDbContext : IdentityDbContext<UserEntity, RoleEntity, Guid>
     {
