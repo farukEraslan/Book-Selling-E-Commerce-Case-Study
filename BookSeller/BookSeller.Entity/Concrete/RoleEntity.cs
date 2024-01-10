@@ -2,5 +2,6 @@
 {
     public class RoleEntity : IdentityRole<Guid>, IEntity
     {
+
     }
 }

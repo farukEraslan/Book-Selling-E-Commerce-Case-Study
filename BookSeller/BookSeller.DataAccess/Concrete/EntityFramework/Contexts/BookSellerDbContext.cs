@@ -1,4 +1,6 @@
-﻿namespace BookSeller.DataAccess.Concrete.EntityFramework.Contexts
+﻿using BookSeller.DataAccess.Configurations;
+
+namespace BookSeller.DataAccess.Concrete.EntityFramework.Contexts
 {
     public class BookSellerDbContext : IdentityDbContext<UserEntity, RoleEntity, Guid>
     {
@@ -8,7 +10,18 @@
             base.OnConfiguring(optionsBuilder);
         }
 
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.ApplyConfiguration(new CategoryConfiguration());
+            builder.ApplyConfiguration(new ProductConfiguration());
+            builder.ApplyConfiguration(new RoleConfiguration());
+            builder.ApplyConfiguration(new UserConfiguration());
+            base.OnModelCreating(builder);
+        }
+
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<RoleEntity> Roles { get; set; }
+        public DbSet<UserEntity> Users { get; set; }
     }
 }

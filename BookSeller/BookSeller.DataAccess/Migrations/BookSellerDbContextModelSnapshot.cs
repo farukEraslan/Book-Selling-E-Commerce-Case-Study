@@ -30,11 +30,39 @@ namespace BookSeller.DataAccess.Migrations
 
                     b.Property<string>("CategoryName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.HasKey("CategoryId");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            CategoryId = new Guid("bfcf17d8-9fd6-4ef7-8760-5b911d237bb5"),
+                            CategoryName = "Roman"
+                        },
+                        new
+                        {
+                            CategoryId = new Guid("96d7ceaf-9b10-408f-9e2b-47f05d64884a"),
+                            CategoryName = "Kişisel Gelişim"
+                        },
+                        new
+                        {
+                            CategoryId = new Guid("b156c055-7c4c-408b-83ef-a1ad693f1aaa"),
+                            CategoryName = "Çocuk ve Gençlik"
+                        },
+                        new
+                        {
+                            CategoryId = new Guid("7a1a2c71-c736-4a0b-b3ba-edf525cec130"),
+                            CategoryName = "Tarih"
+                        },
+                        new
+                        {
+                            CategoryId = new Guid("2d33e781-d07a-4a80-9c22-d60cb8c28bfa"),
+                            CategoryName = "Çizgi Roman"
+                        });
                 });
 
             modelBuilder.Entity("BookSeller.Entity.Concrete.Product", b =>
@@ -44,21 +72,25 @@ namespace BookSeller.DataAccess.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Author")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("BookName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
                     b.Property<Guid>("CategoryId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ISBN")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("Publisher")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
@@ -66,9 +98,14 @@ namespace BookSeller.DataAccess.Migrations
                     b.Property<decimal>("UnitPrice")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("ProductId");
 
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Products");
                 });
@@ -99,6 +136,22 @@ namespace BookSeller.DataAccess.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("b4faf2e5-3638-4238-b3c0-df45eee9f54c"),
+                            ConcurrencyStamp = "3be2ad73-3595-4f9b-9c61-5d63ea484c59",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        },
+                        new
+                        {
+                            Id = new Guid("1198b242-3a70-46b0-aacb-19865a75458e"),
+                            ConcurrencyStamp = "238b11a9-1998-4029-b027-10066ef5b337",
+                            Name = "Customer",
+                            NormalizedName = "CUSTOMER"
+                        });
                 });
 
             modelBuilder.Entity("BookSeller.Entity.Concrete.UserEntity", b =>
@@ -126,11 +179,13 @@ namespace BookSeller.DataAccess.Migrations
 
                     b.Property<string>("FirstName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("LastName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(75)
+                        .HasColumnType("nvarchar(75)");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -176,6 +231,26 @@ namespace BookSeller.DataAccess.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("9b666cc7-3ba3-4343-b15c-ce88dd8661d2"),
+                            AccessFailedCount = 0,
+                            BirthDate = new DateTime(1997, 6, 7, 7, 0, 0, 0, DateTimeKind.Unspecified),
+                            ConcurrencyStamp = "2f00e741-957a-4bb0-8778-f84e84196b4c",
+                            Email = "frk.eraslan@hotmail.com",
+                            EmailConfirmed = false,
+                            FirstName = "Faruk",
+                            LastName = "Eraslan",
+                            LockoutEnabled = false,
+                            NormalizedEmail = "FRK.ERASLAN@HOTMAIL.COM",
+                            NormalizedUserName = "FARUK.ERASLAN",
+                            PhoneNumber = "5063347409",
+                            PhoneNumberConfirmed = false,
+                            TwoFactorEnabled = false,
+                            UserName = "faruk.eraslan"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
@@ -289,7 +364,15 @@ namespace BookSeller.DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("BookSeller.Entity.Concrete.UserEntity", "User")
+                        .WithMany("Products")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Category");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
@@ -344,6 +427,11 @@ namespace BookSeller.DataAccess.Migrations
                 });
 
             modelBuilder.Entity("BookSeller.Entity.Concrete.Category", b =>
+                {
+                    b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("BookSeller.Entity.Concrete.UserEntity", b =>
                 {
                     b.Navigation("Products");
                 });

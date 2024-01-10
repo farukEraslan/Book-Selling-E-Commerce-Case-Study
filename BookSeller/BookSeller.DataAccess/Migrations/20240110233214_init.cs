@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace BookSeller.DataAccess.Migrations
 {
     /// <inheritdoc />
@@ -30,8 +32,8 @@ namespace BookSeller.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    FirstName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    LastName = table.Column<string>(type: "nvarchar(75)", maxLength: 75, nullable: false),
                     BirthDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -58,7 +60,7 @@ namespace BookSeller.DataAccess.Migrations
                 columns: table => new
                 {
                     CategoryId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    CategoryName = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    CategoryName = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -177,22 +179,55 @@ namespace BookSeller.DataAccess.Migrations
                 {
                     ProductId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     CategoryId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    BookName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    BookName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: false),
                     UnitPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false),
-                    Author = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Publisher = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ISBN = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Author = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: true),
+                    Publisher = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: true),
+                    ISBN = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Products", x => x.ProductId);
+                    table.ForeignKey(
+                        name: "FK_Products_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Products_Categories_CategoryId",
                         column: x => x.CategoryId,
                         principalTable: "Categories",
                         principalColumn: "CategoryId",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "AspNetRoles",
+                columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
+                values: new object[,]
+                {
+                    { new Guid("1198b242-3a70-46b0-aacb-19865a75458e"), "238b11a9-1998-4029-b027-10066ef5b337", "Customer", "CUSTOMER" },
+                    { new Guid("b4faf2e5-3638-4238-b3c0-df45eee9f54c"), "3be2ad73-3595-4f9b-9c61-5d63ea484c59", "Admin", "ADMIN" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUsers",
+                columns: new[] { "Id", "AccessFailedCount", "BirthDate", "ConcurrencyStamp", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
+                values: new object[] { new Guid("9b666cc7-3ba3-4343-b15c-ce88dd8661d2"), 0, new DateTime(1997, 6, 7, 7, 0, 0, 0, DateTimeKind.Unspecified), "2f00e741-957a-4bb0-8778-f84e84196b4c", "frk.eraslan@hotmail.com", false, "Faruk", "Eraslan", false, null, "FRK.ERASLAN@HOTMAIL.COM", "FARUK.ERASLAN", null, "5063347409", false, null, false, "faruk.eraslan" });
+
+            migrationBuilder.InsertData(
+                table: "Categories",
+                columns: new[] { "CategoryId", "CategoryName" },
+                values: new object[,]
+                {
+                    { new Guid("2d33e781-d07a-4a80-9c22-d60cb8c28bfa"), "Çizgi Roman" },
+                    { new Guid("7a1a2c71-c736-4a0b-b3ba-edf525cec130"), "Tarih" },
+                    { new Guid("96d7ceaf-9b10-408f-9e2b-47f05d64884a"), "Kişisel Gelişim" },
+                    { new Guid("b156c055-7c4c-408b-83ef-a1ad693f1aaa"), "Çocuk ve Gençlik" },
+                    { new Guid("bfcf17d8-9fd6-4ef7-8760-5b911d237bb5"), "Roman" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -238,6 +273,11 @@ namespace BookSeller.DataAccess.Migrations
                 name: "IX_Products_CategoryId",
                 table: "Products",
                 column: "CategoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Products_UserId",
+                table: "Products",
+                column: "UserId");
         }
 
         /// <inheritdoc />

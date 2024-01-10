@@ -1,3 +1,5 @@
+using BookSeller.Business.DependencyInjections;
+
 namespace BookSeller.WebAPI
 {
     public class Program
@@ -7,7 +9,10 @@ namespace BookSeller.WebAPI
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddDataAccessServices();
+
+            // DI Containers
+            builder.Services.AddDataAccessServices().AddBusinessServices();
+
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

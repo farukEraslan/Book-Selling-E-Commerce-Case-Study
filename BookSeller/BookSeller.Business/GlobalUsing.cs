@@ -1,0 +1,10 @@
+﻿global using BookSeller.Entity.Concrete;
+global using BookSeller.Entity.DTO.Product;
+global using System.Linq.Expressions;
+global using BookSeller.Business.Abstract;
+global using BookSeller.Entity.DTO.Category;
+global using BookSeller.Entity.DomainModels;
+global using AutoMapper;
+global using BookSeller.DataAccess.Abstract;
+global using BookSeller.Business.Concrete;
+global using Microsoft.Extensions.DependencyInjection;

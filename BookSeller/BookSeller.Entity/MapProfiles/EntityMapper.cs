@@ -1,0 +1,24 @@
+﻿namespace BookSeller.Business.MapProfiles
+{
+    public class EntityMapper : Profile
+    {
+        public EntityMapper()
+        {
+            // Category
+            CreateMap<CategoryCreateDTO, Category>();
+            CreateMap<CategoryUpdateDTO, Category>();
+            CreateMap<CategoryDTO, Category>().ReverseMap();
+            
+            // Product
+            CreateMap<ProductCreateDTO, Product>();
+            CreateMap<ProductUpdateDTO, Product>();
+            CreateMap<ProductDTO, Product>().ReverseMap();
+            
+            // User
+            CreateMap<UserDTO, UserEntity>().ReverseMap();
+            
+            // Role
+            CreateMap<RoleDTO, RoleEntity>().ReverseMap();
+        }
+    }
+}

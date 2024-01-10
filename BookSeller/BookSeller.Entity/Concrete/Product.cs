@@ -2,12 +2,19 @@
 {
     public class Product : IEntity
     {
+        // Product PK
         public Guid ProductId { get; set; }
+
         // Category FK
         public Guid CategoryId { get; set; }
+        // User FK
+        public Guid UserId { get; set; }
 
         // Category Navi Prop
         public Category Category { get; set; }
+        // User Navi Prop
+        public UserEntity User { get; set; }
+
         public string BookName { get; set; }
         public decimal UnitPrice { get; set; }
         public int Quantity { get; set; }
