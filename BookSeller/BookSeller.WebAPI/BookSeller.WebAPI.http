@@ -1,0 +1,6 @@
+@BookSeller.WebAPI_HostAddress = http://localhost:5191
+
+GET {{BookSeller.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
