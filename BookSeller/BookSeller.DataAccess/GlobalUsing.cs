@@ -5,3 +5,5 @@ global using Microsoft.EntityFrameworkCore;
 global using BookSeller.Core.DataAccess.Concrete.EntityFramework;
 global using BookSeller.DataAccess.Abstract;
 global using BookSeller.DataAccess.Concrete.EntityFramework.Contexts;
+global using BookSeller.DataAccess.Concrete.EntityFramework;
+global using Microsoft.Extensions.DependencyInjection;
