@@ -8,3 +8,5 @@ global using AutoMapper;
 global using BookSeller.DataAccess.Abstract;
 global using BookSeller.Business.Concrete;
 global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.AspNetCore.Identity;
+global using BookSeller.Entity.DTO.User;

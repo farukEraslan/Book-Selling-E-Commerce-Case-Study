@@ -1,4 +1,6 @@
-﻿namespace BookSeller.Business.DependencyInjections
+﻿using BookSeller.DataAccess.Concrete.EntityFramework;
+
+namespace BookSeller.Business.DependencyInjections
 {
     public static class DependencyInjections
     {
@@ -7,6 +9,7 @@
             services.AddScoped<ICartService, CartManager>();
             services.AddScoped<ICategoryService, CategoryManager>();
             services.AddScoped<IProductService, ProductManager>();
+            services.AddScoped<IUserService, UserEntityManager>();
             return services;
         }
     }

@@ -15,6 +15,8 @@
             CreateMap<ProductDTO, Product>().ReverseMap();
             
             // User
+            CreateMap<UserCreateDTO, UserEntity>();
+            CreateMap<UserUpdateDTO, UserEntity>();
             CreateMap<UserDTO, UserEntity>().ReverseMap();
             
             // Role

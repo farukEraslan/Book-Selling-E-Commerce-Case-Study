@@ -2,13 +2,6 @@
 {
     public class CartManager : ICartService
     {
-        private readonly ICartService _cartService;
-
-        public CartManager(ICartService cartService)
-        {
-            _cartService = cartService;
-        }
-
         public void AddToCart(Cart cart, Product product)
         {
             var cartLine = cart.CartLines.FirstOrDefault(c => c.Product.ProductId == product.ProductId);

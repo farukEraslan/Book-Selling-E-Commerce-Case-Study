@@ -1,9 +1,19 @@
-﻿using BookSeller.DataAccess.Configurations;
-
-namespace BookSeller.DataAccess.Concrete.EntityFramework.Contexts
+﻿namespace BookSeller.DataAccess.Concrete.EntityFramework.Contexts
 {
     public class BookSellerDbContext : IdentityDbContext<UserEntity, RoleEntity, Guid>
     {
+        private readonly IHttpContextAccessor _httpContextAccessor;
+
+        public BookSellerDbContext()
+        {
+            
+        }
+
+        public BookSellerDbContext(DbContextOptions<BookSellerDbContext> options, IHttpContextAccessor httpContextAccessor) : base(options)
+        {
+            _httpContextAccessor = httpContextAccessor;
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server = ISTN36002\\SQLEXPRESS; Database = BookSeller; uid = sa; pwd = 123; Trusted_Connection = True; TrustServerCertificate = True;");
