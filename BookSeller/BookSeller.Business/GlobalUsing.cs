@@ -10,3 +10,4 @@ global using BookSeller.Business.Concrete;
 global using Microsoft.Extensions.DependencyInjection;
 global using Microsoft.AspNetCore.Identity;
 global using BookSeller.Entity.DTO.User;
+global using BookSeller.Entity.DTO.Login;

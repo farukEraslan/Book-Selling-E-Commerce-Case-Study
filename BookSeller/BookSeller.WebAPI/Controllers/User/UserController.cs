@@ -40,7 +40,9 @@
             }
         }
 
+
         [HttpDelete]
+        [Authorize("Admin")]
         public async Task<IActionResult> Delete(Guid userId)
         {
             var result = await _userService.DeleteAsync(userId);
@@ -55,6 +57,7 @@
         }
 
         [HttpGet]
+        [Authorize("Admin")]
         public async Task<IActionResult> GetAll()
         {
             var users = _userService.GetAll();
@@ -69,12 +72,28 @@
         }
 
         [HttpGet]
+        [Authorize("Admin")]
         public async Task<IActionResult> GetById(Guid userId)
         {
-            var user = _userService.GetByIdAsync(userId);
+            var user = await _userService.GetByIdAsync(userId);
             if (user is not null)
             {
                 return Ok(user);
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
+
+        [HttpPost]
+        [Authorize("Admin")]
+        public async Task<IActionResult> AddToRoleAsync(Guid userId, string roleName)
+        {
+            var result = await _userService.AddToRoleAsync(userId, roleName);
+            if (result.Succeeded)
+            {
+                return Ok();
             }
             else
             {

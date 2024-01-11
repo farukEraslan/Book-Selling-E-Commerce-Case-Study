@@ -10,6 +10,7 @@ namespace BookSeller.Business.DependencyInjections
             services.AddScoped<ICategoryService, CategoryManager>();
             services.AddScoped<IProductService, ProductManager>();
             services.AddScoped<IUserService, UserEntityManager>();
+            services.AddScoped<ILoginService, LoginService>();
             return services;
         }
     }

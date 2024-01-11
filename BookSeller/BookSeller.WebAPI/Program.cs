@@ -1,9 +1,3 @@
-using BookSeller.Business.DependencyInjections;
-using BookSeller.Business.MapProfiles;
-using BookSeller.DataAccess.Concrete.EntityFramework.Contexts;
-using BookSeller.Entity.Concrete;
-using Microsoft.EntityFrameworkCore;
-
 namespace BookSeller.WebAPI
 {
     public class Program

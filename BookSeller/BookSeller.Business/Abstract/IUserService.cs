@@ -8,6 +8,7 @@
         Task<UserDTO> GetByIdAsync(Guid userId);
         List<UserDTO> GetAll();
         List<UserDTO> GetAll(Expression<Func<UserEntity, bool>> expression);
+        Task<IdentityResult> AddToRoleAsync(Guid userId, string roleName);
 
     }
 }
