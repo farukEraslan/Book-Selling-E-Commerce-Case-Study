@@ -1,14 +1,19 @@
-﻿namespace BookSeller.WebAPI.Controllers.User
+﻿using BookSeller.WebAPI.Logging.Abstract;
+using Microsoft.AspNetCore.Diagnostics;
+
+namespace BookSeller.WebAPI.Controllers.User
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
+        private readonly IExceptionHandler _exceptionHandler;
 
-        public UserController(IUserService userService)
+        public UserController(IUserService userService, IExceptionHandler exceptionHandler)
         {
             _userService = userService;
+            _exceptionHandler = exceptionHandler;
         }
 
         [HttpPost]

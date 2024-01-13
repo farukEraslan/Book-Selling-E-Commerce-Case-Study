@@ -20,4 +20,8 @@
     <ProjectReference Include="..\BookSeller.DataAccess\BookSeller.DataAccess.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ExceptionHandling\" />
+  </ItemGroup>
+
 </Project>

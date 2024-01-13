@@ -10,3 +10,6 @@ global using BookSeller.Entity.Concrete;
 global using Microsoft.EntityFrameworkCore;
 global using BookSeller.Business.Abstract;
 global using BookSeller.Entity.DTO.Login;
+global using Serilog;
+global using Serilog.Events;
+global using Serilog.Sinks.MSSqlServer;

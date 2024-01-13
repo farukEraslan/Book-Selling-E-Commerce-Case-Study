@@ -1,5 +1,3 @@
-using Serilog;
-
 namespace BookSeller.WebAPI
 {
     public class Program
@@ -13,10 +11,24 @@ namespace BookSeller.WebAPI
             // DI Containers
             builder.Services.AddDataAccessServices().AddBusinessServices();
 
-            // Log to File
-            Log.Logger = new LoggerConfiguration().MinimumLevel.Information().WriteTo.File("log/bookSellerLog.txt").CreateLogger();
+            // Serilog Logger
+            Log.Logger = new LoggerConfiguration().MinimumLevel.Information().WriteTo.Console()
+                .WriteTo.File("BookSelerLog.txt",
+                    outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}",
+                    rollingInterval: RollingInterval.Day)
+                .WriteTo.MSSqlServer("Server = ISTN36002\\SQLEXPRESS; Database = BookSeller; uid = sa; pwd = 123; Trusted_Connection = True; TrustServerCertificate = True;",
+                    sinkOptions: new MSSqlServerSinkOptions
+                    {
+                        TableName = "Logs",
+                        AutoCreateSqlTable = true
+                    },
+                    restrictedToMinimumLevel: LogEventLevel.Information).CreateLogger();
 
-            builder .Host.UseSerilog();
+            builder.Host.UseSerilog();
+
+            // Exception Handler
+            //builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+            //builder.Services.AddProblemDetails();
 
             // HttpContextAccessor
             builder.Services.AddHttpContextAccessor();
@@ -87,7 +99,8 @@ namespace BookSeller.WebAPI
 
             app.UseAuthorization();
 
-
+            // Exception Handler
+            //app.UseExceptionHandler();
             app.MapControllers();
 
             app.Run();
