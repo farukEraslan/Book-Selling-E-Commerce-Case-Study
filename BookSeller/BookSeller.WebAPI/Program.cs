@@ -1,3 +1,5 @@
+using Serilog;
+
 namespace BookSeller.WebAPI
 {
     public class Program
@@ -10,6 +12,11 @@ namespace BookSeller.WebAPI
 
             // DI Containers
             builder.Services.AddDataAccessServices().AddBusinessServices();
+
+            // Log to File
+            Log.Logger = new LoggerConfiguration().MinimumLevel.Information().WriteTo.File("log/bookSellerLog.txt").CreateLogger();
+
+            builder .Host.UseSerilog();
 
             // HttpContextAccessor
             builder.Services.AddHttpContextAccessor();

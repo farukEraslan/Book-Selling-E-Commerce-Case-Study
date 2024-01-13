@@ -1,4 +1,4 @@
-﻿namespace BookSeller.Business.MapProfiles
+﻿namespace BookSeller.Entity.MapProfiles
 {
     public class EntityMapper : Profile
     {

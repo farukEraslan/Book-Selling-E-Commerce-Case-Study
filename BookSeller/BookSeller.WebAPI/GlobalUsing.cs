@@ -4,7 +4,7 @@ global using BookSeller.Entity.DTO.User;
 global using BookSeller.DataAccess.Abstract;
 global using Microsoft.AspNetCore.Authorization;
 global using BookSeller.Business.DependencyInjections;
-global using BookSeller.Business.MapProfiles;
+global using BookSeller.Entity.MapProfiles;
 global using BookSeller.DataAccess.Concrete.EntityFramework.Contexts;
 global using BookSeller.Entity.Concrete;
 global using Microsoft.EntityFrameworkCore;

@@ -1,4 +1,4 @@
-using BookSeller.Business.MapProfiles;
+using BookSeller.Entity.MapProfiles;
 using BookSeller.DataAccess.Concrete.EntityFramework.Contexts;
 using BookSeller.DataAccess.DependencyInjections;
 using BookSeller.Entity.Concrete;
