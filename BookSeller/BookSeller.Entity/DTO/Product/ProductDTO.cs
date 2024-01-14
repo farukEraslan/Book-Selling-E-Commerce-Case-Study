@@ -3,11 +3,7 @@
     public class ProductDTO : IDto
     {
         public Guid ProductId { get; set; }
-        // Category FK
         public Guid CategoryId { get; set; }
-
-        // Category Navi Prop
-        public string CategoryName { get; set; }
         public string BookName { get; set; }
         public decimal UnitPrice { get; set; }
         public int Quantity { get; set; }

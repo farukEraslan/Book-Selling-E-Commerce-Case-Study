@@ -179,7 +179,6 @@ namespace BookSeller.DataAccess.Migrations
                 {
                     ProductId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     CategoryId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     BookName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: false),
                     UnitPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false),
@@ -190,12 +189,6 @@ namespace BookSeller.DataAccess.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Products", x => x.ProductId);
-                    table.ForeignKey(
-                        name: "FK_Products_AspNetUsers_UserId",
-                        column: x => x.UserId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Products_Categories_CategoryId",
                         column: x => x.CategoryId,
@@ -209,25 +202,25 @@ namespace BookSeller.DataAccess.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { new Guid("1198b242-3a70-46b0-aacb-19865a75458e"), "238b11a9-1998-4029-b027-10066ef5b337", "Customer", "CUSTOMER" },
-                    { new Guid("b4faf2e5-3638-4238-b3c0-df45eee9f54c"), "3be2ad73-3595-4f9b-9c61-5d63ea484c59", "Admin", "ADMIN" }
+                    { new Guid("00e648f5-a4d9-422f-b044-6fe4f526bfb9"), "69f054bc-dca7-49bb-aa74-544b57298d8a", "Admin", "ADMIN" },
+                    { new Guid("b1beba1f-5b90-46d9-9a97-da1a40eb663f"), "52c4c433-d06d-45ff-9fab-16c7d8dda835", "Customer", "CUSTOMER" }
                 });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "BirthDate", "ConcurrencyStamp", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { new Guid("9b666cc7-3ba3-4343-b15c-ce88dd8661d2"), 0, new DateTime(1997, 6, 7, 7, 0, 0, 0, DateTimeKind.Unspecified), "2f00e741-957a-4bb0-8778-f84e84196b4c", "frk.eraslan@hotmail.com", false, "Faruk", "Eraslan", false, null, "FRK.ERASLAN@HOTMAIL.COM", "FARUK.ERASLAN", null, "5063347409", false, null, false, "faruk.eraslan" });
+                values: new object[] { new Guid("6d041502-bc11-4472-9017-f08da35e01eb"), 0, new DateTime(1997, 6, 7, 7, 0, 0, 0, DateTimeKind.Unspecified), "e20cd58a-b553-473d-932d-6d730dd632eb", "frk.eraslan@hotmail.com", false, "Faruk", "Eraslan", false, null, "FRK.ERASLAN@HOTMAIL.COM", "FARUK.ERASLAN", null, "5063347409", false, null, false, "faruk.eraslan" });
 
             migrationBuilder.InsertData(
                 table: "Categories",
                 columns: new[] { "CategoryId", "CategoryName" },
                 values: new object[,]
                 {
-                    { new Guid("2d33e781-d07a-4a80-9c22-d60cb8c28bfa"), "Çizgi Roman" },
-                    { new Guid("7a1a2c71-c736-4a0b-b3ba-edf525cec130"), "Tarih" },
-                    { new Guid("96d7ceaf-9b10-408f-9e2b-47f05d64884a"), "Kişisel Gelişim" },
-                    { new Guid("b156c055-7c4c-408b-83ef-a1ad693f1aaa"), "Çocuk ve Gençlik" },
-                    { new Guid("bfcf17d8-9fd6-4ef7-8760-5b911d237bb5"), "Roman" }
+                    { new Guid("3abbdd23-954f-4ff6-92ca-9a028cda30dc"), "Kişisel Gelişim" },
+                    { new Guid("daba6561-fd7a-40a5-9db4-70b3daa81eab"), "Tarih" },
+                    { new Guid("e2126a84-257b-4823-b5f8-87c08890e858"), "Roman" },
+                    { new Guid("fddde4ed-cd13-4f26-a133-da840746db26"), "Çizgi Roman" },
+                    { new Guid("fe0e4519-7385-4d0a-b311-b4b13a5a1a18"), "Çocuk ve Gençlik" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -273,11 +266,6 @@ namespace BookSeller.DataAccess.Migrations
                 name: "IX_Products_CategoryId",
                 table: "Products",
                 column: "CategoryId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Products_UserId",
-                table: "Products",
-                column: "UserId");
         }
 
         /// <inheritdoc />

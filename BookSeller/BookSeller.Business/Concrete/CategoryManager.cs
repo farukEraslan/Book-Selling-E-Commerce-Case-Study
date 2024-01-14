@@ -26,9 +26,15 @@
             _categoryDAL.Delete(_mapper.Map<Category>(categoryDTO));
         }
 
-        public List<CategoryDTO> GetAll()
+        public List<CategoryDTO> GetAll(int pageNumber, int pageSize)
         {
-            return _mapper.Map<List<CategoryDTO>>(_categoryDAL.GetAll());
+            var categories = _categoryDAL.GetAll()
+                    .Skip((pageNumber - 1) * pageSize)
+                    .Take(pageSize)
+                    .Select(category => _mapper.Map<CategoryDTO>(category))
+                    .ToList();
+
+            return categories;
         }
 
         public CategoryDTO GetById(Guid categoryId)

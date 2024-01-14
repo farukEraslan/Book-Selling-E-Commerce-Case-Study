@@ -15,3 +15,4 @@ global using Serilog.Events;
 global using Serilog.Sinks.MSSqlServer;
 global using BookSeller.Entity.DependencyInjections;
 global using BookSeller.Entity.DTO.Category;
+global using BookSeller.Entity.DTO.Product;

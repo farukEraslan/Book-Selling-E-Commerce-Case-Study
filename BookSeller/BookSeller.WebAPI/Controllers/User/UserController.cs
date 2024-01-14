@@ -20,8 +20,6 @@
                 return Ok();
             else 
                 return BadRequest(result.Errors);
-
-
         }
 
         [HttpPut]
@@ -34,7 +32,6 @@
             else
                 return BadRequest(result.Errors);
         }
-
 
         [HttpDelete]
         [Authorize("Admin")]
@@ -50,9 +47,9 @@
 
         [HttpGet]
         [Authorize("Admin")]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll(int pageNumber, int pageSize)
         {
-            var users = _userService.GetAll();
+            var users = _userService.GetAll(pageNumber, pageSize);
 
             if (users is not null)
                 return Ok(users);

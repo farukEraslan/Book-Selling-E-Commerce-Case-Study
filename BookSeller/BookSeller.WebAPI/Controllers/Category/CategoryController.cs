@@ -34,9 +34,9 @@
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll(int pageNumber, int pageSize)
         {
-            var categories = _categoryService.GetAll();
+            var categories = _categoryService.GetAll(pageNumber, pageSize);
 
             if (categories is not null)
                 return Ok(categories);

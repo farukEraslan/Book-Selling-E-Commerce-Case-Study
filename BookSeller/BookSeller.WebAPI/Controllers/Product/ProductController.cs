@@ -1,6 +1,4 @@
-﻿using BookSeller.Entity.DTO.Product;
-
-namespace BookSeller.WebAPI.Controllers.Product
+﻿namespace BookSeller.WebAPI.Controllers.Product
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
@@ -40,23 +38,13 @@ namespace BookSeller.WebAPI.Controllers.Product
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var products = _productService.GetAll();
-
-            if (products is not null)
-                return Ok(products);
-            else
-                return BadRequest();
+            return Ok(_productService.GetAll());
         }
 
         [HttpGet]
         public async Task<IActionResult> GetById(Guid productId)
         {
-            var product = _productService.GetById(productId);
-
-            if (product is not null)
-                return Ok(product);
-            else
-                return BadRequest();
+            return Ok(_productService.GetById(productId));
         }
     }
 }

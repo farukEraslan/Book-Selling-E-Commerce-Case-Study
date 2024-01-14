@@ -11,9 +11,9 @@
             _mapper = mapper;
         }
 
-        public void Add(ProductCreateDTO productDTO)
+        public void Add(ProductCreateDTO productCreateDTO)
         {
-            _productDAL.Add(_mapper.Map<Product>(productDTO));
+            _productDAL.Add(_mapper.Map<Product>(productCreateDTO));
         }
 
         public void Update(ProductUpdateDTO productUpdateDTO)

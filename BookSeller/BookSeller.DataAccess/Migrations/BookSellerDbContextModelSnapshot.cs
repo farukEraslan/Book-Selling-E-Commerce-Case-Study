@@ -40,27 +40,27 @@ namespace BookSeller.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            CategoryId = new Guid("bfcf17d8-9fd6-4ef7-8760-5b911d237bb5"),
+                            CategoryId = new Guid("e2126a84-257b-4823-b5f8-87c08890e858"),
                             CategoryName = "Roman"
                         },
                         new
                         {
-                            CategoryId = new Guid("96d7ceaf-9b10-408f-9e2b-47f05d64884a"),
+                            CategoryId = new Guid("3abbdd23-954f-4ff6-92ca-9a028cda30dc"),
                             CategoryName = "Kişisel Gelişim"
                         },
                         new
                         {
-                            CategoryId = new Guid("b156c055-7c4c-408b-83ef-a1ad693f1aaa"),
+                            CategoryId = new Guid("fe0e4519-7385-4d0a-b311-b4b13a5a1a18"),
                             CategoryName = "Çocuk ve Gençlik"
                         },
                         new
                         {
-                            CategoryId = new Guid("7a1a2c71-c736-4a0b-b3ba-edf525cec130"),
+                            CategoryId = new Guid("daba6561-fd7a-40a5-9db4-70b3daa81eab"),
                             CategoryName = "Tarih"
                         },
                         new
                         {
-                            CategoryId = new Guid("2d33e781-d07a-4a80-9c22-d60cb8c28bfa"),
+                            CategoryId = new Guid("fddde4ed-cd13-4f26-a133-da840746db26"),
                             CategoryName = "Çizgi Roman"
                         });
                 });
@@ -98,14 +98,9 @@ namespace BookSeller.DataAccess.Migrations
                     b.Property<decimal>("UnitPrice")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("ProductId");
 
                     b.HasIndex("CategoryId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Products");
                 });
@@ -140,15 +135,15 @@ namespace BookSeller.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("b4faf2e5-3638-4238-b3c0-df45eee9f54c"),
-                            ConcurrencyStamp = "3be2ad73-3595-4f9b-9c61-5d63ea484c59",
+                            Id = new Guid("00e648f5-a4d9-422f-b044-6fe4f526bfb9"),
+                            ConcurrencyStamp = "69f054bc-dca7-49bb-aa74-544b57298d8a",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = new Guid("1198b242-3a70-46b0-aacb-19865a75458e"),
-                            ConcurrencyStamp = "238b11a9-1998-4029-b027-10066ef5b337",
+                            Id = new Guid("b1beba1f-5b90-46d9-9a97-da1a40eb663f"),
+                            ConcurrencyStamp = "52c4c433-d06d-45ff-9fab-16c7d8dda835",
                             Name = "Customer",
                             NormalizedName = "CUSTOMER"
                         });
@@ -235,10 +230,10 @@ namespace BookSeller.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("9b666cc7-3ba3-4343-b15c-ce88dd8661d2"),
+                            Id = new Guid("6d041502-bc11-4472-9017-f08da35e01eb"),
                             AccessFailedCount = 0,
                             BirthDate = new DateTime(1997, 6, 7, 7, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "2f00e741-957a-4bb0-8778-f84e84196b4c",
+                            ConcurrencyStamp = "e20cd58a-b553-473d-932d-6d730dd632eb",
                             Email = "frk.eraslan@hotmail.com",
                             EmailConfirmed = false,
                             FirstName = "Faruk",
@@ -364,15 +359,7 @@ namespace BookSeller.DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("BookSeller.Entity.Concrete.UserEntity", "User")
-                        .WithMany("Products")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Category");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
@@ -427,11 +414,6 @@ namespace BookSeller.DataAccess.Migrations
                 });
 
             modelBuilder.Entity("BookSeller.Entity.Concrete.Category", b =>
-                {
-                    b.Navigation("Products");
-                });
-
-            modelBuilder.Entity("BookSeller.Entity.Concrete.UserEntity", b =>
                 {
                     b.Navigation("Products");
                 });

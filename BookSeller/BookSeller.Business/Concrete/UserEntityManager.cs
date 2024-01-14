@@ -35,14 +35,22 @@
             return _mapper.Map<UserDTO>(await _userManager.FindByIdAsync(userId.ToString()));
         }
 
-        public List<UserDTO> GetAll()
+        public List<UserDTO> GetAll(int pageNumber, int pageSize)
         {
-            return _mapper.Map<List<UserDTO>>(_userManager.Users.ToList());
+            return _userManager.Users
+                   .Skip((pageNumber - 1) * pageSize)
+                   .Take(pageSize)
+                   .Select(user => _mapper.Map<UserDTO>(user))
+                   .ToList();
         }
 
-        public List<UserDTO> GetAll(Expression<Func<UserEntity, bool>> expression)
+        public List<UserDTO> GetAll(Expression<Func<UserEntity, bool>> expression, int pageNumber, int pageSize)
         {
-            return _mapper.Map<List<UserDTO>>(_userManager.Users.Where(expression).ToList());
+            return _userManager.Users.Where(expression)
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .Select(user => _mapper.Map<UserDTO>(user))
+                .ToList();
         }
 
         public async Task<IdentityResult> AddToRoleAsync(Guid userId, string roleName)

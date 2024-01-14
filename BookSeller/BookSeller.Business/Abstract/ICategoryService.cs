@@ -8,6 +8,6 @@ namespace BookSeller.Business.Abstract
         void Update(CategoryUpdateDTO categoryUpdateDTO);
         void Delete(CategoryDTO categoryDTO);
         CategoryDTO GetById(Guid categoryId);
-        List<CategoryDTO> GetAll();
+        List<CategoryDTO> GetAll(int pageNumber, int pageSize);
     }
 }

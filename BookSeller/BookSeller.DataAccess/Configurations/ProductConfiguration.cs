@@ -14,8 +14,6 @@
 
             // Category Navigation
             builder.HasOne(x => x.Category).WithMany(x => x.Products).HasForeignKey(x => x.CategoryId);
-            // User Navigation
-            builder.HasOne(x => x.User).WithMany(x => x.Products).HasForeignKey(x => x.UserId);
         }
     }
 }
