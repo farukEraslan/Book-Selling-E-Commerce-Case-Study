@@ -1,3 +1,7 @@
+using BookSeller.Entity.Validators.FluentValidator;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+
 namespace BookSeller.WebAPI
 {
     public class Program
@@ -13,7 +17,7 @@ namespace BookSeller.WebAPI
 
             // Serilog Logger
             Log.Logger = new LoggerConfiguration().MinimumLevel.Information().WriteTo.Console()
-                .WriteTo.File("BookSelerLog.txt",
+                .WriteTo.File("BookSellerLog.txt",
                     outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}",
                     rollingInterval: RollingInterval.Day)
                 .WriteTo.MSSqlServer("Server = ISTN36002\\SQLEXPRESS; Database = BookSeller; uid = sa; pwd = 123; Trusted_Connection = True; TrustServerCertificate = True;",
@@ -82,6 +86,10 @@ namespace BookSeller.WebAPI
             });
 
             builder.Services.AddControllers();
+
+            // Fluent Validation
+            builder.Services.AddFluentValidators();
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

@@ -1,33 +1,26 @@
-﻿using BookSeller.WebAPI.Logging.Abstract;
-using Microsoft.AspNetCore.Diagnostics;
-
-namespace BookSeller.WebAPI.Controllers.User
+﻿namespace BookSeller.WebAPI.Controllers.User
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
-        private readonly IExceptionHandler _exceptionHandler;
 
-        public UserController(IUserService userService, IExceptionHandler exceptionHandler)
+        public UserController(IUserService userService)
         {
             _userService = userService;
-            _exceptionHandler = exceptionHandler;
         }
 
         [HttpPost]
         public async Task<IActionResult> Create(UserCreateDTO userCreateDTO)
         {
             var result = await _userService.AddAsync(userCreateDTO);
-            if (result.Succeeded)
-            {
+
+            if (result.Succeeded) 
                 return Ok();
-            }
-            else
-            {
+            else 
                 return BadRequest(result.Errors);
-            }
+
 
         }
 
@@ -35,14 +28,11 @@ namespace BookSeller.WebAPI.Controllers.User
         public async Task<IActionResult> Update(UserUpdateDTO userUpdateDTO)
         {
             var result = await _userService.UpdateAsync(userUpdateDTO);
+
             if (result.Succeeded)
-            {
                 return Ok();
-            }
             else
-            {
                 return BadRequest(result.Errors);
-            }
         }
 
 
@@ -51,14 +41,11 @@ namespace BookSeller.WebAPI.Controllers.User
         public async Task<IActionResult> Delete(Guid userId)
         {
             var result = await _userService.DeleteAsync(userId);
+
             if (result.Succeeded)
-            {
                 return Ok();
-            }
             else
-            {
                 return BadRequest(result.Errors);
-            }
         }
 
         [HttpGet]
@@ -66,14 +53,11 @@ namespace BookSeller.WebAPI.Controllers.User
         public async Task<IActionResult> GetAll()
         {
             var users = _userService.GetAll();
+
             if (users is not null)
-            {
                 return Ok(users);
-            }
             else
-            {
                 return BadRequest();
-            }
         }
 
         [HttpGet]
@@ -81,14 +65,11 @@ namespace BookSeller.WebAPI.Controllers.User
         public async Task<IActionResult> GetById(Guid userId)
         {
             var user = await _userService.GetByIdAsync(userId);
+
             if (user is not null)
-            {
                 return Ok(user);
-            }
             else
-            {
                 return BadRequest();
-            }
         }
 
         [HttpPost]
@@ -96,14 +77,11 @@ namespace BookSeller.WebAPI.Controllers.User
         public async Task<IActionResult> AddToRoleAsync(Guid userId, string roleName)
         {
             var result = await _userService.AddToRoleAsync(userId, roleName);
+
             if (result.Succeeded)
-            {
                 return Ok();
-            }
             else
-            {
-                return BadRequest();
-            }
+                return BadRequest(result.Errors);
         }
     }
 }

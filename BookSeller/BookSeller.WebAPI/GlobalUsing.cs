@@ -13,3 +13,5 @@ global using BookSeller.Entity.DTO.Login;
 global using Serilog;
 global using Serilog.Events;
 global using Serilog.Sinks.MSSqlServer;
+global using BookSeller.Entity.DependencyInjections;
+global using BookSeller.Entity.DTO.Category;
