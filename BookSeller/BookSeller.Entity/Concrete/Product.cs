@@ -1,4 +1,6 @@
-﻿namespace BookSeller.Entity.Concrete
+﻿using BookSeller.Business.Concrete;
+
+namespace BookSeller.Entity.Concrete
 {
     public class Product : IEntity
     {
@@ -17,5 +19,7 @@
         public string? Author { get; set; }
         public string? Publisher { get; set; }
         public string ISBN { get; set; }
+
+        public List<CartLine> Cartlines { get; set; }
     }
 }

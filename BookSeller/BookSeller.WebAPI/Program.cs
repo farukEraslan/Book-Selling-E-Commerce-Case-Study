@@ -1,7 +1,3 @@
-using BookSeller.Entity.Validators.FluentValidator;
-using FluentValidation;
-using FluentValidation.AspNetCore;
-
 namespace BookSeller.WebAPI
 {
     public class Program
@@ -11,6 +7,10 @@ namespace BookSeller.WebAPI
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddHttpContextAccessor();
+            builder.Services.AddSession();
+
+            builder.Services.AddScoped<ICartSessionHelper, CartSessionHelper>();
 
             // DI Containers
             builder.Services.AddDataAccessServices().AddBusinessServices();
@@ -106,6 +106,8 @@ namespace BookSeller.WebAPI
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
+
+            app.UseSession();
 
             // Exception Handler
             //app.UseExceptionHandler();

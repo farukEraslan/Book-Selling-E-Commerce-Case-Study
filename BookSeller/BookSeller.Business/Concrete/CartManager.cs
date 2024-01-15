@@ -2,24 +2,27 @@
 {
     public class CartManager : ICartService
     {
-        public void AddToCart(Cart cart, Product product)
+        public bool AddToCart(CartDTO cart, ProductDTO product)
         {
             var cartLine = cart.CartLines.FirstOrDefault(c => c.Product.ProductId == product.ProductId);
-            if (cartLine != null)
+            if (cartLine != null && cartLine.Quantity < 10)
             {
                 cartLine.Quantity++;
+                return true;
             }
-            else
+            else if (cartLine == null)
             {
-                cart.CartLines.Add(new CartLine
+                cart.CartLines.Add(new CartLineDTO
                 {
                     Product = product,
                     Quantity = 1
                 });
+                return true;
             }
+            else return false;
         }
 
-        public void RemoveFromCart(Cart cart, Guid productId)
+        public void RemoveFromCart(CartDTO cart, Guid productId)
         {
             var cartLine = cart.CartLines.FirstOrDefault(c => c.Product.ProductId == productId);
             if (cartLine != null)
@@ -32,7 +35,7 @@
             }
         }
 
-        public List<CartLine> GetCartLines(Cart cart)
+        public List<CartLineDTO> GetCartLines(CartDTO cart)
         {
             return cart.CartLines;
         }

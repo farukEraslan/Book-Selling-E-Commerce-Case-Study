@@ -1,0 +1,656 @@
+2024-01-16 00:57:30.735 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-16 00:57:31.357 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-16 00:57:31.358 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-16 00:57:31.360 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-16 00:57:31.361 +03:00 [INF] Hosting environment: Development
+2024-01-16 00:57:31.362 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-16 00:57:42.147 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-16 00:57:42.445 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 297.6278ms
+2024-01-16 00:57:42.454 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-16 00:57:42.461 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 7.4618ms
+2024-01-16 00:57:42.462 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-16 00:57:42.632 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 169.8499ms
+2024-01-16 00:57:42.681 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-16 00:57:42.768 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 86.3401ms
+2024-01-16 00:57:48.500 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Product/GetAll - null null
+2024-01-16 00:57:48.514 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-16 00:57:48.533 +03:00 [INF] Route matched with {action = "GetAll", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BookSeller.WebAPI.Controllers.Product.ProductController (BookSeller.WebAPI).
+2024-01-16 00:57:49.674 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookSeller.Entity.DTO.Product.ProductDTO, BookSeller.Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-01-16 00:57:49.692 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI) in 1154.1276ms
+2024-01-16 00:57:49.694 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-16 00:57:49.695 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Product/GetAll - 200 null application/json; charset=utf-8 1195.0126ms
+2024-01-16 00:58:05.347 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 00:58:05.350 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 00:58:05.358 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 00:58:05.362 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 1.9723ms
+2024-01-16 00:58:05.363 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 00:58:05.365 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'BookSeller.WebAPI.Helpers.Abstract.ICartSessionHelper' while attempting to activate 'BookSeller.WebAPI.Controllers.Order.OrderController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method146(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-16 00:58:05.392 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 500 null text/plain; charset=utf-8 44.8713ms
+2024-01-16 00:59:17.642 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-16 00:59:18.271 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-16 00:59:18.273 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-16 00:59:18.276 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-16 00:59:18.277 +03:00 [INF] Hosting environment: Development
+2024-01-16 00:59:18.278 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-16 00:59:22.096 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-16 00:59:22.369 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 278.479ms
+2024-01-16 00:59:22.380 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-16 00:59:22.388 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-16 00:59:22.389 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 8.8614ms
+2024-01-16 00:59:22.425 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.7065ms
+2024-01-16 00:59:22.482 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-16 00:59:22.562 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 80.2443ms
+2024-01-16 00:59:40.345 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Product/GetAll - null null
+2024-01-16 00:59:40.356 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-16 00:59:40.375 +03:00 [INF] Route matched with {action = "GetAll", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BookSeller.WebAPI.Controllers.Product.ProductController (BookSeller.WebAPI).
+2024-01-16 00:59:41.365 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookSeller.Entity.DTO.Product.ProductDTO, BookSeller.Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-01-16 00:59:41.381 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI) in 1000.433ms
+2024-01-16 00:59:41.382 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-16 00:59:41.383 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Product/GetAll - 200 null application/json; charset=utf-8 1037.6663ms
+2024-01-16 00:59:48.424 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 00:59:48.428 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 00:59:48.435 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:00:55.528 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-16 01:00:56.010 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-16 01:00:56.012 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-16 01:00:56.013 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-16 01:00:56.014 +03:00 [INF] Hosting environment: Development
+2024-01-16 01:00:56.015 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-16 01:00:56.636 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-16 01:00:56.953 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 321.9558ms
+2024-01-16 01:00:56.967 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-16 01:00:56.974 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-16 01:00:56.977 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 9.4674ms
+2024-01-16 01:00:57.013 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.6256ms
+2024-01-16 01:00:57.073 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-16 01:00:57.153 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 80.0143ms
+2024-01-16 01:01:01.440 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Product/GetAll - null null
+2024-01-16 01:01:01.454 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:01:01.473 +03:00 [INF] Route matched with {action = "GetAll", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BookSeller.WebAPI.Controllers.Product.ProductController (BookSeller.WebAPI).
+2024-01-16 01:01:02.502 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookSeller.Entity.DTO.Product.ProductDTO, BookSeller.Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-01-16 01:01:02.518 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI) in 1039.781ms
+2024-01-16 01:01:02.520 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:01:02.521 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Product/GetAll - 200 null application/json; charset=utf-8 1080.9305ms
+2024-01-16 01:01:11.303 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:01:11.307 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:01:11.314 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:02:07.802 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:02:07.807 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 56490.0901ms
+2024-01-16 01:02:07.809 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:02:07.812 +03:00 [INF] Session started; Key:2a05f505-a6bf-980a-33f5-8434a32005ba, Id:479e26f4-f660-d2b3-4d30-bff591217252
+2024-01-16 01:02:07.814 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 56510.7109ms
+2024-01-16 01:02:29.715 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-16 01:02:30.226 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-16 01:02:30.229 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-16 01:02:30.230 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-16 01:02:30.231 +03:00 [INF] Hosting environment: Development
+2024-01-16 01:02:30.232 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-16 01:02:34.037 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-16 01:02:34.299 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 264.7833ms
+2024-01-16 01:02:34.316 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-16 01:02:34.324 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 8.0234ms
+2024-01-16 01:02:34.324 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-16 01:02:34.368 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.7958ms
+2024-01-16 01:02:34.423 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-16 01:02:34.499 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 75.8838ms
+2024-01-16 01:02:45.200 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:02:45.211 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:02:45.227 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:02:46.283 +03:00 [INF] Accessing expired session, Key:2a05f505-a6bf-980a-33f5-8434a32005ba
+2024-01-16 01:02:46.382 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:02:46.387 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 1154.9498ms
+2024-01-16 01:02:46.389 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:02:46.391 +03:00 [INF] Session started; Key:2a05f505-a6bf-980a-33f5-8434a32005ba, Id:e36edef9-ae60-36bc-ecf9-8a24119a8c87
+2024-01-16 01:02:46.393 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 1192.7691ms
+2024-01-16 01:03:19.590 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:03:19.600 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:03:19.601 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:03:19.653 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:03:19.657 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 53.8751ms
+2024-01-16 01:03:19.659 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:03:19.660 +03:00 [INF] Session started; Key:490a32d8-ad23-5e34-fbab-6d270ffc42fb, Id:7bf147d0-f73c-f9f8-0095-c52ce6becdb8
+2024-01-16 01:03:19.661 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 70.9335ms
+2024-01-16 01:04:44.104 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-16 01:04:44.586 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-16 01:04:44.588 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-16 01:04:44.590 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-16 01:04:44.592 +03:00 [INF] Hosting environment: Development
+2024-01-16 01:04:44.593 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-16 01:04:45.193 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-16 01:04:45.465 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 275.4729ms
+2024-01-16 01:04:45.484 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-16 01:04:45.490 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-16 01:04:45.490 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 6.6393ms
+2024-01-16 01:04:45.534 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.1163ms
+2024-01-16 01:04:45.600 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-16 01:04:45.684 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 84.2635ms
+2024-01-16 01:04:50.792 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Product/GetAll - null null
+2024-01-16 01:04:50.805 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:04:50.822 +03:00 [INF] Route matched with {action = "GetAll", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BookSeller.WebAPI.Controllers.Product.ProductController (BookSeller.WebAPI).
+2024-01-16 01:04:51.875 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookSeller.Entity.DTO.Product.ProductDTO, BookSeller.Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-01-16 01:04:51.893 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI) in 1064.7929ms
+2024-01-16 01:04:51.894 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:04:51.896 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Product/GetAll - 200 null application/json; charset=utf-8 1103.9964ms
+2024-01-16 01:05:01.119 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:05:01.122 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:05:01.129 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:05:01.277 +03:00 [INF] Accessing expired session, Key:490a32d8-ad23-5e34-fbab-6d270ffc42fb
+2024-01-16 01:05:01.374 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:05:01.376 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 244.9184ms
+2024-01-16 01:05:01.377 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:05:01.378 +03:00 [INF] Session started; Key:490a32d8-ad23-5e34-fbab-6d270ffc42fb, Id:529e6227-055a-4d49-c24a-aa04b94a8da8
+2024-01-16 01:05:01.380 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 260.8573ms
+2024-01-16 01:05:08.786 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:05:08.791 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:05:08.793 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:05:08.811 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:05:08.815 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 20.551ms
+2024-01-16 01:05:08.816 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:05:08.817 +03:00 [INF] Session started; Key:a1d20369-7785-2689-91b8-29f772f99d26, Id:b44d1346-7a10-1123-e740-f86c7db75c0f
+2024-01-16 01:05:08.818 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 32.0873ms
+2024-01-16 01:05:17.361 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7086/api/Order/Delete?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null null
+2024-01-16 01:05:17.365 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Delete (BookSeller.WebAPI)'
+2024-01-16 01:05:17.367 +03:00 [INF] Route matched with {action = "Delete", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Delete(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:05:17.388 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Delete (BookSeller.WebAPI) in 19.1172ms
+2024-01-16 01:05:17.391 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Delete (BookSeller.WebAPI)'
+2024-01-16 01:05:17.394 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No route matches the supplied values.
+   at Microsoft.AspNetCore.Mvc.Infrastructure.RedirectToActionResultExecutor.ExecuteAsync(ActionContext context, RedirectToActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-16 01:05:17.420 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7086/api/Order/Delete?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 500 null text/plain; charset=utf-8 58.8314ms
+2024-01-16 01:06:08.507 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-16 01:06:08.982 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-16 01:06:08.983 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-16 01:06:08.986 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-16 01:06:08.987 +03:00 [INF] Hosting environment: Development
+2024-01-16 01:06:08.988 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-16 01:06:12.719 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-16 01:06:12.976 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 262.3939ms
+2024-01-16 01:06:12.985 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-16 01:06:12.994 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-16 01:06:12.994 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 9.0642ms
+2024-01-16 01:06:13.033 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.3876ms
+2024-01-16 01:06:13.090 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-16 01:06:13.172 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 82.1745ms
+2024-01-16 01:06:24.872 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Product/GetAll - null null
+2024-01-16 01:06:24.883 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:06:24.898 +03:00 [INF] Route matched with {action = "GetAll", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BookSeller.WebAPI.Controllers.Product.ProductController (BookSeller.WebAPI).
+2024-01-16 01:06:25.868 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookSeller.Entity.DTO.Product.ProductDTO, BookSeller.Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-01-16 01:06:25.885 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI) in 980.6261ms
+2024-01-16 01:06:25.886 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:06:25.888 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Product/GetAll - 200 null application/json; charset=utf-8 1015.9376ms
+2024-01-16 01:06:36.504 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:06:36.509 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:06:36.517 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:06:36.759 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:06:36.762 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 243.149ms
+2024-01-16 01:06:36.764 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:06:36.766 +03:00 [INF] Session started; Key:78cc822f-5892-54fa-9dbb-1138ae41dfad, Id:bb4d2fde-5375-17b2-4e91-2061fd2cdf63
+2024-01-16 01:06:36.768 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 263.9995ms
+2024-01-16 01:06:42.409 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7086/api/Order/Delete?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null null
+2024-01-16 01:06:42.420 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Delete (BookSeller.WebAPI)'
+2024-01-16 01:06:42.423 +03:00 [INF] Route matched with {action = "Delete", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Delete(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:06:42.445 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:06:42.447 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Delete (BookSeller.WebAPI) in 20.0612ms
+2024-01-16 01:06:42.449 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Delete (BookSeller.WebAPI)'
+2024-01-16 01:06:42.451 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7086/api/Order/Delete?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 41.9157ms
+2024-01-16 01:09:40.407 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-16 01:09:40.877 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-16 01:09:40.878 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-16 01:09:40.880 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-16 01:09:40.881 +03:00 [INF] Hosting environment: Development
+2024-01-16 01:09:40.882 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-16 01:09:44.554 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-16 01:09:44.818 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 267.5353ms
+2024-01-16 01:09:44.829 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-16 01:09:44.836 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 7.3678ms
+2024-01-16 01:09:44.838 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-16 01:09:44.877 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.6537ms
+2024-01-16 01:09:44.928 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-16 01:09:45.004 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 76.7394ms
+2024-01-16 01:10:01.658 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Order/GetAll - null null
+2024-01-16 01:10:01.672 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:10:01.684 +03:00 [INF] Route matched with {action = "GetAll", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:10:01.767 +03:00 [INF] Accessing expired session, Key:78cc822f-5892-54fa-9dbb-1138ae41dfad
+2024-01-16 01:10:01.860 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Entity.DTO.Order.CartListDTO'.
+2024-01-16 01:10:01.876 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI) in 186.4878ms
+2024-01-16 01:10:01.877 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:10:01.879 +03:00 [INF] Session started; Key:78cc822f-5892-54fa-9dbb-1138ae41dfad, Id:db32c3e1-e74b-de07-2323-3c0f1f3574e9
+2024-01-16 01:10:01.880 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Order/GetAll - 200 null application/json; charset=utf-8 222.7007ms
+2024-01-16 01:10:08.495 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Product/GetAll - null null
+2024-01-16 01:10:08.498 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:10:08.503 +03:00 [INF] Route matched with {action = "GetAll", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BookSeller.WebAPI.Controllers.Product.ProductController (BookSeller.WebAPI).
+2024-01-16 01:10:09.406 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookSeller.Entity.DTO.Product.ProductDTO, BookSeller.Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-01-16 01:10:09.410 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI) in 904.2725ms
+2024-01-16 01:10:09.411 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:10:09.413 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Product/GetAll - 200 null application/json; charset=utf-8 917.8403ms
+2024-01-16 01:10:20.384 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:10:20.388 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:10:20.394 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:10:20.534 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:10:20.536 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 140.0178ms
+2024-01-16 01:10:20.537 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:10:20.539 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 154.3543ms
+2024-01-16 01:10:22.216 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Order/GetAll - null null
+2024-01-16 01:10:22.219 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:10:22.220 +03:00 [INF] Route matched with {action = "GetAll", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:10:22.225 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Entity.DTO.Order.CartListDTO'.
+2024-01-16 01:10:22.226 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI) in 5.1829ms
+2024-01-16 01:10:22.229 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:10:22.230 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Order/GetAll - 200 null application/json; charset=utf-8 14.301ms
+2024-01-16 01:10:38.119 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:10:38.122 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:10:38.123 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:10:38.141 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:10:38.144 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 18.1513ms
+2024-01-16 01:10:38.146 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:10:38.147 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 28.4597ms
+2024-01-16 01:10:38.679 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:10:38.682 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:10:38.682 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:10:38.686 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:10:38.687 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 3.4406ms
+2024-01-16 01:10:38.689 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:10:38.689 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 9.9446ms
+2024-01-16 01:10:39.125 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:10:39.128 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:10:39.129 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:10:39.133 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:10:39.134 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 3.7459ms
+2024-01-16 01:10:39.137 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:10:39.138 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 13.0887ms
+2024-01-16 01:10:41.113 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Order/GetAll - null null
+2024-01-16 01:10:41.116 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:10:41.117 +03:00 [INF] Route matched with {action = "GetAll", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:10:41.119 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Entity.DTO.Order.CartListDTO'.
+2024-01-16 01:10:41.120 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI) in 2.0809ms
+2024-01-16 01:10:41.122 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:10:41.123 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Order/GetAll - 200 null application/json; charset=utf-8 10.4298ms
+2024-01-16 01:10:46.193 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:10:46.197 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:10:46.197 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:10:46.201 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:10:46.203 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 4.7848ms
+2024-01-16 01:10:46.206 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:10:46.207 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 14.2988ms
+2024-01-16 01:10:46.634 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:10:46.638 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:10:46.638 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:10:46.641 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:10:46.642 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 2.3643ms
+2024-01-16 01:10:46.644 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:10:46.644 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 11.2561ms
+2024-01-16 01:10:47.089 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:10:47.092 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:10:47.093 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:10:47.095 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:10:47.096 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 2.4181ms
+2024-01-16 01:10:47.098 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:10:47.099 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 10.0964ms
+2024-01-16 01:10:47.562 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:10:47.565 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:10:47.565 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:10:47.568 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:10:47.570 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 3.0531ms
+2024-01-16 01:10:47.571 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:10:47.572 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 10.1585ms
+2024-01-16 01:10:48.047 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:10:48.050 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:10:48.051 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:10:48.055 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:10:48.055 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 3.0446ms
+2024-01-16 01:10:48.058 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:10:48.059 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 11.9678ms
+2024-01-16 01:10:48.942 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:10:48.945 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:10:48.946 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:10:48.949 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:10:48.950 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 2.7755ms
+2024-01-16 01:10:48.951 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:10:48.952 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 10.2095ms
+2024-01-16 01:10:49.318 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:10:49.322 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:10:49.323 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:10:49.326 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:10:49.328 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 3.1874ms
+2024-01-16 01:10:49.329 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:10:49.330 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 11.9227ms
+2024-01-16 01:10:53.744 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Order/GetAll - null null
+2024-01-16 01:10:53.747 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:10:53.748 +03:00 [INF] Route matched with {action = "GetAll", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:10:53.749 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Entity.DTO.Order.CartListDTO'.
+2024-01-16 01:10:53.750 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI) in 0.8788ms
+2024-01-16 01:10:53.751 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:10:53.752 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Order/GetAll - 200 null application/json; charset=utf-8 7.795ms
+2024-01-16 01:10:56.297 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:10:56.299 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:10:56.300 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:10:56.304 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:10:56.306 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 3.7647ms
+2024-01-16 01:10:56.307 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:10:56.308 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 10.4269ms
+2024-01-16 01:10:57.769 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Order/GetAll - null null
+2024-01-16 01:10:57.772 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:10:57.773 +03:00 [INF] Route matched with {action = "GetAll", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:10:57.774 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Entity.DTO.Order.CartListDTO'.
+2024-01-16 01:10:57.775 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI) in 0.8396ms
+2024-01-16 01:10:57.776 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:10:57.777 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Order/GetAll - 200 null application/json; charset=utf-8 8.3296ms
+2024-01-16 01:16:26.735 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-16 01:16:27.232 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-16 01:16:27.234 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-16 01:16:27.236 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-16 01:16:27.237 +03:00 [INF] Hosting environment: Development
+2024-01-16 01:16:27.238 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-16 01:16:27.829 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-16 01:16:28.113 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 290.2929ms
+2024-01-16 01:16:28.128 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-16 01:16:28.134 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-16 01:16:28.137 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 8.2965ms
+2024-01-16 01:16:28.180 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.4954ms
+2024-01-16 01:16:28.237 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-16 01:16:28.313 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 76.2863ms
+2024-01-16 01:16:42.046 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Order/GetAll - null null
+2024-01-16 01:16:42.056 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:16:42.070 +03:00 [INF] Route matched with {action = "GetAll", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:16:42.153 +03:00 [INF] Accessing expired session, Key:78cc822f-5892-54fa-9dbb-1138ae41dfad
+2024-01-16 01:16:42.247 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Entity.DTO.Order.CartListDTO'.
+2024-01-16 01:16:42.262 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI) in 187.453ms
+2024-01-16 01:16:42.264 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:16:42.265 +03:00 [INF] Session started; Key:78cc822f-5892-54fa-9dbb-1138ae41dfad, Id:4d43ba71-c182-f2cd-d96b-df1ac54d57a9
+2024-01-16 01:16:42.267 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Order/GetAll - 200 null application/json; charset=utf-8 221.0439ms
+2024-01-16 01:16:47.328 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Product/GetAll - null null
+2024-01-16 01:16:47.331 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:16:47.335 +03:00 [INF] Route matched with {action = "GetAll", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BookSeller.WebAPI.Controllers.Product.ProductController (BookSeller.WebAPI).
+2024-01-16 01:16:48.250 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookSeller.Entity.DTO.Product.ProductDTO, BookSeller.Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-01-16 01:16:48.253 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI) in 916.3261ms
+2024-01-16 01:16:48.255 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:16:48.257 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Product/GetAll - 200 null application/json; charset=utf-8 929.0708ms
+2024-01-16 01:17:03.487 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:17:03.490 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:17:03.497 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:17:03.638 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:17:03.640 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 140.2659ms
+2024-01-16 01:17:03.641 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:17:03.643 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 155.4758ms
+2024-01-16 01:17:06.874 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:17:06.877 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:17:06.878 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:17:06.895 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:17:06.897 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 18.1709ms
+2024-01-16 01:17:06.898 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:17:06.899 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 25.4247ms
+2024-01-16 01:17:07.895 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:17:07.898 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:17:07.899 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:17:07.903 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:17:07.904 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 3.64ms
+2024-01-16 01:17:07.905 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:17:07.906 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 11.5509ms
+2024-01-16 01:17:08.881 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:17:08.883 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:17:08.884 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:17:08.888 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:17:08.890 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 4.4094ms
+2024-01-16 01:17:08.891 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:17:08.892 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 11.4273ms
+2024-01-16 01:17:09.738 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:17:09.740 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:17:09.740 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:17:09.745 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:17:09.746 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 4.7229ms
+2024-01-16 01:17:09.748 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:17:09.749 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 11.288ms
+2024-01-16 01:17:10.570 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:17:10.572 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:17:10.573 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:17:10.578 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:17:10.579 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 5.1245ms
+2024-01-16 01:17:10.580 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:17:10.581 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 11.442ms
+2024-01-16 01:17:11.371 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:17:11.373 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:17:11.374 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:17:11.378 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:17:11.379 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 4.0463ms
+2024-01-16 01:17:11.381 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:17:11.382 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 11.3677ms
+2024-01-16 01:17:12.098 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:17:12.100 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:17:12.101 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:17:12.103 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:17:12.104 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 2.1553ms
+2024-01-16 01:17:12.105 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:17:12.106 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 8.2942ms
+2024-01-16 01:17:12.981 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:17:12.983 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:17:12.984 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:17:12.986 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:17:12.987 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 2.0904ms
+2024-01-16 01:17:12.988 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:17:12.989 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 8.4857ms
+2024-01-16 01:17:13.700 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:17:13.704 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:17:13.705 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:17:13.707 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:17:13.708 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 2.4748ms
+2024-01-16 01:17:13.710 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:17:13.713 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 13.2329ms
+2024-01-16 01:17:16.329 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Order/GetAll - null null
+2024-01-16 01:17:16.331 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:17:16.332 +03:00 [INF] Route matched with {action = "GetAll", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:17:16.333 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Entity.DTO.Order.CartListDTO'.
+2024-01-16 01:17:16.334 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI) in 1.2818ms
+2024-01-16 01:17:16.335 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:17:16.336 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Order/GetAll - 200 null application/json; charset=utf-8 7.6351ms
+2024-01-16 01:17:20.204 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:17:20.208 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:17:20.208 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:17:20.214 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:17:20.215 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 5.0566ms
+2024-01-16 01:17:20.217 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:17:20.218 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 13.8738ms
+2024-01-16 01:17:23.920 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Order/GetAll - null null
+2024-01-16 01:17:23.922 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:17:23.923 +03:00 [INF] Route matched with {action = "GetAll", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:17:23.924 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Entity.DTO.Order.CartListDTO'.
+2024-01-16 01:17:23.925 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI) in 1.0753ms
+2024-01-16 01:17:23.926 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:17:23.927 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Order/GetAll - 200 null application/json; charset=utf-8 7.5213ms
+2024-01-16 01:17:32.637 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:17:32.640 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:17:32.640 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:18:25.136 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-01-16 01:18:25.138 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 52495.892ms
+2024-01-16 01:18:25.140 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:18:25.141 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 400 null text/plain; charset=utf-8 52503.5435ms
+2024-01-16 01:18:33.289 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Order/GetAll - null null
+2024-01-16 01:18:33.292 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:18:33.294 +03:00 [INF] Route matched with {action = "GetAll", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:18:33.296 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Entity.DTO.Order.CartListDTO'.
+2024-01-16 01:18:33.297 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI) in 1.3862ms
+2024-01-16 01:18:33.298 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:18:33.299 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Order/GetAll - 200 null application/json; charset=utf-8 10.6156ms
+2024-01-16 01:19:00.775 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-16 01:19:01.254 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-16 01:19:01.256 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-16 01:19:01.257 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-16 01:19:01.258 +03:00 [INF] Hosting environment: Development
+2024-01-16 01:19:01.259 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-16 01:19:04.992 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-16 01:19:05.260 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 272.1672ms
+2024-01-16 01:19:05.270 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-16 01:19:05.276 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 6.4015ms
+2024-01-16 01:19:05.277 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-16 01:19:05.317 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.2812ms
+2024-01-16 01:19:05.369 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-16 01:19:05.452 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 82.4295ms
+2024-01-16 01:19:09.648 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Order/GetAll - null null
+2024-01-16 01:19:09.658 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:19:09.671 +03:00 [INF] Route matched with {action = "GetAll", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:19:09.754 +03:00 [INF] Accessing expired session, Key:78cc822f-5892-54fa-9dbb-1138ae41dfad
+2024-01-16 01:19:09.847 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Entity.DTO.Order.CartListDTO'.
+2024-01-16 01:19:09.863 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI) in 186.5793ms
+2024-01-16 01:19:09.865 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:19:09.866 +03:00 [INF] Session started; Key:78cc822f-5892-54fa-9dbb-1138ae41dfad, Id:003e69cb-4e41-5182-b892-be2f4bd023ff
+2024-01-16 01:19:09.868 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Order/GetAll - 200 null application/json; charset=utf-8 220.1966ms
+2024-01-16 01:19:13.497 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:19:13.501 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:19:13.508 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:19:17.647 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:19:17.649 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 4138.8794ms
+2024-01-16 01:19:17.650 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:19:17.651 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 4154.5424ms
+2024-01-16 01:19:21.583 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:19:21.586 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:19:21.586 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:19:21.642 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:19:21.644 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 56.2659ms
+2024-01-16 01:19:21.645 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:19:21.646 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 63.706ms
+2024-01-16 01:19:22.113 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:19:22.116 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:19:22.116 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:19:22.128 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:19:22.130 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 12.7351ms
+2024-01-16 01:19:22.131 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:19:22.132 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 18.4316ms
+2024-01-16 01:19:22.552 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:19:22.554 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:19:22.555 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:19:22.559 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:19:22.560 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 3.687ms
+2024-01-16 01:19:22.561 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:19:22.562 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 10.9147ms
+2024-01-16 01:19:22.988 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:19:22.990 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:19:22.991 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:19:22.995 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:19:22.996 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 3.9665ms
+2024-01-16 01:19:22.997 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:19:22.998 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 10.5041ms
+2024-01-16 01:19:23.394 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:19:23.397 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:19:23.397 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:19:23.402 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:19:23.403 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 3.8375ms
+2024-01-16 01:19:23.404 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:19:23.405 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 11.9836ms
+2024-01-16 01:19:23.778 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:19:23.781 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:19:23.782 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:19:23.785 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:19:23.787 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 3.4689ms
+2024-01-16 01:19:23.789 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:19:23.790 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 12.2859ms
+2024-01-16 01:19:24.207 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:19:24.209 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:19:24.210 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:19:24.215 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:19:24.216 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 4.0822ms
+2024-01-16 01:19:24.217 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:19:24.217 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 11.0778ms
+2024-01-16 01:19:25.202 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:19:25.205 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:19:25.206 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:19:25.209 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:19:25.210 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 2.7345ms
+2024-01-16 01:19:25.211 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:19:25.213 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 11.1486ms
+2024-01-16 01:19:25.980 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:19:25.983 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:19:25.983 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:19:25.986 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:19:25.987 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 2.0647ms
+2024-01-16 01:19:25.988 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:19:25.989 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 9.5264ms
+2024-01-16 01:19:26.636 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:19:26.640 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:19:26.641 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:19:26.644 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-01-16 01:19:26.645 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 3.6713ms
+2024-01-16 01:19:26.647 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:19:26.648 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 400 null text/plain; charset=utf-8 11.5647ms
+2024-01-16 01:19:29.552 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Order/GetAll - null null
+2024-01-16 01:19:29.555 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:19:29.555 +03:00 [INF] Route matched with {action = "GetAll", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:19:29.557 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Entity.DTO.Order.CartListDTO'.
+2024-01-16 01:19:29.560 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI) in 3.0164ms
+2024-01-16 01:19:29.562 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:19:29.564 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Order/GetAll - 200 null application/json; charset=utf-8 11.8486ms
+2024-01-16 01:19:42.595 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7086/api/Order/Delete?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null null
+2024-01-16 01:19:42.604 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Delete (BookSeller.WebAPI)'
+2024-01-16 01:19:42.606 +03:00 [INF] Route matched with {action = "Delete", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:19:42.612 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:19:42.614 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Delete (BookSeller.WebAPI) in 5.05ms
+2024-01-16 01:19:42.615 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Delete (BookSeller.WebAPI)'
+2024-01-16 01:19:42.616 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7086/api/Order/Delete?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 21.3519ms
+2024-01-16 01:19:45.173 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Order/GetAll - null null
+2024-01-16 01:19:45.175 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:19:45.176 +03:00 [INF] Route matched with {action = "GetAll", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:19:45.178 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Entity.DTO.Order.CartListDTO'.
+2024-01-16 01:19:45.179 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI) in 1.8955ms
+2024-01-16 01:19:45.181 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:19:45.182 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Order/GetAll - 200 null application/json; charset=utf-8 8.4353ms
+2024-01-16 01:19:52.396 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:19:52.400 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:19:52.401 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:19:52.404 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-16 01:19:52.405 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 2.4378ms
+2024-01-16 01:19:52.407 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:19:52.408 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 200 null text/plain; charset=utf-8 11.9648ms
+2024-01-16 01:19:56.609 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Order/GetAll - null null
+2024-01-16 01:19:56.611 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:19:56.613 +03:00 [INF] Route matched with {action = "GetAll", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:19:56.616 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Entity.DTO.Order.CartListDTO'.
+2024-01-16 01:19:56.616 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI) in 1.1365ms
+2024-01-16 01:19:56.617 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAll (BookSeller.WebAPI)'
+2024-01-16 01:19:56.618 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Order/GetAll - 200 null application/json; charset=utf-8 9.2124ms
+2024-01-16 01:20:00.584 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - null 0
+2024-01-16 01:20:00.587 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:20:00.587 +03:00 [INF] Route matched with {action = "Create", controller = "Order", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-16 01:20:00.590 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-01-16 01:20:00.591 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI) in 2.0056ms
+2024-01-16 01:20:00.592 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.Create (BookSeller.WebAPI)'
+2024-01-16 01:20:00.593 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/Create?productId=2e55e06a-4075-4ee2-aad3-08dc154c3873 - 400 null text/plain; charset=utf-8 8.4114ms

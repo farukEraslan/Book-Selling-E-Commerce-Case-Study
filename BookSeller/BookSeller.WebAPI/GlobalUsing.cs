@@ -16,3 +16,8 @@ global using Serilog.Sinks.MSSqlServer;
 global using BookSeller.Entity.DependencyInjections;
 global using BookSeller.Entity.DTO.Category;
 global using BookSeller.Entity.DTO.Product;
+global using BookSeller.WebAPI.Helpers.Abstract;
+global using BookSeller.Entity.DTO.Order;
+global using Newtonsoft.Json;
+global using BookSeller.WebAPI.Extensions;
+global using BookSeller.WebAPI.Helpers.Concrete;

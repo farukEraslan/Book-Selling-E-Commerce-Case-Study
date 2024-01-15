@@ -16,4 +16,8 @@
     <ProjectReference Include="..\BookSeller.Core\BookSeller.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DomainModels\" />
+  </ItemGroup>
+
 </Project>

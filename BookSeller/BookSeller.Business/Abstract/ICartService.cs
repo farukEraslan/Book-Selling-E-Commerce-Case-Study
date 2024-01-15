@@ -1,9 +1,11 @@
-﻿namespace BookSeller.Business.Abstract
+﻿using BookSeller.Entity.DTO.Order;
+
+namespace BookSeller.Business.Abstract
 {
     public interface ICartService
     {
-        void AddToCart(Cart cart, Product product);
-        void RemoveFromCart(Cart cart, Guid productId);
-        List<CartLine> GetCartLines(Cart cart);
+        bool AddToCart(CartDTO cart, ProductDTO product);
+        void RemoveFromCart(CartDTO cart, Guid productId);
+        List<CartLineDTO> GetCartLines(CartDTO cart);
     }
 }

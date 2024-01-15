@@ -1,13 +1,13 @@
-﻿namespace BookSeller.Entity.DomainModels
+﻿namespace BookSeller.Entity.DTO.Order
 {
-    public class Cart : IDomainModel
+    public class CartDTO : IDomainModel
     {
-        public Cart()
+        public CartDTO()
         {
-            this.CartLines = new List<CartLine>();
+            CartLines = new List<CartLineDTO>();
         }
 
-        public List<CartLine> CartLines { get; set; }
+        public List<CartLineDTO> CartLines { get; set; }
         public Guid UserId { get; set; }
         public string Address { get; set; }
         public decimal CartTotalPrice
@@ -15,7 +15,7 @@
             get
             {
                 decimal cartTotalPrice = 0;
-                foreach (CartLine cartLine in this.CartLines)
+                foreach (CartLineDTO cartLine in CartLines)
                 {
                     cartTotalPrice += cartLine.CartLinePrice;
                 }
