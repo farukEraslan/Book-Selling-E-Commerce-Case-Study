@@ -34,7 +34,7 @@
         }
 
         [HttpDelete]
-        [Authorize("Admin")]
+        [Authorize("admin")]
         public async Task<IActionResult> Delete(Guid userId)
         {
             var result = await _userService.DeleteAsync(userId);
@@ -46,7 +46,7 @@
         }
 
         [HttpGet]
-        [Authorize("Admin")]
+        [Authorize("admin")]
         public async Task<IActionResult> GetAll(int pageNumber, int pageSize)
         {
             var users = _userService.GetAll(pageNumber, pageSize);
@@ -58,7 +58,7 @@
         }
 
         [HttpGet]
-        [Authorize("Admin")]
+        [Authorize("admin")]
         public async Task<IActionResult> GetById(Guid userId)
         {
             var user = await _userService.GetByIdAsync(userId);
@@ -70,7 +70,7 @@
         }
 
         [HttpPost]
-        //[Authorize("Admin")]
+        [Authorize("admin")]
         public async Task<IActionResult> AddToRoleAsync(Guid userId, string roleName)
         {
             var result = await _userService.AddToRoleAsync(userId, roleName);

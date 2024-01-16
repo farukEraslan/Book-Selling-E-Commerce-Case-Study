@@ -61,7 +61,7 @@
         public async Task<IdentityResult> AddToRoleAsync(Guid userId, string roleName)
         {
             var user = await _userManager.FindByIdAsync(userId.ToString());
-            var result = await _userManager.AddToRoleAsync(user, roleName);
+            var result = await _userManager.AddToRoleAsync(user, roleName.ToLower());
             return result;
         }
     }

@@ -20,7 +20,7 @@
         }
 
         [HttpPost]
-        [Authorize("Customer")]
+        [Authorize("customer")]
         public async Task<IActionResult> CreateToCart(Guid productId)
         {
             var product = _productService.GetById(productId);
@@ -37,7 +37,7 @@
         }
 
         [HttpDelete]
-        [Authorize("Customer")]
+        [Authorize("customer")]
         public async Task<IActionResult> DeleteFromCart(Guid productId)
         {
             var product = _productService.GetById(productId);
@@ -50,7 +50,7 @@
         }
 
         [HttpGet]
-        [Authorize("Customer")]
+        [Authorize("customer")]
         public async Task<IActionResult> GetAllFromCart()
         {
             var model = new CartListDomainModel()
@@ -61,7 +61,7 @@
         }
 
         [HttpPost]
-        [Authorize("Customer")]
+        [Authorize("customer")]
         public async Task<IActionResult> GiveOrder(string city, string town, string street, string propertyNo, string postalCode)
         {
             var cart = await _cartSessionHelper.GetCart("cart");
@@ -77,14 +77,14 @@
         }
 
         [HttpGet]
-        [Authorize("Admin")]
+        [Authorize("admin")]
         public async Task<IActionResult> GetOrders()
         {
             return Ok(_cartService.GetCarts());
         }
 
         [HttpPost]
-        [Authorize("Admin")]
+        [Authorize("admin")]
         public async Task<IActionResult> ApproveOrder(Guid cartId)
         {
             var cart = _cartService.GetById(cartId);

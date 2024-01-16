@@ -2,7 +2,7 @@
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    [Authorize("Admin")]
+    [Authorize("admin")]
     public class CategoryController : ControllerBase
     {
         private readonly ICategoryService _categoryService;

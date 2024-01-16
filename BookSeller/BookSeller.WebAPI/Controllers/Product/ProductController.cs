@@ -12,7 +12,7 @@
         }
 
         [HttpPost]
-        [Authorize("Admin")]
+        [Authorize("admin")]
         public async Task<IActionResult> Create(ProductCreateDTO productCreateDTO)
         {
             _productService.Add(productCreateDTO);
@@ -20,7 +20,7 @@
         }
 
         [HttpPut]
-        [Authorize("Admin")]
+        [Authorize("admin")]
         public async Task<IActionResult> Update(ProductUpdateDTO productUpdateDTO)
         {
             _productService.Update(productUpdateDTO);
@@ -28,7 +28,7 @@
         }
 
         [HttpDelete]
-        [Authorize("Admin")]
+        [Authorize("admin")]
         public async Task<IActionResult> Delete(ProductDTO productDTO)
         {
             _productService.Delete(productDTO);
