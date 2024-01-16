@@ -35,6 +35,11 @@
             return _mapper.Map<UserDTO>(await _userManager.FindByIdAsync(userId.ToString()));
         }
 
+        public async Task<UserDTO> GetByNameAsync(string userName)
+        {
+            return _mapper.Map<UserDTO>(await _userManager.FindByNameAsync(userName));
+        }
+
         public List<UserDTO> GetAll(int pageNumber, int pageSize)
         {
             return _userManager.Users

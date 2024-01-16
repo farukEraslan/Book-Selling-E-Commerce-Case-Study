@@ -1,6 +1,4 @@
-﻿using BookSeller.Business.Concrete;
-
-namespace BookSeller.DataAccess.Configurations
+﻿namespace BookSeller.DataAccess.Configurations
 {
     public class CartLineConfiguration : IEntityTypeConfiguration<CartLine>
     {
@@ -11,6 +9,7 @@ namespace BookSeller.DataAccess.Configurations
             builder.Property(x => x.CartLinePrice);
 
             builder.HasOne(x=>x.Product).WithMany(x=>x.Cartlines).HasForeignKey(x=>x.ProductId);
+            builder.HasOne(x=>x.Cart).WithMany(x=>x.CartLines).HasForeignKey(x=>x.CartId);
         }
     }
 }

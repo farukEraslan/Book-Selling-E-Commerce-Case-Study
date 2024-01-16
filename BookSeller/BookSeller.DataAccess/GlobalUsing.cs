@@ -10,3 +10,4 @@ global using Microsoft.Extensions.DependencyInjection;
 global using Microsoft.EntityFrameworkCore.Metadata.Builders;
 global using BookSeller.DataAccess.Configurations;
 global using Microsoft.AspNetCore.Http;
+global using System.Linq.Expressions;

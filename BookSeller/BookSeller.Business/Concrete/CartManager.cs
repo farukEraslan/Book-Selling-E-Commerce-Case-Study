@@ -2,7 +2,16 @@
 {
     public class CartManager : ICartService
     {
-        public bool AddToCart(CartDTO cart, ProductDTO product)
+        private readonly ICartDAL _cartDAL;
+        private readonly IMapper _mapper;
+
+        public CartManager(ICartDAL cartDAL, IMapper mapper)
+        {
+            _cartDAL = cartDAL;
+            _mapper = mapper;
+        }
+
+        public bool AddToCart(CartDomainModel cart, ProductDTO product)
         {
             var cartLine = cart.CartLines.FirstOrDefault(c => c.Product.ProductId == product.ProductId);
             if (cartLine != null && cartLine.Quantity < 10)
@@ -12,7 +21,7 @@
             }
             else if (cartLine == null)
             {
-                cart.CartLines.Add(new CartLineDTO
+                cart.CartLines.Add(new CartLineDomainModel
                 {
                     Product = product,
                     Quantity = 1
@@ -22,7 +31,7 @@
             else return false;
         }
 
-        public void RemoveFromCart(CartDTO cart, Guid productId)
+        public void RemoveFromCart(CartDomainModel cart, Guid productId)
         {
             var cartLine = cart.CartLines.FirstOrDefault(c => c.Product.ProductId == productId);
             if (cartLine != null)
@@ -35,9 +44,14 @@
             }
         }
 
-        public List<CartLineDTO> GetCartLines(CartDTO cart)
+        public void AddToDatabase(CartDTO cartDTO)
         {
-            return cart.CartLines;
+            _cartDAL.Add(_mapper.Map<Cart>(cartDTO));
+        }
+
+        public List<CartDTO> GetCarts()
+        {
+            return _mapper.Map<List<CartDTO>>(_cartDAL.GetAll());
         }
     }
 }

@@ -26,6 +26,8 @@
             builder.ApplyConfiguration(new ProductConfiguration());
             builder.ApplyConfiguration(new RoleConfiguration());
             builder.ApplyConfiguration(new UserConfiguration());
+            builder.ApplyConfiguration(new CartConfiguration());
+            builder.ApplyConfiguration(new CartLineConfiguration());
             base.OnModelCreating(builder);
         }
 
@@ -33,5 +35,7 @@
         public DbSet<Product> Products { get; set; }
         public DbSet<RoleEntity> Roles { get; set; }
         public DbSet<UserEntity> Users { get; set; }
+        public DbSet<Cart> Carts { get; set; }
+        public DbSet<CartLine> CartLines { get; set; }
     }
 }

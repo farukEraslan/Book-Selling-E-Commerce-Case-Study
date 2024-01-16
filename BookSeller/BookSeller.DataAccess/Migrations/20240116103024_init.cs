@@ -174,6 +174,27 @@ namespace BookSeller.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Carts",
+                columns: table => new
+                {
+                    CartId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CartTotalPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    IsApproved = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Carts", x => x.CartId);
+                    table.ForeignKey(
+                        name: "FK_Carts_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Products",
                 columns: table => new
                 {
@@ -197,30 +218,57 @@ namespace BookSeller.DataAccess.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "CartLines",
+                columns: table => new
+                {
+                    CartLineId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    ProductId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CartId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Quantity = table.Column<int>(type: "int", maxLength: 10, nullable: false),
+                    CartLinePrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CartLines", x => x.CartLineId);
+                    table.ForeignKey(
+                        name: "FK_CartLines_Carts_CartId",
+                        column: x => x.CartId,
+                        principalTable: "Carts",
+                        principalColumn: "CartId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_CartLines_Products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "Products",
+                        principalColumn: "ProductId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { new Guid("00e648f5-a4d9-422f-b044-6fe4f526bfb9"), "69f054bc-dca7-49bb-aa74-544b57298d8a", "Admin", "ADMIN" },
-                    { new Guid("b1beba1f-5b90-46d9-9a97-da1a40eb663f"), "52c4c433-d06d-45ff-9fab-16c7d8dda835", "Customer", "CUSTOMER" }
+                    { new Guid("7b74f4e2-8c95-4b7b-a17f-56090dc8194e"), "ccf4f579-ec07-43df-aadb-e9c53b5e7426", "Customer", "CUSTOMER" },
+                    { new Guid("81e11fed-e284-42e4-b482-95deadbb531b"), "66111ec8-1b41-41fd-9f6b-803bd37e7d1a", "Admin", "ADMIN" }
                 });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "BirthDate", "ConcurrencyStamp", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { new Guid("6d041502-bc11-4472-9017-f08da35e01eb"), 0, new DateTime(1997, 6, 7, 7, 0, 0, 0, DateTimeKind.Unspecified), "e20cd58a-b553-473d-932d-6d730dd632eb", "frk.eraslan@hotmail.com", false, "Faruk", "Eraslan", false, null, "FRK.ERASLAN@HOTMAIL.COM", "FARUK.ERASLAN", null, "5063347409", false, null, false, "faruk.eraslan" });
+                values: new object[] { new Guid("be6d7479-24a2-41ab-ad84-8a75634cfb0b"), 0, new DateTime(1997, 6, 7, 7, 0, 0, 0, DateTimeKind.Unspecified), "db54094a-d73c-412b-a3d9-56b7f6c4a5c0", "frk.eraslan@hotmail.com", false, "Faruk", "Eraslan", false, null, "FRK.ERASLAN@HOTMAIL.COM", "FARUK.ERASLAN", null, "5063347409", false, null, false, "faruk.eraslan" });
 
             migrationBuilder.InsertData(
                 table: "Categories",
                 columns: new[] { "CategoryId", "CategoryName" },
                 values: new object[,]
                 {
-                    { new Guid("3abbdd23-954f-4ff6-92ca-9a028cda30dc"), "Kişisel Gelişim" },
-                    { new Guid("daba6561-fd7a-40a5-9db4-70b3daa81eab"), "Tarih" },
-                    { new Guid("e2126a84-257b-4823-b5f8-87c08890e858"), "Roman" },
-                    { new Guid("fddde4ed-cd13-4f26-a133-da840746db26"), "Çizgi Roman" },
-                    { new Guid("fe0e4519-7385-4d0a-b311-b4b13a5a1a18"), "Çocuk ve Gençlik" }
+                    { new Guid("4071b253-4ef8-4aa8-ba64-2855ae87b89d"), "Kişisel Gelişim" },
+                    { new Guid("765ac2ba-c962-4744-aecf-96c28ceacb8a"), "Çocuk ve Gençlik" },
+                    { new Guid("b22409a6-2096-4785-a956-63072a71ad81"), "Tarih" },
+                    { new Guid("efb161ec-13ca-4841-8a9a-7f55c3028423"), "Çizgi Roman" },
+                    { new Guid("f4d722c0-60f0-4a07-9fa6-f4f792a9347d"), "Roman" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -263,6 +311,21 @@ namespace BookSeller.DataAccess.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_CartLines_CartId",
+                table: "CartLines",
+                column: "CartId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CartLines_ProductId",
+                table: "CartLines",
+                column: "ProductId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Carts_UserId",
+                table: "Carts",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Products_CategoryId",
                 table: "Products",
                 column: "CategoryId");
@@ -287,10 +350,16 @@ namespace BookSeller.DataAccess.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Products");
+                name: "CartLines");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
+
+            migrationBuilder.DropTable(
+                name: "Carts");
+
+            migrationBuilder.DropTable(
+                name: "Products");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");

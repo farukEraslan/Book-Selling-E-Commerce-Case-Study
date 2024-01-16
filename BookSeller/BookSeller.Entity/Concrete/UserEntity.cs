@@ -1,6 +1,4 @@
-﻿using BookSeller.Business.Concrete;
-
-namespace BookSeller.Entity.Concrete
+﻿namespace BookSeller.Entity.Concrete
 {
     public class UserEntity : IdentityUser<Guid>, IEntity
     {

@@ -21,3 +21,4 @@ global using BookSeller.Entity.DTO.Order;
 global using Newtonsoft.Json;
 global using BookSeller.WebAPI.Extensions;
 global using BookSeller.WebAPI.Helpers.Concrete;
+global using AutoMapper;

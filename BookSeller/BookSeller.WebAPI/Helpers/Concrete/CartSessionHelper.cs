@@ -2,11 +2,13 @@
 {
     public class CartSessionHelper : ICartSessionHelper
     {
-        IHttpContextAccessor _httpContextAccessor;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IUserService _userService;
 
-        public CartSessionHelper(IHttpContextAccessor httpContextAccessor)
+        public CartSessionHelper(IHttpContextAccessor httpContextAccessor, IUserService userService)
         {
             _httpContextAccessor = httpContextAccessor;
+            _userService = userService;
         }
 
         public void Clear()
@@ -14,18 +16,27 @@
             _httpContextAccessor.HttpContext.Session.Clear();
         }
 
-        public CartDTO GetCart(string key)
+        public async Task<CartDomainModel> GetCart(string key)
         {
-            var cartToCheck = _httpContextAccessor.HttpContext.Session.GetObject<CartDTO>(key);
+            var cartToCheck = _httpContextAccessor.HttpContext.Session.GetObject<CartDomainModel>(key);
             if (cartToCheck == null)
             {
-                SetCart(key, new CartDTO());
-                cartToCheck = _httpContextAccessor.HttpContext.Session.GetObject<CartDTO>(key);
+                SetCart(key, new CartDomainModel());
+                cartToCheck = _httpContextAccessor.HttpContext.Session.GetObject<CartDomainModel>(key);
+                cartToCheck.CartId = Guid.NewGuid();
+                cartToCheck.UserId = (await _userService.GetByNameAsync(_httpContextAccessor.HttpContext.User.Identity.Name)).Id;
+                cartToCheck.IsApproved = false;
             }
+
+            foreach (var cartLine in cartToCheck.CartLines)
+            {
+                cartLine.CartId = cartToCheck.CartId;
+            }
+
             return cartToCheck;
         }
 
-        public void SetCart(string key, CartDTO cart)
+        public void SetCart(string key, CartDomainModel cart)
         {
             _httpContextAccessor.HttpContext.Session.SetObject(key, cart);
         }

@@ -70,7 +70,7 @@
         }
 
         [HttpPost]
-        [Authorize("Admin")]
+        //[Authorize("Admin")]
         public async Task<IActionResult> AddToRoleAsync(Guid userId, string roleName)
         {
             var result = await _userService.AddToRoleAsync(userId, roleName);

@@ -7,6 +7,7 @@ namespace BookSeller.Business.DependencyInjections
         public static IServiceCollection AddBusinessServices(this IServiceCollection services)
         {
             services.AddScoped<ICartService, CartManager>();
+            services.AddScoped<ICartLineService, CartLineManager>();
             services.AddScoped<ICategoryService, CategoryManager>();
             services.AddScoped<IProductService, ProductManager>();
             services.AddScoped<IUserService, UserEntityManager>();

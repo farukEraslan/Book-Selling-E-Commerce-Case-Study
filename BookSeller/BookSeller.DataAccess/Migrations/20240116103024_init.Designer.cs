@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookSeller.DataAccess.Migrations
 {
     [DbContext(typeof(BookSellerDbContext))]
-    [Migration("20240114214116_init")]
+    [Migration("20240116103024_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -24,6 +24,60 @@ namespace BookSeller.DataAccess.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("BookSeller.Entity.Concrete.Cart", b =>
+                {
+                    b.Property<Guid>("CartId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("CartTotalPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<bool>("IsApproved")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("CartId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Carts");
+                });
+
+            modelBuilder.Entity("BookSeller.Entity.Concrete.CartLine", b =>
+                {
+                    b.Property<Guid>("CartLineId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CartId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("CartLinePrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Quantity")
+                        .HasMaxLength(10)
+                        .HasColumnType("int");
+
+                    b.HasKey("CartLineId");
+
+                    b.HasIndex("CartId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("CartLines");
+                });
 
             modelBuilder.Entity("BookSeller.Entity.Concrete.Category", b =>
                 {
@@ -43,27 +97,27 @@ namespace BookSeller.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            CategoryId = new Guid("e2126a84-257b-4823-b5f8-87c08890e858"),
+                            CategoryId = new Guid("f4d722c0-60f0-4a07-9fa6-f4f792a9347d"),
                             CategoryName = "Roman"
                         },
                         new
                         {
-                            CategoryId = new Guid("3abbdd23-954f-4ff6-92ca-9a028cda30dc"),
+                            CategoryId = new Guid("4071b253-4ef8-4aa8-ba64-2855ae87b89d"),
                             CategoryName = "Kişisel Gelişim"
                         },
                         new
                         {
-                            CategoryId = new Guid("fe0e4519-7385-4d0a-b311-b4b13a5a1a18"),
+                            CategoryId = new Guid("765ac2ba-c962-4744-aecf-96c28ceacb8a"),
                             CategoryName = "Çocuk ve Gençlik"
                         },
                         new
                         {
-                            CategoryId = new Guid("daba6561-fd7a-40a5-9db4-70b3daa81eab"),
+                            CategoryId = new Guid("b22409a6-2096-4785-a956-63072a71ad81"),
                             CategoryName = "Tarih"
                         },
                         new
                         {
-                            CategoryId = new Guid("fddde4ed-cd13-4f26-a133-da840746db26"),
+                            CategoryId = new Guid("efb161ec-13ca-4841-8a9a-7f55c3028423"),
                             CategoryName = "Çizgi Roman"
                         });
                 });
@@ -138,15 +192,15 @@ namespace BookSeller.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("00e648f5-a4d9-422f-b044-6fe4f526bfb9"),
-                            ConcurrencyStamp = "69f054bc-dca7-49bb-aa74-544b57298d8a",
+                            Id = new Guid("81e11fed-e284-42e4-b482-95deadbb531b"),
+                            ConcurrencyStamp = "66111ec8-1b41-41fd-9f6b-803bd37e7d1a",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = new Guid("b1beba1f-5b90-46d9-9a97-da1a40eb663f"),
-                            ConcurrencyStamp = "52c4c433-d06d-45ff-9fab-16c7d8dda835",
+                            Id = new Guid("7b74f4e2-8c95-4b7b-a17f-56090dc8194e"),
+                            ConcurrencyStamp = "ccf4f579-ec07-43df-aadb-e9c53b5e7426",
                             Name = "Customer",
                             NormalizedName = "CUSTOMER"
                         });
@@ -233,10 +287,10 @@ namespace BookSeller.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("6d041502-bc11-4472-9017-f08da35e01eb"),
+                            Id = new Guid("be6d7479-24a2-41ab-ad84-8a75634cfb0b"),
                             AccessFailedCount = 0,
                             BirthDate = new DateTime(1997, 6, 7, 7, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "e20cd58a-b553-473d-932d-6d730dd632eb",
+                            ConcurrencyStamp = "db54094a-d73c-412b-a3d9-56b7f6c4a5c0",
                             Email = "frk.eraslan@hotmail.com",
                             EmailConfirmed = false,
                             FirstName = "Faruk",
@@ -354,6 +408,36 @@ namespace BookSeller.DataAccess.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("BookSeller.Entity.Concrete.Cart", b =>
+                {
+                    b.HasOne("BookSeller.Entity.Concrete.UserEntity", "User")
+                        .WithMany("Carts")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("BookSeller.Entity.Concrete.CartLine", b =>
+                {
+                    b.HasOne("BookSeller.Entity.Concrete.Cart", "Cart")
+                        .WithMany("CartLines")
+                        .HasForeignKey("CartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BookSeller.Entity.Concrete.Product", "Product")
+                        .WithMany("Cartlines")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cart");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("BookSeller.Entity.Concrete.Product", b =>
                 {
                     b.HasOne("BookSeller.Entity.Concrete.Category", "Category")
@@ -416,9 +500,24 @@ namespace BookSeller.DataAccess.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("BookSeller.Entity.Concrete.Cart", b =>
+                {
+                    b.Navigation("CartLines");
+                });
+
             modelBuilder.Entity("BookSeller.Entity.Concrete.Category", b =>
                 {
                     b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("BookSeller.Entity.Concrete.Product", b =>
+                {
+                    b.Navigation("Cartlines");
+                });
+
+            modelBuilder.Entity("BookSeller.Entity.Concrete.UserEntity", b =>
+                {
+                    b.Navigation("Carts");
                 });
 #pragma warning restore 612, 618
         }

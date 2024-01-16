@@ -1,26 +1,19 @@
 ﻿namespace BookSeller.Entity.DTO.Order
 {
-    public class CartDTO : IDomainModel
+    public class CartDTO : IDto
     {
         public CartDTO()
         {
             CartLines = new List<CartLineDTO>();
         }
-
         public List<CartLineDTO> CartLines { get; set; }
+
+        public Guid CartId { get; set; }
         public Guid UserId { get; set; }
+
         public string Address { get; set; }
-        public decimal CartTotalPrice
-        {
-            get
-            {
-                decimal cartTotalPrice = 0;
-                foreach (CartLineDTO cartLine in CartLines)
-                {
-                    cartTotalPrice += cartLine.CartLinePrice;
-                }
-                return cartTotalPrice;
-            }
-        }
+        public bool IsApproved { get; set; }
+        public decimal CartTotalPrice { get; set; }
+
     }
 }

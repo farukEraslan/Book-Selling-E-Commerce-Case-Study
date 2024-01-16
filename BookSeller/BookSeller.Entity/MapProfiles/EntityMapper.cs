@@ -1,4 +1,6 @@
-﻿namespace BookSeller.Entity.MapProfiles
+﻿using BookSeller.Entity.DTO.Order;
+
+namespace BookSeller.Entity.MapProfiles
 {
     public class EntityMapper : Profile
     {
@@ -21,6 +23,14 @@
             
             // Role
             CreateMap<RoleDTO, RoleEntity>().ReverseMap();
+
+            // CartLine
+            CreateMap<CartLineDTO, CartLine>().ReverseMap();
+            CreateMap<CartLineDomainModel, CartLineDTO>().ReverseMap();
+
+            // Cart
+            CreateMap<CartDTO, Cart>().ReverseMap();
+            CreateMap<CartDomainModel, CartDTO>().ReverseMap();
         }
     }
 }

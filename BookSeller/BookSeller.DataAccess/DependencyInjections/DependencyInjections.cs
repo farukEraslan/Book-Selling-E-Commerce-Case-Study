@@ -6,6 +6,8 @@
         {
             services.AddScoped<ICategoryDAL, EFCategoryDAL>();
             services.AddScoped<IProductDAL, EFProductDAL>();
+            services.AddScoped<ICartDAL, EFCartDAL>();
+            services.AddScoped<ICartLineDAL, EFCartLineDAL>();
             return services;
         }
     }

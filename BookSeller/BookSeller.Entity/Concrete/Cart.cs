@@ -1,4 +1,4 @@
-﻿namespace BookSeller.Business.Concrete
+﻿namespace BookSeller.Entity.Concrete
 {
     public class Cart : IEntity
     {
@@ -16,7 +16,8 @@
 
         public string Address { get; set; }
         public decimal CartTotalPrice { get; set; }
-        
+        public bool IsApproved { get; set; }
+
         public List<CartLine> CartLines { get; set; }
     }
 }

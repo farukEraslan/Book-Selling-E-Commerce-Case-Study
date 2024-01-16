@@ -7,19 +7,28 @@
         private readonly ICartService _cartService;
         private readonly IProductService _productService;
         private readonly ICartSessionHelper _cartSessionHelper;
+        private readonly ICartLineService _cartLineService;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IUserService _userService;
+        private readonly IMapper _mapper;
 
-        public OrderController(ICartService cartService, IProductService productService, ICartSessionHelper cartSessionHelper)
+        public OrderController(ICartService cartService, IProductService productService, ICartSessionHelper cartSessionHelper, ICartLineService cartLineService, IHttpContextAccessor httpContextAccessor, IUserService userService, IMapper mapper)
         {
             _cartService = cartService;
             _productService = productService;
             _cartSessionHelper = cartSessionHelper;
+            _cartLineService = cartLineService;
+            _httpContextAccessor = httpContextAccessor;
+            _userService = userService;
+            _mapper = mapper;
         }
 
         [HttpPost]
-        public IActionResult Create(Guid productId)
+        [Authorize("Customer")]
+        public async Task<IActionResult> CreateToCart(Guid productId)
         {
             var product = _productService.GetById(productId);
-            var cart = _cartSessionHelper.GetCart("cart");
+            var cart = await _cartSessionHelper.GetCart("cart");
             var result = _cartService.AddToCart(cart, product);
 
             _cartSessionHelper.SetCart("cart", cart);
@@ -32,10 +41,11 @@
         }
 
         [HttpDelete]
-        public IActionResult Delete(Guid productId)
+        [Authorize("Customer")]
+        public async Task<IActionResult> DeleteFromCart(Guid productId)
         {
             var product = _productService.GetById(productId);
-            var cart = _cartSessionHelper.GetCart("cart");
+            var cart = await _cartSessionHelper.GetCart("cart");
             _cartService.RemoveFromCart(cart, productId);
 
             _cartSessionHelper.SetCart("cart", cart);
@@ -44,13 +54,37 @@
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        [Authorize("Customer")]
+        public async Task<IActionResult> GetAllFromCart()
         {
-            var model = new CartListDTO()
+            var model = new CartListDomainModel()
             {
-                Cart = _cartSessionHelper.GetCart("cart")
+                Cart = await _cartSessionHelper.GetCart("cart")
             };
             return Ok(model);
+        }
+
+        [HttpPost]
+        [Authorize("Customer")]
+        public async Task<IActionResult> GiveOrder(string city, string town, string street, string propertyNo, string postalCode)
+        {
+            var cart = await _cartSessionHelper.GetCart("cart");
+            cart.Address = $"{street} mah. No:{propertyNo} {town}/{city} {postalCode}";
+            _cartService.AddToDatabase(_mapper.Map<CartDTO>(cart));
+            foreach (var cartLine in cart.CartLines)
+            {
+                _cartLineService.AddLine(_mapper.Map<CartLineDTO>(cartLine));
+            }
+
+            _cartSessionHelper.Clear();
+            return Ok();
+        }
+
+        [HttpPost]
+        [Authorize("Admin")]
+        public async Task<IActionResult> GetOrders()
+        {
+            return Ok(_cartService.GetCarts());
         }
     }
 }

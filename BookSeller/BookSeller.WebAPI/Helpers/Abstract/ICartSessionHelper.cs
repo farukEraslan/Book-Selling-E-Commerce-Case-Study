@@ -2,8 +2,8 @@
 {
     public interface ICartSessionHelper
     {
-        CartDTO GetCart(string key);
-        void SetCart(string key, CartDTO cart);
+        Task<CartDomainModel> GetCart(string key);
+        void SetCart(string key, CartDomainModel cart);
         void Clear();
     }
 }
