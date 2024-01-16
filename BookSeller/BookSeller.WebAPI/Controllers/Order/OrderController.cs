@@ -8,18 +8,14 @@
         private readonly IProductService _productService;
         private readonly ICartSessionHelper _cartSessionHelper;
         private readonly ICartLineService _cartLineService;
-        private readonly IHttpContextAccessor _httpContextAccessor;
-        private readonly IUserService _userService;
         private readonly IMapper _mapper;
 
-        public OrderController(ICartService cartService, IProductService productService, ICartSessionHelper cartSessionHelper, ICartLineService cartLineService, IHttpContextAccessor httpContextAccessor, IUserService userService, IMapper mapper)
+        public OrderController(ICartService cartService, IProductService productService, ICartSessionHelper cartSessionHelper, ICartLineService cartLineService, IMapper mapper)
         {
             _cartService = cartService;
             _productService = productService;
             _cartSessionHelper = cartSessionHelper;
             _cartLineService = cartLineService;
-            _httpContextAccessor = httpContextAccessor;
-            _userService = userService;
             _mapper = mapper;
         }
 
@@ -80,11 +76,24 @@
             return Ok();
         }
 
-        [HttpPost]
+        [HttpGet]
         [Authorize("Admin")]
         public async Task<IActionResult> GetOrders()
         {
             return Ok(_cartService.GetCarts());
         }
+
+        [HttpPost]
+        [Authorize("Admin")]
+        public async Task<IActionResult> ApproveOrder(Guid cartId)
+        {
+            var cart = _cartService.GetById(cartId);
+            cart.IsApproved = true;
+            _cartService.Update(cart);
+            // Sipariş onay maili burada atılacak.
+            return Ok("Sipariş Onaylandı.");
+        }
+
+
     }
 }

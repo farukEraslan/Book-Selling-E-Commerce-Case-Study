@@ -53,5 +53,18 @@
         {
             return _mapper.Map<List<CartDTO>>(_cartDAL.GetAll());
         }
+
+        public CartDTO GetById(Guid cartId)
+        {
+            return _mapper.Map<CartDTO>(_cartDAL.GetById(x=>x.CartId == cartId));
+        }
+
+        public void Update(CartDTO cart)
+        {
+            var updatedCart = _cartDAL.GetById(x=>x.CartId == cart.CartId);
+            _cartDAL.Update(_mapper.Map(cart, updatedCart));
+        }
+
+
     }
 }
