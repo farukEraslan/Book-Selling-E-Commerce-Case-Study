@@ -17,9 +17,9 @@
             var result = await _userService.AddAsync(userCreateDTO);
 
             if (result.IsSuccess) 
-                return Ok(result.IsSuccess);
+                return Ok(result.Message);
             else 
-                return BadRequest(result.IsSuccess);
+                return BadRequest(result.Message);
         }
 
         [HttpPut]
@@ -28,7 +28,7 @@
             var result = await _userService.UpdateAsync(userUpdateDTO);
 
             if (result.IsSuccess)
-                return Ok();
+                return Ok(result.Message);
             else
                 return BadRequest(result.Message);
         }
@@ -40,7 +40,7 @@
             var result = await _userService.DeleteAsync(userId);
 
             if (result.IsSuccess)
-                return Ok();
+                return Ok(result.Message);
             else
                 return BadRequest(result.Message);
         }
@@ -54,7 +54,7 @@
             if (users is not null)
                 return Ok(users);
             else
-                return BadRequest();
+                return BadRequest(users.Message);
         }
 
         [HttpGet]
@@ -66,7 +66,7 @@
             if (user is not null)
                 return Ok(user);
             else
-                return BadRequest();
+                return BadRequest(user.Message);
         }
 
         [HttpPost]
@@ -76,7 +76,7 @@
             var result = await _userService.AddToRoleAsync(userId, roleName);
 
             if (result.IsSuccess)
-                return Ok();
+                return Ok(result.Message);
             else
                 return BadRequest(result.Message);
         }

@@ -64,7 +64,7 @@
             return _mapper.Map<UserDTO>(await _userManager.FindByNameAsync(userName));
         }
 
-        public Result GetAll(int pageNumber, int pageSize)
+        public DataResult<List<UserDTO>> GetAll(int pageNumber, int pageSize)
         {
             return new SuccessDataResult<List<UserDTO>>(_userManager.Users
                    .Skip((pageNumber - 1) * pageSize)
@@ -73,7 +73,7 @@
                    .ToList(), Messages.FoundSuccess);
         }
 
-        public Result GetAll(Expression<Func<UserEntity, bool>> expression, int pageNumber, int pageSize)
+        public DataResult<List<UserDTO>> GetAll(Expression<Func<UserEntity, bool>> expression, int pageNumber, int pageSize)
         {
             return new SuccessDataResult<List<UserDTO>>(_userManager.Users.Where(expression)
                 .Skip((pageNumber - 1) * pageSize)
