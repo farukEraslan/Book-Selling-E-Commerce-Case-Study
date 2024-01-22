@@ -11,34 +11,60 @@
             _mapper = mapper;
         }
 
-        public void Add(ProductCreateDTO productCreateDTO)
+        public Result Add(ProductCreateDTO productCreateDTO)
         {
+            var hasProduct = _productDAL.GetById(product => product.ISBN == productCreateDTO.ISBN);
+            if (hasProduct != null)
+                return new ErrorResult(Messages.AddFailAlreadyExists);
+
             _productDAL.Add(_mapper.Map<Product>(productCreateDTO));
+            return new SuccessResult(Messages.AddSuccess);
         }
 
-        public void Update(ProductUpdateDTO productUpdateDTO)
+        public Result Update(ProductUpdateDTO productUpdateDTO)
         {
+            var hasProduct = _productDAL.GetById(product => product.ProductId == productUpdateDTO.ProductId);
+            if (hasProduct == null) 
+                return new ErrorResult(Messages.NotFound);
+
+            if (productUpdateDTO.ISBN == hasProduct.ISBN)
+                return new ErrorResult(Messages.UpdateFailExist);
+
             _productDAL.Update(_mapper.Map<Product>(productUpdateDTO));
+            return new SuccessResult(Messages.UpdateSuccess);
         }
 
-        public void Delete(ProductDTO productDTO)
+        public Result Delete(ProductDTO productDTO)
         {
+            var hasProduct = _productDAL.GetById(product => product.ProductId == productDTO.ProductId);
+            if (hasProduct == null)
+                return new ErrorResult(Messages.NotFound);
+
             _productDAL.Delete(_mapper.Map<Product>(productDTO));
+            return new SuccessResult(Messages.DeleteSuccess);
         }
 
-        public List<ProductDTO> GetAll()
+        public DataResult<List<ProductDTO>> GetAll(int pageNumber, int pageSize)
         {
-            return _mapper.Map<List<ProductDTO>>(_productDAL.GetAll());
+            return new SuccessDataResult<List<ProductDTO>>(_productDAL.GetAll()
+                   .Skip((pageNumber - 1) * pageSize)
+                   .Take(pageSize)
+                   .Select(product => _mapper.Map<ProductDTO>(product))
+                   .ToList(), Messages.ListedSuccess);
         }
 
-        public List<ProductDTO> GetAll(Expression<Func<Product, bool>> expression)
+        public DataResult<List<ProductDTO>> GetAll(Expression<Func<Product, bool>> expression, int pageNumber, int pageSize)
         {
-            return _mapper.Map<List<ProductDTO>>(_productDAL.GetAll(expression));
+            return new SuccessDataResult<List<ProductDTO>>(_productDAL.GetAll(expression)
+                            .Skip((pageNumber - 1) * pageSize)
+                            .Take(pageSize)
+                            .Select(product => _mapper.Map<ProductDTO>(product))
+                            .ToList(), Messages.ListedSuccess);
         }
 
-        public ProductDTO GetById(Guid productId)
+        public DataResult<ProductDTO> GetById(Guid productId)
         {
-            return _mapper.Map<ProductDTO>(_productDAL.GetById(p => p.ProductId == productId));
+            return new SuccessDataResult<ProductDTO>(_mapper.Map<ProductDTO>(_productDAL.GetById(p => p.ProductId == productId)), Messages.ListedSuccess);
         }
     }
 }

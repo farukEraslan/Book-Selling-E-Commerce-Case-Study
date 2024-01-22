@@ -70,7 +70,7 @@
                    .Skip((pageNumber - 1) * pageSize)
                    .Take(pageSize)
                    .Select(user => _mapper.Map<UserDTO>(user))
-                   .ToList(), Messages.FoundSuccess);
+                   .ToList(), Messages.ListedSuccess);
         }
 
         public DataResult<List<UserDTO>> GetAll(Expression<Func<UserEntity, bool>> expression, int pageNumber, int pageSize)
@@ -79,7 +79,7 @@
                 .Skip((pageNumber - 1) * pageSize)
                 .Take(pageSize)
                 .Select(user => _mapper.Map<UserDTO>(user))
-                .ToList(), Messages.FoundSuccess);
+                .ToList(), Messages.ListedSuccess);
         }
 
         public async Task<Result> AddToRoleAsync(Guid userId, string roleName)

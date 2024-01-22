@@ -13,7 +13,7 @@ namespace BookSeller.Entity.MapProfiles
             
             // Product
             CreateMap<ProductCreateDTO, Product>();
-            CreateMap<ProductUpdateDTO, Product>();
+            CreateMap<ProductUpdateDTO, Product>().ReverseMap();
             CreateMap<ProductDTO, Product>().ReverseMap();
             
             // User

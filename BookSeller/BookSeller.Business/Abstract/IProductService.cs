@@ -2,11 +2,11 @@
 {
     public interface IProductService
     {
-        void Add(ProductCreateDTO productDTO);
-        void Update(ProductUpdateDTO productUpdateDTO);
-        void Delete(ProductDTO productDTO);
-        ProductDTO GetById(Guid productId);
-        List<ProductDTO> GetAll();
-        List<ProductDTO> GetAll(Expression<Func<Product, bool>> expression);
+        Result Add(ProductCreateDTO productDTO);
+        Result Update(ProductUpdateDTO productUpdateDTO);
+        Result Delete(ProductDTO productDTO);
+        DataResult<ProductDTO> GetById(Guid productId);
+        DataResult<List<ProductDTO>> GetAll(int pageNumber, int pageSize);
+        DataResult<List<ProductDTO>> GetAll(Expression<Func<Product, bool>> expression, int pageNumber, int pageSize);
     }
 }

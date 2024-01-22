@@ -15,7 +15,7 @@
 
         public bool AddToCart(CartDomainModel cart, ProductDTO product)
         {
-            var productQuantity = _productService.GetById(product.ProductId).Quantity;
+            var productQuantity = _productService.GetById(product.ProductId).Data.Quantity;
 
             var cartLine = cart.CartLines.FirstOrDefault(c => c.Product.ProductId == product.ProductId);
             if (cartLine != null && cartLine.Quantity < 10)

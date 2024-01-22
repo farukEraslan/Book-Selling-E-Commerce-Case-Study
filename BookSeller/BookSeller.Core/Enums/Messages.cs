@@ -5,6 +5,7 @@
         public const string AddSuccess = "Add_Success";
         public const string UpdateSuccess = "Update_Success";
         public const string UpdateFail = "Update_Fail";
+        public const string UpdateFailExist = "Update_Fail_Already_Exist";
         public const string AddFail = "Add_Fail";
         public const string AddFailAlreadyExists = "Add_Fail_Already_Exists";
         public const string UserNotFound = "User_Not_Found";

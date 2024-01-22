@@ -12,39 +12,56 @@
         }
 
         [HttpPost]
-        [Authorize("admin")]
+        [Authorize("Admin")]
         public async Task<IActionResult> Create(ProductCreateDTO productCreateDTO)
         {
-            _productService.Add(productCreateDTO);
-            return Ok();
+            var result = _productService.Add(productCreateDTO);
+            if (result.IsSuccess)
+                return Ok(result.Message);
+            else
+                return BadRequest(result.Message);
         }
 
         [HttpPut]
-        [Authorize("admin")]
+        [Authorize("Admin")]
         public async Task<IActionResult> Update(ProductUpdateDTO productUpdateDTO)
         {
-            _productService.Update(productUpdateDTO);
-            return Ok();
+            var result = _productService.Update(productUpdateDTO);
+            if (result.IsSuccess)
+                return Ok(result.Message);
+            else
+                return BadRequest(result.Message);
         }
 
         [HttpDelete]
-        [Authorize("admin")]
+        [Authorize("Admin")]
         public async Task<IActionResult> Delete(ProductDTO productDTO)
         {
-            _productService.Delete(productDTO);
-            return Ok();
+            var result = _productService.Delete(productDTO);
+            if (result.IsSuccess)
+                return Ok(result.Message);
+            else
+                return BadRequest(result.Message);
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll(int pageNumber, int pageSize)
         {
-            return Ok(_productService.GetAll());
+            var result = _productService.GetAll(pageNumber, pageSize);
+            if (result.IsSuccess)
+                return Ok(result);
+            else
+                return BadRequest(result.Message);
         }
 
         [HttpGet]
         public async Task<IActionResult> GetById(Guid productId)
         {
-            return Ok(_productService.GetById(productId));
+            var result = _productService.GetById(productId);
+            if (result.IsSuccess)
+                return Ok(result);
+            else
+                return BadRequest(result.Message);
         }
     }
 }
