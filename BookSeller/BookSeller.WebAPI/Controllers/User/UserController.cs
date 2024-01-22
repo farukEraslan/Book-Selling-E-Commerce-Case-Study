@@ -16,10 +16,10 @@
         {
             var result = await _userService.AddAsync(userCreateDTO);
 
-            if (result.Succeeded) 
-                return Ok();
+            if (result.IsSuccess) 
+                return Ok(result.IsSuccess);
             else 
-                return BadRequest(result.Errors);
+                return BadRequest(result.IsSuccess);
         }
 
         [HttpPut]
@@ -27,26 +27,26 @@
         {
             var result = await _userService.UpdateAsync(userUpdateDTO);
 
-            if (result.Succeeded)
+            if (result.IsSuccess)
                 return Ok();
             else
-                return BadRequest(result.Errors);
+                return BadRequest(result.Message);
         }
 
         [HttpDelete]
-        [Authorize("admin")]
+        [Authorize("Admin")]
         public async Task<IActionResult> Delete(Guid userId)
         {
             var result = await _userService.DeleteAsync(userId);
 
-            if (result.Succeeded)
+            if (result.IsSuccess)
                 return Ok();
             else
-                return BadRequest(result.Errors);
+                return BadRequest(result.Message);
         }
 
         [HttpGet]
-        [Authorize("admin")]
+        [Authorize("Admin")]
         public async Task<IActionResult> GetAll(int pageNumber, int pageSize)
         {
             var users = _userService.GetAll(pageNumber, pageSize);
@@ -58,7 +58,7 @@
         }
 
         [HttpGet]
-        [Authorize("admin")]
+        [Authorize("Admin")]
         public async Task<IActionResult> GetById(Guid userId)
         {
             var user = await _userService.GetByIdAsync(userId);
@@ -70,15 +70,15 @@
         }
 
         [HttpPost]
-        [Authorize("admin")]
+        [Authorize("Admin")]
         public async Task<IActionResult> AddToRoleAsync(Guid userId, string roleName)
         {
             var result = await _userService.AddToRoleAsync(userId, roleName);
 
-            if (result.Succeeded)
+            if (result.IsSuccess)
                 return Ok();
             else
-                return BadRequest(result.Errors);
+                return BadRequest(result.Message);
         }
     }
 }

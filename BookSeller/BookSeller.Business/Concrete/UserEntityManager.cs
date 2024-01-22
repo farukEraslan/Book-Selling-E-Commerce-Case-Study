@@ -11,28 +11,52 @@
             _mapper = mapper;
         }
 
-        public async Task<IdentityResult> AddAsync(UserCreateDTO entity)
+        public async Task<Result> AddAsync(UserCreateDTO entity)
         {
+            var hasUser = await _userManager.FindByEmailAsync(entity.Email);
+            if (hasUser != null)
+                return new ErrorResult(Messages.UserExist);
+
             var result = await _userManager.CreateAsync(_mapper.Map<UserEntity>(entity), entity.Password);
-            return result;
+            if (result.Succeeded)
+                return new SuccessResult(Messages.AddSuccess);
+            else
+                return new ErrorResult(Messages.AddFail);
         }
 
-        public async Task<IdentityResult> UpdateAsync(UserUpdateDTO entity)
+        public async Task<Result> UpdateAsync(UserUpdateDTO entity)
         {
             var user = await _userManager.FindByIdAsync(entity.Id);
+            if (user == null)
+                return new ErrorResult(Messages.UserNotFound);
+
             var result = await _userManager.UpdateAsync(_mapper.Map(entity, user));
-            return result;
+            if (result.Succeeded)
+                return new SuccessResult(Messages.UpdateSuccess);
+            else
+                return new ErrorResult(Messages.UpdateFail);
         }
 
-        public async Task<IdentityResult> DeleteAsync(Guid userId)
+        public async Task<Result> DeleteAsync(Guid userId)
         {
-            var result = await _userManager.DeleteAsync(await _userManager.FindByIdAsync(userId.ToString()));
-            return result;
+            var user = await _userManager.FindByIdAsync(userId.ToString());
+            if (user == null)
+                return new ErrorResult(Messages.UserNotFound);
+
+            var result = await _userManager.DeleteAsync(user);
+            if (result.Succeeded)
+                return new SuccessResult(Messages.DeleteSuccess);
+            else
+                return new ErrorResult(Messages.DeleteFail);
         }
 
-        public async Task<UserDTO> GetByIdAsync(Guid userId)
+        public async Task<DataResult<UserDTO>> GetByIdAsync(Guid userId)
         {
-            return _mapper.Map<UserDTO>(await _userManager.FindByIdAsync(userId.ToString()));
+            var user = await _userManager.FindByIdAsync(userId.ToString());
+            if (user == null)
+                return new ErrorDataResult<UserDTO>(Messages.UserNotFound);
+
+            return new SuccessDataResult<UserDTO>(_mapper.Map<UserDTO>(user), Messages.FoundSuccess);
         }
 
         public async Task<UserDTO> GetByNameAsync(string userName)
@@ -40,29 +64,32 @@
             return _mapper.Map<UserDTO>(await _userManager.FindByNameAsync(userName));
         }
 
-        public List<UserDTO> GetAll(int pageNumber, int pageSize)
+        public Result GetAll(int pageNumber, int pageSize)
         {
-            return _userManager.Users
+            return new SuccessDataResult<List<UserDTO>>(_userManager.Users
                    .Skip((pageNumber - 1) * pageSize)
                    .Take(pageSize)
                    .Select(user => _mapper.Map<UserDTO>(user))
-                   .ToList();
+                   .ToList(), Messages.FoundSuccess);
         }
 
-        public List<UserDTO> GetAll(Expression<Func<UserEntity, bool>> expression, int pageNumber, int pageSize)
+        public Result GetAll(Expression<Func<UserEntity, bool>> expression, int pageNumber, int pageSize)
         {
-            return _userManager.Users.Where(expression)
+            return new SuccessDataResult<List<UserDTO>>(_userManager.Users.Where(expression)
                 .Skip((pageNumber - 1) * pageSize)
                 .Take(pageSize)
                 .Select(user => _mapper.Map<UserDTO>(user))
-                .ToList();
+                .ToList(), Messages.FoundSuccess);
         }
 
-        public async Task<IdentityResult> AddToRoleAsync(Guid userId, string roleName)
+        public async Task<Result> AddToRoleAsync(Guid userId, string roleName)
         {
             var user = await _userManager.FindByIdAsync(userId.ToString());
-            var result = await _userManager.AddToRoleAsync(user, roleName.ToLower());
-            return result;
+            var result = await _userManager.AddToRoleAsync(user, roleName);
+            if (result.Succeeded)
+                return new SuccessResult(Messages.AddSuccess);
+            else
+                return new ErrorResult(Messages.AddFail);
         }
     }
 }

@@ -8,5 +8,6 @@
         List<CartDTO> GetCarts();
         CartDTO GetById(Guid cartId);
         void Update(CartDTO cart);
+        string SendEmail(string customerEmail, string orderId);
     }
 }

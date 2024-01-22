@@ -2,14 +2,14 @@
 {
     public interface IUserService
     {
-        Task<IdentityResult> AddAsync(UserCreateDTO entity);
-        Task<IdentityResult> UpdateAsync(UserUpdateDTO entity);
-        Task<IdentityResult> DeleteAsync(Guid userId);
-        Task<UserDTO> GetByIdAsync(Guid userId);
+        Task<Result> AddAsync(UserCreateDTO entity);
+        Task<Result> UpdateAsync(UserUpdateDTO entity);
+        Task<Result> DeleteAsync(Guid userId);
+        Task<DataResult<UserDTO>> GetByIdAsync(Guid userId);
         Task<UserDTO> GetByNameAsync(string userName);
-        List<UserDTO> GetAll(int pageNumber, int pageSize);
-        List<UserDTO> GetAll(Expression<Func<UserEntity, bool>> expression, int pageNumber, int pageSize);
-        Task<IdentityResult> AddToRoleAsync(Guid userId, string roleName);
+        Result GetAll(int pageNumber, int pageSize);
+        Result GetAll(Expression<Func<UserEntity, bool>> expression, int pageNumber, int pageSize);
+        Task<Result> AddToRoleAsync(Guid userId, string roleName);
 
     }
 }

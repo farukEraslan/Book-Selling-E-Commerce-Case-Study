@@ -8,19 +8,21 @@
         private readonly IProductService _productService;
         private readonly ICartSessionHelper _cartSessionHelper;
         private readonly ICartLineService _cartLineService;
+        private readonly IUserService _userService;
         private readonly IMapper _mapper;
 
-        public OrderController(ICartService cartService, IProductService productService, ICartSessionHelper cartSessionHelper, ICartLineService cartLineService, IMapper mapper)
+        public OrderController(ICartService cartService, IProductService productService, ICartSessionHelper cartSessionHelper, ICartLineService cartLineService, IMapper mapper, IUserService userService)
         {
             _cartService = cartService;
             _productService = productService;
             _cartSessionHelper = cartSessionHelper;
             _cartLineService = cartLineService;
             _mapper = mapper;
+            _userService = userService;
         }
 
         [HttpPost]
-        //[Authorize("customer")]
+        [Authorize("Customer")]
         public async Task<IActionResult> CreateToCart(Guid productId)
         {
             var product = _productService.GetById(productId);
@@ -37,7 +39,7 @@
         }
 
         [HttpDelete]
-        [Authorize("customer")]
+        [Authorize("Customer")]
         public async Task<IActionResult> DeleteFromCart(Guid productId)
         {
             var product = _productService.GetById(productId);
@@ -50,7 +52,7 @@
         }
 
         [HttpGet]
-        //[Authorize("customer")]
+        [Authorize("Customer")]
         public async Task<IActionResult> GetAllFromCart()
         {
             var model = new CartListDomainModel()
@@ -61,7 +63,7 @@
         }
 
         [HttpPost]
-        [Authorize("customer")]
+        [Authorize("Customer")]
         public async Task<IActionResult> GiveOrder(string city, string town, string street, string propertyNo, string postalCode)
         {
             var cart = await _cartSessionHelper.GetCart("cart");
@@ -77,23 +79,24 @@
         }
 
         [HttpGet]
-        [Authorize("admin")]
+        [Authorize("Admin")]
         public async Task<IActionResult> GetOrders()
         {
             return Ok(_cartService.GetCarts());
         }
 
         [HttpPost]
-        [Authorize("admin")]
+        [Authorize("Admin")]
         public async Task<IActionResult> ApproveOrder(Guid cartId)
         {
             var cart = _cartService.GetById(cartId);
+
+            var user = await _userService.GetByIdAsync(cart.UserId);
+            var result = _cartService.SendEmail(user.Data.Email, cartId.ToString());
+
             cart.IsApproved = true;
             _cartService.Update(cart);
-            // Sipariş onay maili burada atılacak.
-            return Ok("Sipariş Onaylandı.");
+            return Ok($"Sipariş Onaylandı.\n{result}");
         }
-
-
     }
 }

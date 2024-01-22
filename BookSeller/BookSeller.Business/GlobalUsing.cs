@@ -11,3 +11,7 @@ global using Microsoft.AspNetCore.Identity;
 global using BookSeller.Entity.DTO.User;
 global using BookSeller.Entity.DTO.Login;
 global using BookSeller.Entity.DTO.Order;
+global using RabbitMQ.Client;
+global using System.Text;
+global using BookSeller.Core.Enums;
+global using BookSeller.Core.ResultSets.Concrete;
