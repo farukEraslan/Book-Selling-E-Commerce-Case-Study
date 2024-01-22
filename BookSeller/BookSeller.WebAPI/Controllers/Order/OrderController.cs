@@ -20,7 +20,7 @@
         }
 
         [HttpPost]
-        [Authorize("customer")]
+        //[Authorize("customer")]
         public async Task<IActionResult> CreateToCart(Guid productId)
         {
             var product = _productService.GetById(productId);
@@ -50,7 +50,7 @@
         }
 
         [HttpGet]
-        [Authorize("customer")]
+        //[Authorize("customer")]
         public async Task<IActionResult> GetAllFromCart()
         {
             var model = new CartListDomainModel()
