@@ -1,0 +1,15 @@
+﻿@* @model CategoryListViewModel
+
+<h2>Category List</h2>
+<div class="navbar">
+    <a href="/product/index" class="btn btn-outline-primary">Tüm Ürünler</a>
+    @foreach (var category in Model.Categories)
+    {
+        var css = "btn btn-outline-primary";
+        if (category.CategoryId == Model.CurrentCategory)
+        {
+            css += " active";
+        }
+        <a href="/product/index?category=@category.CategoryId" class="@css">@category.CategoryName</a>
+    }
+</div> *@

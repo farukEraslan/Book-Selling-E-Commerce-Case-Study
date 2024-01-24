@@ -11,11 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookSeller.Entity", "BookSe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookSeller.WebAPI", "BookSeller.WebAPI\BookSeller.WebAPI.csproj", "{3571D8A5-F0CE-4818-B028-A3C2A76EAB04}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookSeller.WebUI", "BookSeller.WebUI\BookSeller.WebUI.csproj", "{E0E61155-690C-47FC-BE3D-42313BA9A4E6}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookSeller.Business", "BookSeller.Business\BookSeller.Business.csproj", "{C2EEEF64-3AFC-4223-B7F4-E3CB3DC1E589}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookSeller.EmailSender", "BookSeller.EmailSender\BookSeller.EmailSender.csproj", "{6B555918-4F76-4FDE-BB79-4AEE158AC765}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookSeller.EmailSender", "BookSeller.EmailSender\BookSeller.EmailSender.csproj", "{6B555918-4F76-4FDE-BB79-4AEE158AC765}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookSeller.WebUI", "BookSeller.WebUI\BookSeller.WebUI.csproj", "{2DCE6389-B407-4D3C-BA7B-11639D8EA2D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +39,6 @@ Global
 		{3571D8A5-F0CE-4818-B028-A3C2A76EAB04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3571D8A5-F0CE-4818-B028-A3C2A76EAB04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3571D8A5-F0CE-4818-B028-A3C2A76EAB04}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E0E61155-690C-47FC-BE3D-42313BA9A4E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E0E61155-690C-47FC-BE3D-42313BA9A4E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E0E61155-690C-47FC-BE3D-42313BA9A4E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E0E61155-690C-47FC-BE3D-42313BA9A4E6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C2EEEF64-3AFC-4223-B7F4-E3CB3DC1E589}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C2EEEF64-3AFC-4223-B7F4-E3CB3DC1E589}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2EEEF64-3AFC-4223-B7F4-E3CB3DC1E589}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +47,10 @@ Global
 		{6B555918-4F76-4FDE-BB79-4AEE158AC765}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B555918-4F76-4FDE-BB79-4AEE158AC765}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B555918-4F76-4FDE-BB79-4AEE158AC765}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DCE6389-B407-4D3C-BA7B-11639D8EA2D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DCE6389-B407-4D3C-BA7B-11639D8EA2D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DCE6389-B407-4D3C-BA7B-11639D8EA2D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DCE6389-B407-4D3C-BA7B-11639D8EA2D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

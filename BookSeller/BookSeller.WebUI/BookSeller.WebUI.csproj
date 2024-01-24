@@ -7,8 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BookSeller.Business\BookSeller.Business.csproj" />
-    <ProjectReference Include="..\BookSeller.DataAccess\BookSeller.DataAccess.csproj" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="RestSharp" Version="110.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BookSeller.Entity\BookSeller.Entity.csproj" />
   </ItemGroup>
 
 </Project>

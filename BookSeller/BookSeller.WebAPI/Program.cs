@@ -90,11 +90,27 @@ namespace BookSeller.WebAPI
             // Fluent Validation
             builder.Services.AddFluentValidators();
 
+            // CORS policy için frontend ekibinin host numaralarýnýn ekleneceði yer
+            var myOrigins = "_myOrigins";
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(name: myOrigins,
+                    policy =>
+                    {
+                        policy.WithOrigins("*")
+                        .WithMethods("GET", "POST", "PUT", "HEAD", "DELETE", "CONNECT", "OPTIONS", "PATCH", "SEARCH")
+                        .AllowAnyHeader();
+                    });
+            });
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
+
+            // CORS policy aktif edildiði yer
+            app.UseCors(myOrigins);
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
