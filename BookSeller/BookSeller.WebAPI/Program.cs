@@ -17,7 +17,7 @@ namespace BookSeller.WebAPI
 
             // Serilog Logger
             Log.Logger = new LoggerConfiguration().MinimumLevel.Information().WriteTo.Console()
-                .WriteTo.File("BookSellerLog.txt",
+                .WriteTo.File("LogFiles/BookSellerLog.txt",
                     outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}",
                     rollingInterval: RollingInterval.Day)
                 .WriteTo.MSSqlServer("Server = ISTN36002\\SQLEXPRESS; Database = BookSeller; uid = sa; pwd = 123; Trusted_Connection = True; TrustServerCertificate = True;",

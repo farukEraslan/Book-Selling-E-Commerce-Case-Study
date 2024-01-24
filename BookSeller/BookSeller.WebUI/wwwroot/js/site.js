@@ -5,8 +5,6 @@
 
 
 
-
-
 //  PRODUCT HTTP GETALL REQUEST
 
 fetch('https://localhost:7086/api/Product/GetAll?pageNumber=1&pageSize=11')
