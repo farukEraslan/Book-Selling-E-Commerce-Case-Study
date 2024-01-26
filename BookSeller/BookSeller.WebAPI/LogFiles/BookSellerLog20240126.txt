@@ -413,3 +413,1196 @@ WHERE [a].[RoleId] = @__role_Id_0
 2024-01-26 13:42:28.045 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI) in 8523.7449ms
 2024-01-26 13:42:28.046 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
 2024-01-26 13:42:28.055 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Login/Login - 204 null null 8578.7518ms
+2024-01-26 14:21:45.201 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-26 14:21:45.783 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-26 14:21:45.795 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-26 14:21:45.797 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-26 14:21:45.798 +03:00 [INF] Hosting environment: Development
+2024-01-26 14:21:45.799 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-26 14:21:49.108 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-26 14:21:49.349 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 241.662ms
+2024-01-26 14:21:49.378 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-26 14:21:49.383 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 5.0871ms
+2024-01-26 14:21:49.384 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-26 14:21:49.410 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.2374ms
+2024-01-26 14:21:49.487 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-26 14:21:49.559 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 72.2191ms
+2024-01-26 14:22:08.008 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-26 14:22:08.577 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-26 14:22:08.578 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-26 14:22:08.580 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-26 14:22:08.581 +03:00 [INF] Hosting environment: Development
+2024-01-26 14:22:08.582 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-26 14:22:13.631 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-26 14:22:13.913 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 285.3219ms
+2024-01-26 14:22:13.933 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-26 14:22:13.939 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 5.9017ms
+2024-01-26 14:22:13.943 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-26 14:22:13.991 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.9502ms
+2024-01-26 14:22:14.135 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-26 14:22:14.266 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 131.1384ms
+2024-01-26 14:22:41.647 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Login/Login - application/json 63
+2024-01-26 14:22:41.655 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:22:41.668 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 14:22:41.686 +03:00 [INF] Route matched with {action = "Login", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BookSeller.Entity.DTO.Login.LoginDTO) on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-26 14:22:42.387 +03:00 [WRN] No store type was specified for the decimal property 'CartTotalPrice' on entity type 'Cart'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:22:42.390 +03:00 [WRN] No store type was specified for the decimal property 'CartLinePrice' on entity type 'CartLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:22:42.392 +03:00 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:22:42.763 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-26 14:22:42.972 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-01-26 14:22:42.996 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-26 14:22:43.005 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-01-26 14:22:43.026 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-01-26 14:22:43.034 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-01-26 14:22:43.041 +03:00 [INF] Executing OkObjectResult, writing value of type 'null'.
+2024-01-26 14:22:43.046 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI) in 1355.1897ms
+2024-01-26 14:22:43.049 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 14:22:43.058 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Login/Login - 204 null null 1411.5794ms
+2024-01-26 14:22:59.390 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/User/GetAll?pageNumber=1&pageSize=11 - null null
+2024-01-26 14:22:59.404 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.User.UserController.GetAll (BookSeller.WebAPI)'
+2024-01-26 14:22:59.410 +03:00 [INF] Route matched with {action = "GetAll", controller = "User", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller BookSeller.WebAPI.Controllers.User.UserController (BookSeller.WebAPI).
+2024-01-26 14:22:59.535 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-26 14:22:59.537 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-26 14:22:59.565 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2024-01-26 14:22:59.575 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Core.ResultSets.Concrete.SuccessDataResult`1[[System.Collections.Generic.List`1[[BookSeller.Entity.DTO.User.UserDTO, BookSeller.Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-01-26 14:22:59.587 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.User.UserController.GetAll (BookSeller.WebAPI) in 174.9617ms
+2024-01-26 14:22:59.589 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.User.UserController.GetAll (BookSeller.WebAPI)'
+2024-01-26 14:22:59.590 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/User/GetAll?pageNumber=1&pageSize=11 - 200 null application/json; charset=utf-8 200.2448ms
+2024-01-26 14:23:13.962 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/User/GetAll?pageNumber=1&pageSize=2 - null null
+2024-01-26 14:23:13.967 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.User.UserController.GetAll (BookSeller.WebAPI)'
+2024-01-26 14:23:13.968 +03:00 [INF] Route matched with {action = "GetAll", controller = "User", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller BookSeller.WebAPI.Controllers.User.UserController (BookSeller.WebAPI).
+2024-01-26 14:23:13.982 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2024-01-26 14:23:13.985 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Core.ResultSets.Concrete.SuccessDataResult`1[[System.Collections.Generic.List`1[[BookSeller.Entity.DTO.User.UserDTO, BookSeller.Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-01-26 14:23:13.986 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.User.UserController.GetAll (BookSeller.WebAPI) in 15.9141ms
+2024-01-26 14:23:13.987 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.User.UserController.GetAll (BookSeller.WebAPI)'
+2024-01-26 14:23:13.988 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/User/GetAll?pageNumber=1&pageSize=2 - 200 null application/json; charset=utf-8 26.3804ms
+2024-01-26 14:23:33.032 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/User/Create - application/json 197
+2024-01-26 14:23:33.036 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:23:33.047 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.User.UserController.Create (BookSeller.WebAPI)'
+2024-01-26 14:23:33.050 +03:00 [INF] Route matched with {action = "Create", controller = "User", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(BookSeller.Entity.DTO.User.UserCreateDTO) on controller BookSeller.WebAPI.Controllers.User.UserController (BookSeller.WebAPI).
+2024-01-26 14:23:33.062 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-26 14:23:33.155 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-01-26 14:23:33.264 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 50), @p7='?' (Size = 75), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [BirthDate], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17);
+2024-01-26 14:23:33.275 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:23:33.278 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.User.UserController.Create (BookSeller.WebAPI) in 225.3908ms
+2024-01-26 14:23:33.279 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.User.UserController.Create (BookSeller.WebAPI)'
+2024-01-26 14:23:33.280 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/User/Create - 200 null text/plain; charset=utf-8 247.5ms
+2024-01-26 14:23:51.190 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/User/GetAll?pageNumber=1&pageSize=10 - null null
+2024-01-26 14:23:51.195 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.User.UserController.GetAll (BookSeller.WebAPI)'
+2024-01-26 14:23:51.196 +03:00 [INF] Route matched with {action = "GetAll", controller = "User", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller BookSeller.WebAPI.Controllers.User.UserController (BookSeller.WebAPI).
+2024-01-26 14:23:51.199 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2024-01-26 14:23:51.201 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Core.ResultSets.Concrete.SuccessDataResult`1[[System.Collections.Generic.List`1[[BookSeller.Entity.DTO.User.UserDTO, BookSeller.Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-01-26 14:23:51.203 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.User.UserController.GetAll (BookSeller.WebAPI) in 5.3424ms
+2024-01-26 14:23:51.204 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.User.UserController.GetAll (BookSeller.WebAPI)'
+2024-01-26 14:23:51.204 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/User/GetAll?pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 15.0469ms
+2024-01-26 14:24:01.403 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Login/Logout - null 0
+2024-01-26 14:24:01.405 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:24:01.406 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Logout (BookSeller.WebAPI)'
+2024-01-26 14:24:01.409 +03:00 [INF] Route matched with {action = "Logout", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task Logout() on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-26 14:24:01.415 +03:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2024-01-26 14:24:01.417 +03:00 [INF] AuthenticationScheme: Identity.External signed out.
+2024-01-26 14:24:01.418 +03:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2024-01-26 14:24:01.419 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Logout (BookSeller.WebAPI) in 7.2391ms
+2024-01-26 14:24:01.420 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Logout (BookSeller.WebAPI)'
+2024-01-26 14:24:01.420 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Login/Logout - 200 0 null 17.9457ms
+2024-01-26 14:24:07.644 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Login/Login - application/json 63
+2024-01-26 14:24:07.646 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:24:07.647 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 14:24:07.647 +03:00 [INF] Route matched with {action = "Login", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BookSeller.Entity.DTO.Login.LoginDTO) on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-26 14:24:07.652 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-26 14:24:07.724 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-01-26 14:24:07.731 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-26 14:24:07.736 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-01-26 14:24:07.743 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-01-26 14:24:07.747 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-01-26 14:24:07.748 +03:00 [INF] Executing OkObjectResult, writing value of type 'null'.
+2024-01-26 14:24:07.749 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI) in 100.5691ms
+2024-01-26 14:24:07.750 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 14:24:07.751 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Login/Login - 204 null null 107.0073ms
+2024-01-26 14:24:12.964 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Login/Logout - null 0
+2024-01-26 14:24:12.967 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:24:12.968 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Logout (BookSeller.WebAPI)'
+2024-01-26 14:24:12.969 +03:00 [INF] Route matched with {action = "Logout", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task Logout() on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-26 14:24:12.970 +03:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2024-01-26 14:24:12.970 +03:00 [INF] AuthenticationScheme: Identity.External signed out.
+2024-01-26 14:24:12.971 +03:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2024-01-26 14:24:12.972 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Logout (BookSeller.WebAPI) in 1.787ms
+2024-01-26 14:24:12.972 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Logout (BookSeller.WebAPI)'
+2024-01-26 14:24:12.973 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Login/Logout - 200 0 null 8.5006ms
+2024-01-26 14:24:32.822 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Login/Login - application/json 68
+2024-01-26 14:24:32.824 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:24:32.825 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 14:24:32.826 +03:00 [INF] Route matched with {action = "Login", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BookSeller.Entity.DTO.Login.LoginDTO) on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-26 14:24:32.830 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-26 14:24:32.902 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-01-26 14:24:32.905 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-26 14:24:32.908 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-01-26 14:24:32.910 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-01-26 14:24:32.912 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-01-26 14:24:32.913 +03:00 [INF] Executing OkObjectResult, writing value of type 'null'.
+2024-01-26 14:24:32.914 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI) in 86.148ms
+2024-01-26 14:24:32.914 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 14:24:32.915 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Login/Login - 204 null null 93.615ms
+2024-01-26 14:24:40.750 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Order/GetAllFromCart - null null
+2024-01-26 14:24:40.754 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI)'
+2024-01-26 14:24:40.757 +03:00 [INF] Route matched with {action = "GetAllFromCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllFromCart() on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:24:40.778 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-01-26 14:24:40.905 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Entity.DTO.Order.CartListDomainModel'.
+2024-01-26 14:24:40.913 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI) in 155.4585ms
+2024-01-26 14:24:40.915 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI)'
+2024-01-26 14:24:40.917 +03:00 [INF] Session started; Key:0ea3e9be-7417-653f-5794-7e34fbcd7d7e, Id:9613ddde-4306-d48e-46b6-c7414920d263
+2024-01-26 14:24:40.918 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Order/GetAllFromCart - 200 null application/json; charset=utf-8 168.4286ms
+2024-01-26 14:25:23.269 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - null 0
+2024-01-26 14:25:23.277 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:25:23.278 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:25:23.282 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:25:30.780 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 7496.9245ms
+2024-01-26 14:25:30.782 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:25:30.784 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at BookSeller.Business.Concrete.CartManager.AddToCart(CartDomainModel cart, ProductDTO product) in C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.Business\Concrete\CartManager.cs:line 26
+   at BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart(Guid productId) in C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI\Controllers\Order\OrderController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-26 14:25:30.841 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - 500 null text/plain; charset=utf-8 7572.7076ms
+2024-01-26 14:25:40.997 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - null 0
+2024-01-26 14:25:41.005 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:25:41.007 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:25:41.008 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:26:10.243 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-26 14:26:10.842 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-26 14:26:10.843 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-26 14:26:10.844 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-26 14:26:10.845 +03:00 [INF] Hosting environment: Development
+2024-01-26 14:26:10.846 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-26 14:26:14.537 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-26 14:26:14.828 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 293.3668ms
+2024-01-26 14:26:14.841 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-26 14:26:14.849 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 7.2234ms
+2024-01-26 14:26:14.850 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-26 14:26:14.907 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.5755ms
+2024-01-26 14:26:14.981 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-26 14:26:15.075 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 94.1815ms
+2024-01-26 14:26:30.582 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Login/Login - application/json 68
+2024-01-26 14:26:30.589 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:26:30.601 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 14:26:30.620 +03:00 [INF] Route matched with {action = "Login", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BookSeller.Entity.DTO.Login.LoginDTO) on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-26 14:26:31.270 +03:00 [WRN] No store type was specified for the decimal property 'CartTotalPrice' on entity type 'Cart'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:26:31.272 +03:00 [WRN] No store type was specified for the decimal property 'CartLinePrice' on entity type 'CartLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:26:31.273 +03:00 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:26:31.660 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-26 14:26:31.861 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-01-26 14:26:31.888 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-26 14:26:31.898 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-01-26 14:26:31.915 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-01-26 14:26:31.924 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-01-26 14:26:31.931 +03:00 [INF] Executing OkObjectResult, writing value of type 'null'.
+2024-01-26 14:26:31.936 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI) in 1312.1484ms
+2024-01-26 14:26:31.938 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 14:26:31.947 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Login/Login - 204 null null 1365.0247ms
+2024-01-26 14:26:44.239 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - null 0
+2024-01-26 14:26:44.242 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:26:44.254 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:26:44.259 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:26:44.523 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-01-26 14:27:28.169 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-26 14:27:28.750 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-26 14:27:28.752 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-26 14:27:28.756 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-26 14:27:28.757 +03:00 [INF] Hosting environment: Development
+2024-01-26 14:27:28.758 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-26 14:27:35.221 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-26 14:27:35.560 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 342.2942ms
+2024-01-26 14:27:35.584 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-26 14:27:35.596 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-26 14:27:35.598 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 13.8271ms
+2024-01-26 14:27:35.653 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 57.711ms
+2024-01-26 14:27:35.740 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-26 14:27:35.882 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 142.9903ms
+2024-01-26 14:27:52.077 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Login/Login - application/json 68
+2024-01-26 14:27:52.085 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:27:52.097 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 14:27:52.117 +03:00 [INF] Route matched with {action = "Login", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BookSeller.Entity.DTO.Login.LoginDTO) on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-26 14:27:52.775 +03:00 [WRN] No store type was specified for the decimal property 'CartTotalPrice' on entity type 'Cart'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:27:52.779 +03:00 [WRN] No store type was specified for the decimal property 'CartLinePrice' on entity type 'CartLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:27:52.781 +03:00 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:27:53.164 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-26 14:27:53.375 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-01-26 14:27:53.400 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-26 14:27:53.410 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-01-26 14:27:53.426 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-01-26 14:27:53.434 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-01-26 14:27:53.442 +03:00 [INF] Executing OkObjectResult, writing value of type 'null'.
+2024-01-26 14:27:53.448 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI) in 1325.9349ms
+2024-01-26 14:27:53.449 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 14:27:53.456 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Login/Login - 204 null null 1379.0344ms
+2024-01-26 14:28:02.161 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - null 0
+2024-01-26 14:28:02.165 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:28:02.176 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:28:02.182 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:28:02.442 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-01-26 14:28:02.603 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:28:02.605 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 421.5337ms
+2024-01-26 14:28:02.607 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:28:02.609 +03:00 [INF] Session started; Key:aeab0d58-82a5-2fb0-ac59-443752a83c5c, Id:255c724e-0c08-cf24-b3c3-9656196dec23
+2024-01-26 14:28:02.614 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - 200 null text/plain; charset=utf-8 453.1209ms
+2024-01-26 14:28:12.384 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Order/GetAllFromCart - null null
+2024-01-26 14:28:12.390 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI)'
+2024-01-26 14:28:12.395 +03:00 [INF] Route matched with {action = "GetAllFromCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllFromCart() on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:28:12.402 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Entity.DTO.Order.CartListDomainModel'.
+2024-01-26 14:28:12.416 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI) in 18.5486ms
+2024-01-26 14:28:12.418 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI)'
+2024-01-26 14:28:12.419 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Order/GetAllFromCart - 200 null application/json; charset=utf-8 35.7204ms
+2024-01-26 14:28:22.550 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - null 0
+2024-01-26 14:28:22.554 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:28:22.570 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:28:22.571 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:28:22.591 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:28:22.593 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 20.8794ms
+2024-01-26 14:28:22.596 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:28:22.599 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - 200 null text/plain; charset=utf-8 49.438ms
+2024-01-26 14:28:23.076 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - null 0
+2024-01-26 14:28:23.077 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:28:23.078 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:28:23.079 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:28:23.084 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:28:23.086 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 5.9908ms
+2024-01-26 14:28:23.087 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:28:23.088 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - 200 null text/plain; charset=utf-8 12.078ms
+2024-01-26 14:28:23.226 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - null 0
+2024-01-26 14:28:23.228 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:28:23.229 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:28:23.231 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:28:23.239 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:28:23.240 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 6.5341ms
+2024-01-26 14:28:23.242 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:28:23.243 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - 200 null text/plain; charset=utf-8 16.8438ms
+2024-01-26 14:28:23.399 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - null 0
+2024-01-26 14:28:23.402 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:28:23.403 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:28:23.404 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:28:23.410 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:28:23.412 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 5.9803ms
+2024-01-26 14:28:23.413 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:28:23.414 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - 200 null text/plain; charset=utf-8 14.5403ms
+2024-01-26 14:28:24.947 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Order/GetAllFromCart - null null
+2024-01-26 14:28:24.950 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI)'
+2024-01-26 14:28:24.951 +03:00 [INF] Route matched with {action = "GetAllFromCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllFromCart() on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:28:24.953 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Entity.DTO.Order.CartListDomainModel'.
+2024-01-26 14:28:24.954 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI) in 1.2786ms
+2024-01-26 14:28:24.955 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI)'
+2024-01-26 14:28:24.956 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Order/GetAllFromCart - 200 null application/json; charset=utf-8 8.9025ms
+2024-01-26 14:28:52.048 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/GiveOrder?city=kocaeli&town=izmit&street=yeni&propertyNo=90&postalCode=41100 - null 0
+2024-01-26 14:28:52.051 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:28:52.052 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GiveOrder (BookSeller.WebAPI)'
+2024-01-26 14:28:52.057 +03:00 [INF] Route matched with {action = "GiveOrder", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GiveOrder(System.String, System.String, System.String, System.String, System.String) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:28:52.189 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-01-26 14:28:52.190 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GiveOrder (BookSeller.WebAPI) in 130.4452ms
+2024-01-26 14:28:52.191 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GiveOrder (BookSeller.WebAPI)'
+2024-01-26 14:28:52.192 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/GiveOrder?city=kocaeli&town=izmit&street=yeni&propertyNo=90&postalCode=41100 - 200 0 null 143.3733ms
+2024-01-26 14:29:14.412 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Login/Logout - null 0
+2024-01-26 14:29:14.420 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:29:14.422 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Logout (BookSeller.WebAPI)'
+2024-01-26 14:29:14.424 +03:00 [INF] Route matched with {action = "Logout", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task Logout() on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-26 14:29:14.430 +03:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2024-01-26 14:29:14.431 +03:00 [INF] AuthenticationScheme: Identity.External signed out.
+2024-01-26 14:29:14.432 +03:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2024-01-26 14:29:14.433 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Logout (BookSeller.WebAPI) in 6.6802ms
+2024-01-26 14:29:14.435 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Logout (BookSeller.WebAPI)'
+2024-01-26 14:29:14.436 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Login/Logout - 200 0 null 24.0762ms
+2024-01-26 14:29:23.142 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Login/Login - application/json 63
+2024-01-26 14:29:23.143 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:29:23.144 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 14:29:23.145 +03:00 [INF] Route matched with {action = "Login", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BookSeller.Entity.DTO.Login.LoginDTO) on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-26 14:29:23.160 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-26 14:29:23.232 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-01-26 14:29:23.238 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-26 14:29:23.241 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-01-26 14:29:23.244 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-01-26 14:29:23.247 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-01-26 14:29:23.248 +03:00 [INF] Executing OkObjectResult, writing value of type 'null'.
+2024-01-26 14:29:23.248 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI) in 102.0771ms
+2024-01-26 14:29:23.249 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 14:29:23.250 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Login/Login - 204 null null 108.8453ms
+2024-01-26 14:29:27.203 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Order/GetOrders - null null
+2024-01-26 14:29:27.205 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetOrders (BookSeller.WebAPI)'
+2024-01-26 14:29:27.208 +03:00 [INF] Route matched with {action = "GetOrders", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetOrders() on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:29:27.222 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookSeller.Entity.DTO.Order.CartDTO, BookSeller.Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-01-26 14:29:27.225 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GetOrders (BookSeller.WebAPI) in 15.5965ms
+2024-01-26 14:29:27.227 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetOrders (BookSeller.WebAPI)'
+2024-01-26 14:29:27.227 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Order/GetOrders - 200 null application/json; charset=utf-8 24.1936ms
+2024-01-26 14:29:50.517 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/ApproveOrder?cartId=fbc964f8-23e8-4bf3-89f1-3f3ae75174b7 - null 0
+2024-01-26 14:29:50.524 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:29:50.525 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.ApproveOrder (BookSeller.WebAPI)'
+2024-01-26 14:29:50.527 +03:00 [INF] Route matched with {action = "ApproveOrder", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ApproveOrder(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:29:50.560 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__get_Item_0
+2024-01-26 14:29:50.663 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:29:50.664 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.ApproveOrder (BookSeller.WebAPI) in 135.4152ms
+2024-01-26 14:29:50.666 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.ApproveOrder (BookSeller.WebAPI)'
+2024-01-26 14:29:50.667 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/ApproveOrder?cartId=fbc964f8-23e8-4bf3-89f1-3f3ae75174b7 - 200 null text/plain; charset=utf-8 149.8172ms
+2024-01-26 14:30:34.972 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/ApproveOrder?cartId=fbc964f8-23e8-4bf3-89f1-3f3ae75174b7 - null 0
+2024-01-26 14:30:34.978 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:30:34.979 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.ApproveOrder (BookSeller.WebAPI)'
+2024-01-26 14:30:34.980 +03:00 [INF] Route matched with {action = "ApproveOrder", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ApproveOrder(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:30:34.987 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__get_Item_0
+2024-01-26 14:30:35.005 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:30:35.007 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.ApproveOrder (BookSeller.WebAPI) in 26.0485ms
+2024-01-26 14:30:35.008 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.ApproveOrder (BookSeller.WebAPI)'
+2024-01-26 14:30:35.009 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/ApproveOrder?cartId=fbc964f8-23e8-4bf3-89f1-3f3ae75174b7 - 200 null text/plain; charset=utf-8 37.0575ms
+2024-01-26 14:31:43.080 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-26 14:31:43.688 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-26 14:31:43.689 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-26 14:31:43.691 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-26 14:31:43.692 +03:00 [INF] Hosting environment: Development
+2024-01-26 14:31:43.693 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-26 14:31:46.326 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Product/GetAll?pageNumber=1&pageSize=11 - null null
+2024-01-26 14:31:46.326 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7086/api/User/GetAll?pageNumber=1&pageSize=11 - null null
+2024-01-26 14:31:46.382 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:31:46.382 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:31:46.387 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7086/api/User/GetAll?pageNumber=1&pageSize=11 - 204 null null 65.0873ms
+2024-01-26 14:31:46.407 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/User/GetAll?pageNumber=1&pageSize=11 - application/json null
+2024-01-26 14:31:46.410 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-26 14:31:46.411 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:31:46.419 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-01-26 14:31:46.474 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-01-26 14:31:46.476 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/User/GetAll?pageNumber=1&pageSize=11 - 302 0 null 69.8102ms
+2024-01-26 14:31:46.482 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7086/Home/Login?ReturnUrl=%2Fapi%2FUser%2FGetAll%3FpageNumber%3D1%26pageSize%3D11 - null null
+2024-01-26 14:31:46.485 +03:00 [INF] Route matched with {action = "GetAll", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller BookSeller.WebAPI.Controllers.Product.ProductController (BookSeller.WebAPI).
+2024-01-26 14:31:46.486 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:31:46.489 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7086/Home/Login?ReturnUrl=%2Fapi%2FUser%2FGetAll%3FpageNumber%3D1%26pageSize%3D11 - 204 null null 7.0221ms
+2024-01-26 14:31:46.502 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/Home/Login?ReturnUrl=%2Fapi%2FUser%2FGetAll%3FpageNumber%3D1%26pageSize%3D11 - application/json null
+2024-01-26 14:31:46.504 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:31:46.508 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/Home/Login?ReturnUrl=%2Fapi%2FUser%2FGetAll%3FpageNumber%3D1%26pageSize%3D11 - 404 0 null 5.6647ms
+2024-01-26 14:31:46.511 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7086/Home/Login, Response status code: 404
+2024-01-26 14:31:47.614 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Core.ResultSets.Concrete.SuccessDataResult`1[[System.Collections.Generic.List`1[[BookSeller.Entity.DTO.Product.ProductDTO, BookSeller.Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-01-26 14:31:47.646 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI) in 1156.722ms
+2024-01-26 14:31:47.648 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-26 14:31:47.650 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Product/GetAll?pageNumber=1&pageSize=11 - 200 null application/json; charset=utf-8 1328.6445ms
+2024-01-26 14:31:51.900 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-26 14:31:52.142 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 241.6157ms
+2024-01-26 14:31:52.156 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-26 14:31:52.164 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 8.1983ms
+2024-01-26 14:31:52.166 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-26 14:31:52.211 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.8098ms
+2024-01-26 14:31:52.290 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-26 14:31:52.394 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 104.4004ms
+2024-01-26 14:36:56.203 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-26 14:36:56.895 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-26 14:36:56.896 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-26 14:36:56.898 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-26 14:36:56.899 +03:00 [INF] Hosting environment: Development
+2024-01-26 14:36:56.899 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-26 14:37:03.087 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-26 14:37:03.429 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 345.9965ms
+2024-01-26 14:37:03.449 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-26 14:37:03.457 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 7.9085ms
+2024-01-26 14:37:03.460 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-26 14:37:03.517 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.5992ms
+2024-01-26 14:37:03.586 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-26 14:37:03.715 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 129.892ms
+2024-01-26 14:37:19.030 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Login/Login - application/json 66
+2024-01-26 14:37:19.038 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:37:19.052 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 14:37:19.072 +03:00 [INF] Route matched with {action = "Login", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BookSeller.Entity.DTO.Login.LoginDTO) on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-26 14:37:19.828 +03:00 [WRN] No store type was specified for the decimal property 'CartTotalPrice' on entity type 'Cart'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:37:19.830 +03:00 [WRN] No store type was specified for the decimal property 'CartLinePrice' on entity type 'CartLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:37:19.831 +03:00 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:37:20.217 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-26 14:37:20.458 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-01-26 14:37:20.484 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-26 14:37:20.495 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-01-26 14:37:20.511 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-01-26 14:37:20.520 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-01-26 14:37:20.526 +03:00 [INF] Executing OkObjectResult, writing value of type 'null'.
+2024-01-26 14:37:20.531 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI) in 1453.3561ms
+2024-01-26 14:37:20.534 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 14:37:20.541 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Login/Login - 204 null null 1511.6975ms
+2024-01-26 14:37:37.868 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - null 0
+2024-01-26 14:37:37.873 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:37:37.888 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:37:37.896 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:37:38.267 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-01-26 14:37:38.466 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:37:38.468 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 569.5019ms
+2024-01-26 14:37:38.470 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:37:38.471 +03:00 [INF] Session started; Key:942931d6-2bf5-043e-23d4-bbaa0958c90b, Id:9d623481-238e-939f-72e9-3697df669f28
+2024-01-26 14:37:38.474 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - 200 null text/plain; charset=utf-8 606.0453ms
+2024-01-26 14:37:40.416 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - null 0
+2024-01-26 14:37:40.421 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:37:40.426 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:37:40.429 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:37:40.447 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:37:40.450 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 19.2947ms
+2024-01-26 14:37:40.451 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:37:40.452 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - 200 null text/plain; charset=utf-8 36.0648ms
+2024-01-26 14:37:42.121 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - null 0
+2024-01-26 14:37:42.125 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:37:42.138 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:37:42.139 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:37:42.149 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:37:42.150 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 8.4961ms
+2024-01-26 14:37:42.151 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:37:42.152 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - 200 null text/plain; charset=utf-8 30.566ms
+2024-01-26 14:37:55.376 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-26 14:37:55.988 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-26 14:37:55.990 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-26 14:37:55.992 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-26 14:37:55.993 +03:00 [INF] Hosting environment: Development
+2024-01-26 14:37:55.994 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-26 14:37:58.383 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-26 14:37:58.639 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 259.416ms
+2024-01-26 14:37:58.667 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-26 14:37:58.685 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-26 14:37:58.695 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 27.2665ms
+2024-01-26 14:37:58.734 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.035ms
+2024-01-26 14:37:58.789 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-26 14:37:58.883 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 94.1063ms
+2024-01-26 14:38:18.217 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Login/Login - application/json 66
+2024-01-26 14:38:18.225 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:38:18.240 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 14:38:18.261 +03:00 [INF] Route matched with {action = "Login", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BookSeller.Entity.DTO.Login.LoginDTO) on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-26 14:38:19.099 +03:00 [WRN] No store type was specified for the decimal property 'CartTotalPrice' on entity type 'Cart'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:38:19.100 +03:00 [WRN] No store type was specified for the decimal property 'CartLinePrice' on entity type 'CartLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:38:19.101 +03:00 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:38:19.544 +03:00 [INF] Executed DbCommand (39ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-26 14:38:19.776 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-01-26 14:38:19.803 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-26 14:38:19.814 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-01-26 14:38:19.833 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-01-26 14:38:19.848 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-01-26 14:38:19.855 +03:00 [INF] Executing OkObjectResult, writing value of type 'null'.
+2024-01-26 14:38:19.862 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI) in 1596.0841ms
+2024-01-26 14:38:19.865 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 14:38:19.874 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Login/Login - 204 null null 1656.3884ms
+2024-01-26 14:38:25.130 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - null 0
+2024-01-26 14:38:25.133 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:38:25.146 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:38:25.152 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:38:25.422 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-01-26 14:38:25.592 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:38:25.596 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 441.2381ms
+2024-01-26 14:38:25.597 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:38:25.599 +03:00 [INF] Session started; Key:885ccd9f-85a1-5232-8c8b-e1f485bcff93, Id:2bceb341-69bd-ea33-90fd-48da88615ec3
+2024-01-26 14:38:25.601 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - 200 null text/plain; charset=utf-8 470.3921ms
+2024-01-26 14:38:26.792 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - null 0
+2024-01-26 14:38:26.798 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:38:26.801 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:38:26.802 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:38:26.818 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:38:26.820 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 17.0537ms
+2024-01-26 14:38:26.822 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:38:26.822 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - 200 null text/plain; charset=utf-8 30.8706ms
+2024-01-26 14:38:27.774 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - null 0
+2024-01-26 14:38:27.777 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:38:27.788 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:38:27.790 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:38:27.799 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:38:27.801 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 9.0197ms
+2024-01-26 14:38:27.802 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:38:27.803 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - 200 null text/plain; charset=utf-8 28.5269ms
+2024-01-26 14:38:44.854 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - null 0
+2024-01-26 14:38:44.857 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:38:44.859 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:38:44.860 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:39:52.403 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-26 14:39:52.875 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-26 14:39:52.877 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-26 14:39:52.879 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-26 14:39:52.879 +03:00 [INF] Hosting environment: Development
+2024-01-26 14:39:52.880 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-26 14:39:58.475 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-26 14:39:58.732 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 260.8791ms
+2024-01-26 14:39:58.765 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-26 14:39:58.777 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-26 14:39:58.778 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 9.8586ms
+2024-01-26 14:39:58.904 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 129.0945ms
+2024-01-26 14:39:58.981 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-26 14:39:59.103 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 122.7111ms
+2024-01-26 14:40:11.736 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Login/Login - application/json 66
+2024-01-26 14:40:11.743 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:40:11.757 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 14:40:11.777 +03:00 [INF] Route matched with {action = "Login", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BookSeller.Entity.DTO.Login.LoginDTO) on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-26 14:40:12.456 +03:00 [WRN] No store type was specified for the decimal property 'CartTotalPrice' on entity type 'Cart'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:40:12.458 +03:00 [WRN] No store type was specified for the decimal property 'CartLinePrice' on entity type 'CartLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:40:12.458 +03:00 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:40:12.848 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-26 14:40:13.057 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-01-26 14:40:13.083 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-26 14:40:13.095 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-01-26 14:40:13.112 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-01-26 14:40:13.120 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-01-26 14:40:13.128 +03:00 [INF] Executing OkObjectResult, writing value of type 'null'.
+2024-01-26 14:40:13.133 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI) in 1351.3133ms
+2024-01-26 14:40:13.135 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 14:40:13.144 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Login/Login - 204 null null 1407.152ms
+2024-01-26 14:40:21.193 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - null 0
+2024-01-26 14:40:21.199 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:40:21.214 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:40:21.219 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:40:21.489 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-01-26 14:40:21.663 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:40:21.665 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 444.3192ms
+2024-01-26 14:40:21.667 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:40:21.668 +03:00 [INF] Session started; Key:827d66a0-7093-6212-5371-a4871724b907, Id:0e87e643-ba4f-624a-8cb7-d692f1a25e45
+2024-01-26 14:40:21.670 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - 200 null text/plain; charset=utf-8 476.1436ms
+2024-01-26 14:40:23.829 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - null 0
+2024-01-26 14:40:23.834 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:40:23.838 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:40:23.840 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:40:54.195 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:40:54.197 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 30355.8491ms
+2024-01-26 14:40:54.199 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:40:54.201 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - 200 null text/plain; charset=utf-8 30372.4537ms
+2024-01-26 14:40:56.519 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - null 0
+2024-01-26 14:40:56.527 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:40:56.545 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:40:56.547 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:41:22.458 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-26 14:41:22.974 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-26 14:41:22.975 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-26 14:41:22.977 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-26 14:41:22.978 +03:00 [INF] Hosting environment: Development
+2024-01-26 14:41:22.978 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-26 14:41:28.736 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-26 14:41:28.988 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 258.0461ms
+2024-01-26 14:41:29.028 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-26 14:41:29.037 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 8.987ms
+2024-01-26 14:41:29.038 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-26 14:41:29.090 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.0899ms
+2024-01-26 14:41:29.175 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-26 14:41:29.368 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 192.5712ms
+2024-01-26 14:41:38.270 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Login/Login - application/json 68
+2024-01-26 14:41:38.276 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:41:38.291 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 14:41:38.312 +03:00 [INF] Route matched with {action = "Login", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BookSeller.Entity.DTO.Login.LoginDTO) on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-26 14:41:39.009 +03:00 [WRN] No store type was specified for the decimal property 'CartTotalPrice' on entity type 'Cart'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:41:39.012 +03:00 [WRN] No store type was specified for the decimal property 'CartLinePrice' on entity type 'CartLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:41:39.014 +03:00 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:41:39.390 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-26 14:41:39.623 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-01-26 14:41:39.650 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-26 14:41:39.661 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-01-26 14:41:39.678 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-01-26 14:41:39.687 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-01-26 14:41:39.695 +03:00 [INF] Executing OkObjectResult, writing value of type 'null'.
+2024-01-26 14:41:39.700 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI) in 1382.6962ms
+2024-01-26 14:41:39.702 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 14:41:39.710 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Login/Login - 204 null null 1440.61ms
+2024-01-26 14:41:48.069 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - null 0
+2024-01-26 14:41:48.074 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:41:48.087 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:41:48.092 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:41:48.388 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-01-26 14:41:48.553 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:41:48.557 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 461.576ms
+2024-01-26 14:41:48.559 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:41:48.561 +03:00 [INF] Session started; Key:9ed7b3d6-40fd-40ba-b30c-c92e73d41375, Id:2b0ba9e2-8cef-1f21-db5e-659f2cc86814
+2024-01-26 14:41:48.563 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - 200 null text/plain; charset=utf-8 493.5848ms
+2024-01-26 14:41:50.463 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - null 0
+2024-01-26 14:41:50.468 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:41:50.472 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:41:50.472 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:41:57.333 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:41:57.335 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 6860.4441ms
+2024-01-26 14:41:57.337 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:41:57.339 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - 200 null text/plain; charset=utf-8 6875.9064ms
+2024-01-26 14:41:59.542 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - null 0
+2024-01-26 14:41:59.545 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:41:59.556 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:41:59.557 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:42:01.872 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-01-26 14:42:01.874 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 2315.3943ms
+2024-01-26 14:42:01.875 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:42:01.876 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - 400 null text/plain; charset=utf-8 2334.1969ms
+2024-01-26 14:56:48.369 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-26 14:56:48.869 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-26 14:56:48.871 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-26 14:56:48.873 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-26 14:56:48.874 +03:00 [INF] Hosting environment: Development
+2024-01-26 14:56:48.875 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-26 14:56:54.671 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-26 14:56:54.913 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 244.6022ms
+2024-01-26 14:56:54.925 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-26 14:56:54.933 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-26 14:56:54.933 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 8.1804ms
+2024-01-26 14:56:54.970 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.6038ms
+2024-01-26 14:56:55.038 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-26 14:56:55.138 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 99.9943ms
+2024-01-26 14:57:05.637 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Login/Login - application/json 68
+2024-01-26 14:57:05.643 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:57:05.657 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 14:57:05.676 +03:00 [INF] Route matched with {action = "Login", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BookSeller.Entity.DTO.Login.LoginDTO) on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-26 14:57:06.342 +03:00 [WRN] No store type was specified for the decimal property 'CartTotalPrice' on entity type 'Cart'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:57:06.345 +03:00 [WRN] No store type was specified for the decimal property 'CartLinePrice' on entity type 'CartLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:57:06.348 +03:00 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:57:06.721 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-26 14:57:06.925 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-01-26 14:57:06.950 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-26 14:57:06.961 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-01-26 14:57:06.977 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-01-26 14:57:06.985 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-01-26 14:57:06.993 +03:00 [INF] Executing OkObjectResult, writing value of type 'null'.
+2024-01-26 14:57:06.999 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI) in 1317.6958ms
+2024-01-26 14:57:07.001 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 14:57:07.010 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Login/Login - 204 null null 1372.8117ms
+2024-01-26 14:57:15.101 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - null 0
+2024-01-26 14:57:15.104 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:57:15.116 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:57:15.122 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:57:15.389 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-01-26 14:57:33.550 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:57:33.554 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 18429.0623ms
+2024-01-26 14:57:33.555 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:57:33.556 +03:00 [INF] Session started; Key:26a1c80c-6dde-d41a-38d1-d6d42205c690, Id:5ab38731-da10-808a-f784-0cd044efe334
+2024-01-26 14:57:33.558 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - 200 null text/plain; charset=utf-8 18456.9529ms
+2024-01-26 14:57:39.733 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - null 0
+2024-01-26 14:57:39.738 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:57:39.741 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:57:39.742 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:57:47.971 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-01-26 14:57:47.974 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 8229.8963ms
+2024-01-26 14:57:47.976 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:57:47.978 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=0a509755-efac-4057-e17a-08dc167fc0dd - 400 null text/plain; charset=utf-8 8244.546ms
+2024-01-26 14:57:59.512 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:57:59.515 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:57:59.526 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:57:59.527 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:58:03.973 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:58:03.975 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 4446.1032ms
+2024-01-26 14:58:03.976 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:58:03.978 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 200 null text/plain; charset=utf-8 4465.9337ms
+2024-01-26 14:58:08.525 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Order/GetAllFromCart - null null
+2024-01-26 14:58:08.528 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI)'
+2024-01-26 14:58:08.531 +03:00 [INF] Route matched with {action = "GetAllFromCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllFromCart() on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:58:08.534 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Entity.DTO.Order.CartListDomainModel'.
+2024-01-26 14:58:08.546 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI) in 13.676ms
+2024-01-26 14:58:08.549 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI)'
+2024-01-26 14:58:08.550 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Order/GetAllFromCart - 200 null application/json; charset=utf-8 24.9562ms
+2024-01-26 14:58:18.961 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:58:18.965 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:58:18.966 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:58:18.967 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:58:18.971 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:58:18.973 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 5.2401ms
+2024-01-26 14:58:18.975 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:58:18.977 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 200 null text/plain; charset=utf-8 16.4846ms
+2024-01-26 14:58:19.573 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:58:19.576 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:58:19.577 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:58:19.577 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:58:19.582 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:58:19.583 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 4.0054ms
+2024-01-26 14:58:19.585 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:58:19.585 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 200 null text/plain; charset=utf-8 12.0054ms
+2024-01-26 14:58:20.100 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:58:20.102 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:58:20.103 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:58:20.104 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:58:20.108 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:58:20.108 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 3.2147ms
+2024-01-26 14:58:20.110 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:58:20.110 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 200 null text/plain; charset=utf-8 10.6432ms
+2024-01-26 14:58:21.015 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:58:21.018 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:58:21.019 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:58:21.019 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:58:21.023 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:58:21.024 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 3.3421ms
+2024-01-26 14:58:21.025 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:58:21.026 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 200 null text/plain; charset=utf-8 10.834ms
+2024-01-26 14:58:21.538 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:58:21.540 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:58:21.541 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:58:21.542 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:58:21.547 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:58:21.548 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 4.3729ms
+2024-01-26 14:58:21.550 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:58:21.551 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 200 null text/plain; charset=utf-8 13.1098ms
+2024-01-26 14:58:21.989 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:58:21.991 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:58:21.992 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:58:21.993 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:58:21.997 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:58:21.998 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 3.4404ms
+2024-01-26 14:58:21.999 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:58:22.000 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 200 null text/plain; charset=utf-8 10.5924ms
+2024-01-26 14:58:23.438 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Order/GetAllFromCart - null null
+2024-01-26 14:58:23.441 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI)'
+2024-01-26 14:58:23.442 +03:00 [INF] Route matched with {action = "GetAllFromCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllFromCart() on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:58:23.443 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Entity.DTO.Order.CartListDomainModel'.
+2024-01-26 14:58:23.444 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI) in 1.407ms
+2024-01-26 14:58:23.446 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI)'
+2024-01-26 14:58:23.447 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Order/GetAllFromCart - 200 null application/json; charset=utf-8 8.8392ms
+2024-01-26 14:58:25.795 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:58:25.798 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:58:25.799 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:58:25.799 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:58:25.803 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:58:25.803 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 3.0684ms
+2024-01-26 14:58:25.804 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:58:25.805 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 200 null text/plain; charset=utf-8 9.9448ms
+2024-01-26 14:58:26.353 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:58:26.355 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:58:26.356 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:58:26.357 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:58:26.360 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:58:26.362 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 4.66ms
+2024-01-26 14:58:26.364 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:58:26.365 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 200 null text/plain; charset=utf-8 12.2287ms
+2024-01-26 14:58:28.077 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Order/GetAllFromCart - null null
+2024-01-26 14:58:28.080 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI)'
+2024-01-26 14:58:28.081 +03:00 [INF] Route matched with {action = "GetAllFromCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllFromCart() on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:58:28.082 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Entity.DTO.Order.CartListDomainModel'.
+2024-01-26 14:58:28.083 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI) in 1.32ms
+2024-01-26 14:58:28.087 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI)'
+2024-01-26 14:58:28.087 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Order/GetAllFromCart - 200 null application/json; charset=utf-8 10.3308ms
+2024-01-26 14:58:34.060 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:58:34.064 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:58:34.065 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:58:34.067 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:58:41.032 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:58:41.034 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 6964.9023ms
+2024-01-26 14:58:41.036 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:58:41.037 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 200 null text/plain; charset=utf-8 6977.0112ms
+2024-01-26 14:58:45.131 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:58:45.134 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:58:45.135 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:58:45.136 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:58:52.208 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:58:52.210 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 7073.4747ms
+2024-01-26 14:58:52.212 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:58:52.214 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 200 null text/plain; charset=utf-8 7082.6243ms
+2024-01-26 14:58:56.641 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Order/GetAllFromCart - null null
+2024-01-26 14:58:56.644 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI)'
+2024-01-26 14:58:56.647 +03:00 [INF] Route matched with {action = "GetAllFromCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllFromCart() on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:58:56.649 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Entity.DTO.Order.CartListDomainModel'.
+2024-01-26 14:58:56.650 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI) in 1.354ms
+2024-01-26 14:58:56.652 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI)'
+2024-01-26 14:58:56.652 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Order/GetAllFromCart - 200 null application/json; charset=utf-8 11.4234ms
+2024-01-26 14:58:59.822 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:58:59.824 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:58:59.825 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:58:59.826 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:59:02.942 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-01-26 14:59:02.944 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 3117.1809ms
+2024-01-26 14:59:02.946 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:02.947 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 400 null text/plain; charset=utf-8 3125.5169ms
+2024-01-26 14:59:08.840 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Order/GetAllFromCart - null null
+2024-01-26 14:59:08.843 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI)'
+2024-01-26 14:59:08.843 +03:00 [INF] Route matched with {action = "GetAllFromCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllFromCart() on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:59:08.845 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Entity.DTO.Order.CartListDomainModel'.
+2024-01-26 14:59:08.846 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI) in 1.3488ms
+2024-01-26 14:59:08.848 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI)'
+2024-01-26 14:59:08.849 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Order/GetAllFromCart - 200 null application/json; charset=utf-8 8.8171ms
+2024-01-26 14:59:26.048 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-26 14:59:26.623 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-26 14:59:26.624 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-26 14:59:26.626 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-26 14:59:26.628 +03:00 [INF] Hosting environment: Development
+2024-01-26 14:59:26.628 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-26 14:59:32.030 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-26 14:59:32.297 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 270.0739ms
+2024-01-26 14:59:32.301 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-26 14:59:32.309 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-26 14:59:32.322 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 12.4848ms
+2024-01-26 14:59:32.341 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.3165ms
+2024-01-26 14:59:32.421 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-26 14:59:32.511 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 90.8011ms
+2024-01-26 14:59:37.635 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Login/Login - application/json 68
+2024-01-26 14:59:37.641 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:59:37.656 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 14:59:37.674 +03:00 [INF] Route matched with {action = "Login", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BookSeller.Entity.DTO.Login.LoginDTO) on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-26 14:59:38.327 +03:00 [WRN] No store type was specified for the decimal property 'CartTotalPrice' on entity type 'Cart'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:59:38.329 +03:00 [WRN] No store type was specified for the decimal property 'CartLinePrice' on entity type 'CartLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:59:38.331 +03:00 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 14:59:38.696 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-26 14:59:38.899 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-01-26 14:59:38.923 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-26 14:59:38.934 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-01-26 14:59:38.950 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-01-26 14:59:38.959 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-01-26 14:59:38.966 +03:00 [INF] Executing OkObjectResult, writing value of type 'null'.
+2024-01-26 14:59:38.972 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI) in 1293.1566ms
+2024-01-26 14:59:38.974 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 14:59:38.982 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Login/Login - 204 null null 1346.9761ms
+2024-01-26 14:59:50.441 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:59:50.445 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:59:50.457 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:50.464 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:59:50.721 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-01-26 14:59:54.071 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:59:54.075 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 3607.5888ms
+2024-01-26 14:59:54.077 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:54.079 +03:00 [INF] Session started; Key:c97c3479-d2eb-5e8e-36c6-7ae74d59d20f, Id:d331c27b-af51-e829-0ec6-7b809d9eebf2
+2024-01-26 14:59:54.080 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 200 null text/plain; charset=utf-8 3639.5508ms
+2024-01-26 14:59:56.520 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:59:56.524 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:59:56.527 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:56.528 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:59:56.550 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:59:56.552 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 21.0514ms
+2024-01-26 14:59:56.553 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:56.555 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 200 null text/plain; charset=utf-8 35.561ms
+2024-01-26 14:59:56.767 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:59:56.769 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:59:56.782 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:56.784 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:59:56.791 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:59:56.794 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 8.4514ms
+2024-01-26 14:59:56.795 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:56.796 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 200 null text/plain; charset=utf-8 29.0961ms
+2024-01-26 14:59:56.919 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:59:56.921 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:59:56.922 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:56.922 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:59:56.926 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:59:56.927 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 3.6336ms
+2024-01-26 14:59:56.928 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:56.929 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 200 null text/plain; charset=utf-8 10.3629ms
+2024-01-26 14:59:57.068 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:59:57.070 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:59:57.071 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:57.072 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:59:57.075 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:59:57.077 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 3.0599ms
+2024-01-26 14:59:57.078 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:57.078 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 200 null text/plain; charset=utf-8 10.3512ms
+2024-01-26 14:59:57.206 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:59:57.208 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:59:57.209 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:57.209 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:59:57.213 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:59:57.215 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 4.6364ms
+2024-01-26 14:59:57.216 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:57.217 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 200 null text/plain; charset=utf-8 11.4207ms
+2024-01-26 14:59:57.365 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:59:57.368 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:59:57.368 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:57.369 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:59:57.372 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:59:57.373 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 3.3302ms
+2024-01-26 14:59:57.375 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:57.375 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 200 null text/plain; charset=utf-8 9.7837ms
+2024-01-26 14:59:57.560 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:59:57.563 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:59:57.564 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:57.564 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:59:57.567 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:59:57.568 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 2.575ms
+2024-01-26 14:59:57.569 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:57.570 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 200 null text/plain; charset=utf-8 9.4393ms
+2024-01-26 14:59:57.756 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:59:57.758 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:59:57.759 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:57.759 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:59:57.763 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:59:57.765 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 4.0037ms
+2024-01-26 14:59:57.766 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:57.766 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 200 null text/plain; charset=utf-8 11.078ms
+2024-01-26 14:59:58.042 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:59:58.045 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:59:58.046 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:58.047 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:59:58.051 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 14:59:58.052 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 3.0869ms
+2024-01-26 14:59:58.053 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:58.055 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 200 null text/plain; charset=utf-8 12.956ms
+2024-01-26 14:59:58.298 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:59:58.300 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:59:58.302 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:58.302 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:59:58.306 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-01-26 14:59:58.306 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 3.0241ms
+2024-01-26 14:59:58.308 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:58.309 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 400 null text/plain; charset=utf-8 10.774ms
+2024-01-26 14:59:58.523 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:59:58.525 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:59:58.526 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:58.527 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:59:58.530 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-01-26 14:59:58.531 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 3.6354ms
+2024-01-26 14:59:58.533 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:58.534 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 400 null text/plain; charset=utf-8 10.4366ms
+2024-01-26 14:59:59.011 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - null 0
+2024-01-26 14:59:59.013 +03:00 [INF] CORS policy execution successful.
+2024-01-26 14:59:59.015 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:59.016 +03:00 [INF] Route matched with {action = "CreateToCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateToCart(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 14:59:59.019 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-01-26 14:59:59.020 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI) in 3.3245ms
+2024-01-26 14:59:59.022 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.CreateToCart (BookSeller.WebAPI)'
+2024-01-26 14:59:59.022 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart?productId=dfbdabab-1859-416a-e17b-08dc167fc0dd - 400 null text/plain; charset=utf-8 11.9367ms
+2024-01-26 15:00:02.290 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Order/GetAllFromCart - null null
+2024-01-26 15:00:02.292 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI)'
+2024-01-26 15:00:02.296 +03:00 [INF] Route matched with {action = "GetAllFromCart", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllFromCart() on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 15:00:02.299 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Entity.DTO.Order.CartListDomainModel'.
+2024-01-26 15:00:02.310 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI) in 11.5737ms
+2024-01-26 15:00:02.312 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetAllFromCart (BookSeller.WebAPI)'
+2024-01-26 15:00:02.314 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Order/GetAllFromCart - 200 null application/json; charset=utf-8 24.1143ms

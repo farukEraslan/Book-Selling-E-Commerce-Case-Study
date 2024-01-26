@@ -31,10 +31,10 @@
 
             _cartSessionHelper.SetCart("cart", cart);
 
-            if (result)
-                return Ok($"{product.Data.BookName} sepete eklendi.");
+            if (result.IsSuccess)
+                return Ok($"{product.Data.BookName} {result.Message}");
             else
-                return BadRequest($"{product.Data.BookName} isimli üründen en fazla 10 tane sipariş edebilirsiniz.");
+                return BadRequest(result.Message);
             
         }
 

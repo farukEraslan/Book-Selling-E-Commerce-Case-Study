@@ -81,5 +81,9 @@
         public const string EducationAlreadyExists = "Education_Already_Exists";
         public const string SubjectAlreadyExists = "Subject_Already_Exists";
         public const string SupplementaryResourceAlreadyExists = "Supplementary_Resource_Already_Exists";
+
+        public const string InsufficientStock = "Yeterli Stok Bulunmamakta.";
+        public const string OrderAmountExceeded = "En fazla 10 adet sipariş verebilirsiniz.";
+        public const string OrderCreated = "Sepete eklendi.";
     }
 }

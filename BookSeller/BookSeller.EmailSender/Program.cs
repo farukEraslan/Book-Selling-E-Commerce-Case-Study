@@ -57,7 +57,7 @@ namespace BookSeller.EmailSender
             client.Send(message);
             client.Disconnect(true);
 
-            return "E-posta başarıyla gönderildi.";
+            return "E-posta gönderim isteği başarıyla gönderildi.";
 
         }
     }

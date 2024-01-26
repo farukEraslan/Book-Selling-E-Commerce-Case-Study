@@ -13,30 +13,34 @@
             _productService = productService;
         }
 
-        public bool AddToCart(CartDomainModel cart, ProductDTO product)
+        public Result AddToCart(CartDomainModel cart, ProductDTO product)
         {
             var productQuantity = _productService.GetById(product.ProductId).Data.Quantity;
 
             var cartLine = cart.CartLines.FirstOrDefault(c => c.Product.ProductId == product.ProductId);
-            if (cartLine != null && cartLine.Quantity < 10)
-            {
-                cartLine.Quantity++;
-                return true;
-            }
-            else if (cartLine.Quantity < productQuantity)
-            {
-                return false;
-            }
-            else if (cartLine == null)
+                        
+            if (cartLine == null)
             {
                 cart.CartLines.Add(new CartLineDomainModel
                 {
                     Product = product,
                     Quantity = 1
                 });
-                return true;
+                return new SuccessResult(Messages.OrderCreated);
             }
-            else return false;
+            else if (cartLine.Quantity >= productQuantity)
+            {
+                return new ErrorResult(Messages.InsufficientStock);
+            }
+            else if (cartLine.Quantity >= 10)
+            {
+                return new ErrorResult(Messages.OrderAmountExceeded);
+            }
+            else
+            {
+                cartLine.Quantity++;
+                return new SuccessResult(Messages.OrderCreated);
+            }
         }
 
         public void RemoveFromCart(CartDomainModel cart, Guid productId)
