@@ -1693,3 +1693,180 @@ WHERE [a].[RoleId] = @__role_Id_0
 2024-01-25 01:29:19.429 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI) in 83.5986ms
 2024-01-25 01:29:19.430 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
 2024-01-25 01:29:19.430 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Login/Login - 200 0 null 89.0449ms
+2024-01-25 22:27:54.157 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-25 22:27:55.352 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-25 22:27:55.356 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-25 22:27:55.363 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-25 22:27:55.374 +03:00 [INF] Hosting environment: Development
+2024-01-25 22:27:55.379 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-25 22:28:05.281 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-25 22:28:06.036 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 763.8245ms
+2024-01-25 22:28:06.660 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Product/GetAll?pageNumber=1&pageSize=11 - null null
+2024-01-25 22:28:06.680 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/User/GetAll?pageNumber=1&pageSize=11 - null null
+2024-01-25 22:28:06.690 +03:00 [INF] CORS policy execution successful.
+2024-01-25 22:28:06.697 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-25 22:28:06.700 +03:00 [INF] CORS policy execution successful.
+2024-01-25 22:28:06.725 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-25 22:28:06.727 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 29.4107ms
+2024-01-25 22:28:06.728 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-01-25 22:28:06.780 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-01-25 22:28:06.783 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/User/GetAll?pageNumber=1&pageSize=11 - 302 0 null 102.3562ms
+2024-01-25 22:28:06.802 +03:00 [INF] Route matched with {action = "GetAll", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller BookSeller.WebAPI.Controllers.Product.ProductController (BookSeller.WebAPI).
+2024-01-25 22:28:06.807 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/Home/Login?ReturnUrl=%2Fapi%2FUser%2FGetAll%3FpageNumber%3D1%26pageSize%3D11 - null null
+2024-01-25 22:28:06.834 +03:00 [INF] CORS policy execution successful.
+2024-01-25 22:28:06.843 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/Home/Login?ReturnUrl=%2Fapi%2FUser%2FGetAll%3FpageNumber%3D1%26pageSize%3D11 - 404 0 null 36.5083ms
+2024-01-25 22:28:06.850 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7086/Home/Login, Response status code: 404
+2024-01-25 22:28:06.992 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-25 22:28:07.099 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 107.2703ms
+2024-01-25 22:28:07.416 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-25 22:28:07.576 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 160.7246ms
+2024-01-25 22:28:09.158 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Core.ResultSets.Concrete.SuccessDataResult`1[[System.Collections.Generic.List`1[[BookSeller.Entity.DTO.Product.ProductDTO, BookSeller.Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-01-25 22:28:09.189 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI) in 2377.3718ms
+2024-01-25 22:28:09.191 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-25 22:28:09.193 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Product/GetAll?pageNumber=1&pageSize=11 - 200 null application/json; charset=utf-8 2532.5618ms
+2024-01-25 22:28:31.006 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7086/api/Login/Login - application/json; charset=utf-8 54
+2024-01-25 22:28:31.014 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-25 22:28:31.021 +03:00 [INF] Route matched with {action = "Login", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BookSeller.Entity.DTO.Login.LoginDTO) on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-25 22:28:31.292 +03:00 [WRN] No store type was specified for the decimal property 'CartTotalPrice' on entity type 'Cart'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-25 22:28:31.295 +03:00 [WRN] No store type was specified for the decimal property 'CartLinePrice' on entity type 'CartLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-25 22:28:31.298 +03:00 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-25 22:28:31.648 +03:00 [INF] Executed DbCommand (64ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-25 22:28:32.125 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-01-25 22:28:32.194 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-25 22:28:32.225 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-01-25 22:28:32.272 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-01-25 22:28:32.294 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-01-25 22:28:32.309 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-01-25 22:28:32.313 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI) in 1288.507ms
+2024-01-25 22:28:32.317 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-25 22:28:32.337 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7086/api/Login/Login - 200 0 null 1331.9692ms
+2024-01-25 22:28:32.500 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Product/GetAll?pageNumber=1&pageSize=11 - null null
+2024-01-25 22:28:32.507 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/User/GetAll?pageNumber=1&pageSize=11 - null null
+2024-01-25 22:28:32.511 +03:00 [INF] CORS policy execution successful.
+2024-01-25 22:28:32.515 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-25 22:28:32.515 +03:00 [INF] CORS policy execution successful.
+2024-01-25 22:28:32.517 +03:00 [INF] Route matched with {action = "GetAll", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller BookSeller.WebAPI.Controllers.Product.ProductController (BookSeller.WebAPI).
+2024-01-25 22:28:32.521 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-01-25 22:28:32.525 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-01-25 22:28:32.526 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/User/GetAll?pageNumber=1&pageSize=11 - 302 0 null 19.7236ms
+2024-01-25 22:28:32.543 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/Home/Login?ReturnUrl=%2Fapi%2FUser%2FGetAll%3FpageNumber%3D1%26pageSize%3D11 - null null
+2024-01-25 22:28:32.546 +03:00 [INF] CORS policy execution successful.
+2024-01-25 22:28:32.548 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/Home/Login?ReturnUrl=%2Fapi%2FUser%2FGetAll%3FpageNumber%3D1%26pageSize%3D11 - 404 0 null 5.1586ms
+2024-01-25 22:28:32.551 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7086/Home/Login, Response status code: 404
+2024-01-25 22:28:32.606 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Core.ResultSets.Concrete.SuccessDataResult`1[[System.Collections.Generic.List`1[[BookSeller.Entity.DTO.Product.ProductDTO, BookSeller.Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-01-25 22:28:32.608 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI) in 86.1184ms
+2024-01-25 22:28:32.611 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-25 22:28:32.612 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Product/GetAll?pageNumber=1&pageSize=11 - 200 null application/json; charset=utf-8 113.9393ms
+2024-01-25 22:29:13.368 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7086/api/Login/Login - application/json; charset=utf-8 54
+2024-01-25 22:29:13.379 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-25 22:29:13.381 +03:00 [INF] Route matched with {action = "Login", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BookSeller.Entity.DTO.Login.LoginDTO) on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-25 22:29:13.461 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-25 22:29:13.605 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-01-25 22:29:13.614 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-25 22:29:13.619 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-01-25 22:29:13.625 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-01-25 22:29:13.628 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-01-25 22:29:13.629 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-01-25 22:29:13.630 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI) in 245.8953ms
+2024-01-25 22:29:13.632 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-25 22:29:13.633 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7086/api/Login/Login - 200 0 null 266.1646ms
+2024-01-25 22:30:07.091 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Product/GetAll?pageNumber=1&pageSize=11 - null null
+2024-01-25 22:30:07.095 +03:00 [INF] CORS policy execution successful.
+2024-01-25 22:30:07.097 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-25 22:30:07.099 +03:00 [INF] Route matched with {action = "GetAll", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller BookSeller.WebAPI.Controllers.Product.ProductController (BookSeller.WebAPI).
+2024-01-25 22:30:07.105 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/User/GetAll?pageNumber=1&pageSize=11 - null null
+2024-01-25 22:30:07.110 +03:00 [INF] CORS policy execution successful.
+2024-01-25 22:30:07.113 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-01-25 22:30:07.115 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-01-25 22:30:07.123 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/User/GetAll?pageNumber=1&pageSize=11 - 302 0 null 17.1254ms
+2024-01-25 22:30:07.131 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Core.ResultSets.Concrete.SuccessDataResult`1[[System.Collections.Generic.List`1[[BookSeller.Entity.DTO.Product.ProductDTO, BookSeller.Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-01-25 22:30:07.134 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI) in 32.261ms
+2024-01-25 22:30:07.136 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-25 22:30:07.138 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Product/GetAll?pageNumber=1&pageSize=11 - 200 null application/json; charset=utf-8 47.1527ms
+2024-01-25 22:30:07.146 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/Home/Login?ReturnUrl=%2Fapi%2FUser%2FGetAll%3FpageNumber%3D1%26pageSize%3D11 - null null
+2024-01-25 22:30:07.150 +03:00 [INF] CORS policy execution successful.
+2024-01-25 22:30:07.151 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/Home/Login?ReturnUrl=%2Fapi%2FUser%2FGetAll%3FpageNumber%3D1%26pageSize%3D11 - 404 0 null 4.7072ms
+2024-01-25 22:30:07.155 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7086/Home/Login, Response status code: 404
+2024-01-25 22:30:42.386 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Login/Login - application/json 63
+2024-01-25 22:30:42.395 +03:00 [INF] CORS policy execution successful.
+2024-01-25 22:30:42.396 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-25 22:30:42.397 +03:00 [INF] Route matched with {action = "Login", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BookSeller.Entity.DTO.Login.LoginDTO) on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-25 22:30:42.432 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-25 22:30:42.616 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-01-25 22:30:42.634 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-25 22:30:42.650 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-01-25 22:30:42.666 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-01-25 22:30:42.677 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-01-25 22:30:42.681 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-01-25 22:30:42.683 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI) in 283.2707ms
+2024-01-25 22:30:42.684 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-25 22:30:42.686 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Login/Login - 200 0 null 300.2139ms
+2024-01-25 22:30:49.372 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Product/GetAll?pageNumber=1&pageSize=11 - null null
+2024-01-25 22:30:49.376 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/User/GetAll?pageNumber=1&pageSize=11 - null null
+2024-01-25 22:30:49.384 +03:00 [INF] CORS policy execution successful.
+2024-01-25 22:30:49.387 +03:00 [INF] CORS policy execution successful.
+2024-01-25 22:30:49.388 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-25 22:30:49.389 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-01-25 22:30:49.391 +03:00 [INF] Route matched with {action = "GetAll", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller BookSeller.WebAPI.Controllers.Product.ProductController (BookSeller.WebAPI).
+2024-01-25 22:30:49.393 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-01-25 22:30:49.397 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/User/GetAll?pageNumber=1&pageSize=11 - 302 0 null 21.705ms
+2024-01-25 22:30:49.400 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Core.ResultSets.Concrete.SuccessDataResult`1[[System.Collections.Generic.List`1[[BookSeller.Entity.DTO.Product.ProductDTO, BookSeller.Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-01-25 22:30:49.405 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI) in 9.4636ms
+2024-01-25 22:30:49.410 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-25 22:30:49.414 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/Home/Login?ReturnUrl=%2Fapi%2FUser%2FGetAll%3FpageNumber%3D1%26pageSize%3D11 - null null
+2024-01-25 22:30:49.421 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Product/GetAll?pageNumber=1&pageSize=11 - 200 null application/json; charset=utf-8 49.1413ms
+2024-01-25 22:30:49.430 +03:00 [INF] CORS policy execution successful.
+2024-01-25 22:30:49.435 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/Home/Login?ReturnUrl=%2Fapi%2FUser%2FGetAll%3FpageNumber%3D1%26pageSize%3D11 - 404 0 null 25.9147ms
+2024-01-25 22:30:49.443 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7086/Home/Login, Response status code: 404

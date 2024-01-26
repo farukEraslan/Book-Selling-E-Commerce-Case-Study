@@ -2,7 +2,7 @@
 {
     public interface ILoginService
     {
-        Task<SignInResult> Login(LoginDTO loginDTO);
+        Task<DataResult<Token>> Login(LoginDTO loginDTO);
         Task Logout();
     }
 }

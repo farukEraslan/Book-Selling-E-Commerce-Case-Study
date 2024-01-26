@@ -15,3 +15,5 @@ global using RabbitMQ.Client;
 global using System.Text;
 global using BookSeller.Core.Enums;
 global using BookSeller.Core.ResultSets.Concrete;
+global using BookSeller.Authentication;
+global using Microsoft.Extensions.Configuration;

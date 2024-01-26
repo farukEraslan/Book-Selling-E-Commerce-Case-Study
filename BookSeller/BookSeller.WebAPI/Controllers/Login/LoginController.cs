@@ -15,13 +15,13 @@
         public async Task<IActionResult> Login(LoginDTO loginDTO)
         {
             var result = await _loginService.Login(loginDTO);
-            if (result.Succeeded)
+            if (result.IsSuccess)
             {
-                return Ok();
+                return Ok(result.Data);
             }
             else
             {
-                return BadRequest();
+                return BadRequest(result.Message);
             }
         }
 

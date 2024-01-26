@@ -2,4 +2,16 @@
     ViewData["Title"] = "Giriş Yap";
 }
 <h1>@ViewData["Title"]</h1>
+
+<form>
+    <div class="mb-3">
+        <label for="emailInput" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="emailInput">
+    </div>
+    <div class="mb-3">
+        <label for="passwordInput" class="form-label">Password</label>
+        <input type="password" class="form-control" id="passwordInput">
+    </div>
+    <button type="submit" class="btn btn-primary" asp-area=" " asp-controller="Home" asp-action="SignIn">Submit</button>
+</form>
  

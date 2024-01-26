@@ -68,19 +68,42 @@ fetch('https://localhost:7086/api/Product/GetAll?pageNumber=1&pageSize=11')
 
 // USER HTTP GETALL REQUEST
 
-fetch('https://localhost:7086/api/User/GetAll?pageNumber=1&pageSize=11')
+//fetch('https://localhost:7086/api/User/GetAll?pageNumber=1&pageSize=11')
+//    .then(response => {
+//        return response.json();
+//    })
+//    .then(users => {
+
+//        users.data.forEach(function (user) {
+
+//            console.log(user);
+
+//        })
+
+//    })
+
+
+const token = 'your_token_here'; // Replace 'your_token_here' with the actual token
+
+fetch('https://localhost:7086/api/User/GetAll?pageNumber=1&pageSize=11', {
+    headers: new Headers({
+        'Authorization': 'Bearer ' + token,
+        'Content-Type': 'application/json' // You can add other headers if needed
+    })
+})
     .then(response => {
         return response.json();
     })
     .then(users => {
-
         users.data.forEach(function (user) {
-
             console.log(user);
-
         })
-
     })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
+
 
 
 // LOGIN HTTP POST REQUEST

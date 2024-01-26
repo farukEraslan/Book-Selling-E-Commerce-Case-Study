@@ -1,3 +1,7 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+
 namespace BookSeller.WebAPI
 {
     public class Program
@@ -9,6 +13,22 @@ namespace BookSeller.WebAPI
             // Add services to the container.
             builder.Services.AddHttpContextAccessor();
             builder.Services.AddSession();
+
+            // JWT BEARER TOKEN
+            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                {
+                    ValidateAudience = true,
+                    ValidateIssuer = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = builder.Configuration["Token:Issuer"],
+                    ValidAudience = builder.Configuration["Token:Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Token:SecurityKey"])),
+                    ClockSkew = TimeSpan.Zero
+                };
+            });
 
             builder.Services.AddScoped<ICartSessionHelper, CartSessionHelper>();
 
@@ -121,6 +141,7 @@ namespace BookSeller.WebAPI
 
             app.UseHttpsRedirection();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseSession();

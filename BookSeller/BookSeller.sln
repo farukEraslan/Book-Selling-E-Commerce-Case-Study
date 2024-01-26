@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookSeller.Business", "Book
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookSeller.EmailSender", "BookSeller.EmailSender\BookSeller.EmailSender.csproj", "{6B555918-4F76-4FDE-BB79-4AEE158AC765}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookSeller.WebUI", "BookSeller.WebUI\BookSeller.WebUI.csproj", "{2DCE6389-B407-4D3C-BA7B-11639D8EA2D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookSeller.WebUI", "BookSeller.WebUI\BookSeller.WebUI.csproj", "{2DCE6389-B407-4D3C-BA7B-11639D8EA2D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookSeller.Authentication", "BookSeller.Authentication\BookSeller.Authentication.csproj", "{6BA1DFEF-F456-48F9-95BC-1A64460DC512}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{2DCE6389-B407-4D3C-BA7B-11639D8EA2D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DCE6389-B407-4D3C-BA7B-11639D8EA2D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DCE6389-B407-4D3C-BA7B-11639D8EA2D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BA1DFEF-F456-48F9-95BC-1A64460DC512}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BA1DFEF-F456-48F9-95BC-1A64460DC512}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BA1DFEF-F456-48F9-95BC-1A64460DC512}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BA1DFEF-F456-48F9-95BC-1A64460DC512}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

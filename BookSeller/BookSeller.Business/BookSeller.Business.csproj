@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BookSeller.Authentication\BookSeller.Authentication.csproj" />
     <ProjectReference Include="..\BookSeller.DataAccess\BookSeller.DataAccess.csproj" />
     <ProjectReference Include="..\BookSeller.Entity\BookSeller.Entity.csproj" />
   </ItemGroup>

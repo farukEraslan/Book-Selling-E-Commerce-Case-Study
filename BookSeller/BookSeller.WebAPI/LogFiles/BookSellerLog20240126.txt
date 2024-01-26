@@ -1,0 +1,415 @@
+2024-01-26 11:51:18.729 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-26 11:51:19.364 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-26 11:51:19.367 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-26 11:51:19.370 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-26 11:51:19.371 +03:00 [INF] Hosting environment: Development
+2024-01-26 11:51:19.372 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-26 11:51:25.063 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-26 11:51:25.370 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 310.2397ms
+2024-01-26 11:51:25.385 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-26 11:51:25.392 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-26 11:51:25.396 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 10.568ms
+2024-01-26 11:51:25.544 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 151.9079ms
+2024-01-26 11:51:25.593 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-26 11:51:25.707 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 114.2917ms
+2024-01-26 11:51:49.948 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Login/Login - application/json 63
+2024-01-26 11:51:49.956 +03:00 [INF] CORS policy execution successful.
+2024-01-26 11:51:49.962 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 11:51:49.982 +03:00 [INF] Route matched with {action = "Login", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BookSeller.Entity.DTO.Login.LoginDTO) on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-26 11:51:50.708 +03:00 [WRN] No store type was specified for the decimal property 'CartTotalPrice' on entity type 'Cart'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:51:50.711 +03:00 [WRN] No store type was specified for the decimal property 'CartLinePrice' on entity type 'CartLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:51:50.712 +03:00 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:51:51.099 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-26 11:51:51.332 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-01-26 11:51:51.359 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-26 11:51:51.369 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-01-26 11:51:51.390 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-01-26 11:51:51.401 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-01-26 11:51:51.409 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-01-26 11:51:51.414 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI) in 1427.3838ms
+2024-01-26 11:51:51.417 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 11:51:51.426 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Login/Login - 200 0 null 1477.7938ms
+2024-01-26 11:52:22.063 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/CreateToCart - null 0
+2024-01-26 11:52:22.074 +03:00 [INF] CORS policy execution successful.
+2024-01-26 11:52:22.080 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Customer)
+2024-01-26 11:52:22.084 +03:00 [INF] AuthenticationScheme: Identity.Application was forbidden.
+2024-01-26 11:52:22.085 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/CreateToCart - 302 0 null 22.4288ms
+2024-01-26 11:52:22.088 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/Home/Error?ReturnUrl=%2Fapi%2FOrder%2FCreateToCart - null null
+2024-01-26 11:52:22.094 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/Home/Error?ReturnUrl=%2Fapi%2FOrder%2FCreateToCart - 404 0 null 6.7798ms
+2024-01-26 11:52:22.103 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7086/Home/Error, Response status code: 404
+2024-01-26 11:53:44.267 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-26 11:53:44.824 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-26 11:53:44.825 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-26 11:53:44.828 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-26 11:53:44.829 +03:00 [INF] Hosting environment: Development
+2024-01-26 11:53:44.831 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-26 11:53:47.343 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/User/GetAll?pageNumber=1&pageSize=11 - null null
+2024-01-26 11:53:47.343 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Product/GetAll?pageNumber=1&pageSize=11 - null null
+2024-01-26 11:53:47.416 +03:00 [INF] CORS policy execution successful.
+2024-01-26 11:53:47.416 +03:00 [INF] CORS policy execution successful.
+2024-01-26 11:53:47.438 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-01-26 11:53:47.438 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-26 11:53:47.458 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-01-26 11:53:47.462 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/User/GetAll?pageNumber=1&pageSize=11 - 302 0 null 126.2619ms
+2024-01-26 11:53:47.477 +03:00 [INF] Route matched with {action = "GetAll", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Int32, Int32) on controller BookSeller.WebAPI.Controllers.Product.ProductController (BookSeller.WebAPI).
+2024-01-26 11:53:47.495 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/Home/Login?ReturnUrl=%2Fapi%2FUser%2FGetAll%3FpageNumber%3D1%26pageSize%3D11 - null null
+2024-01-26 11:53:47.501 +03:00 [INF] CORS policy execution successful.
+2024-01-26 11:53:47.505 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/Home/Login?ReturnUrl=%2Fapi%2FUser%2FGetAll%3FpageNumber%3D1%26pageSize%3D11 - 404 0 null 9.7287ms
+2024-01-26 11:53:47.510 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7086/Home/Login, Response status code: 404
+2024-01-26 11:53:48.601 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookSeller.Core.ResultSets.Concrete.SuccessDataResult`1[[System.Collections.Generic.List`1[[BookSeller.Entity.DTO.Product.ProductDTO, BookSeller.Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-01-26 11:53:48.641 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI) in 1158.0972ms
+2024-01-26 11:53:48.643 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Product.ProductController.GetAll (BookSeller.WebAPI)'
+2024-01-26 11:53:48.645 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Product/GetAll?pageNumber=1&pageSize=11 - 200 null application/json; charset=utf-8 1309.5325ms
+2024-01-26 11:53:52.809 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-26 11:53:53.032 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 223.1961ms
+2024-01-26 11:53:53.049 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-26 11:53:53.056 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 6.7242ms
+2024-01-26 11:53:53.059 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-26 11:53:53.115 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.1502ms
+2024-01-26 11:53:53.305 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-26 11:53:53.439 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 134.555ms
+2024-01-26 11:53:59.735 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7086/api/Login/Login - application/json; charset=utf-8 54
+2024-01-26 11:53:59.738 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 11:53:59.743 +03:00 [INF] Route matched with {action = "Login", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BookSeller.Entity.DTO.Login.LoginDTO) on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-26 11:53:59.837 +03:00 [WRN] No store type was specified for the decimal property 'CartTotalPrice' on entity type 'Cart'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:53:59.839 +03:00 [WRN] No store type was specified for the decimal property 'CartLinePrice' on entity type 'CartLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:53:59.839 +03:00 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:53:59.962 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-26 11:54:00.148 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-01-26 11:54:00.172 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-26 11:54:00.182 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-01-26 11:54:00.199 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-01-26 11:54:00.208 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-01-26 11:54:00.214 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-01-26 11:54:00.217 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI) in 472.4122ms
+2024-01-26 11:54:00.218 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 11:54:00.225 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7086/api/Login/Login - 200 0 null 490.6669ms
+2024-01-26 11:58:38.897 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-26 11:58:39.372 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-26 11:58:39.374 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-26 11:58:39.375 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-26 11:58:39.377 +03:00 [INF] Hosting environment: Development
+2024-01-26 11:58:39.378 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-26 11:58:41.736 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-26 11:58:42.016 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 284.4618ms
+2024-01-26 11:58:42.033 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-26 11:58:42.040 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-26 11:58:42.041 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 8.7396ms
+2024-01-26 11:58:42.085 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.6436ms
+2024-01-26 11:58:42.276 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-26 11:58:42.374 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 97.4807ms
+2024-01-26 11:58:55.219 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Login/Login - application/json 63
+2024-01-26 11:58:55.229 +03:00 [INF] CORS policy execution successful.
+2024-01-26 11:58:55.237 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 11:58:55.258 +03:00 [INF] Route matched with {action = "Login", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BookSeller.Entity.DTO.Login.LoginDTO) on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-26 11:58:55.924 +03:00 [WRN] No store type was specified for the decimal property 'CartTotalPrice' on entity type 'Cart'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:58:55.925 +03:00 [WRN] No store type was specified for the decimal property 'CartLinePrice' on entity type 'CartLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:58:55.926 +03:00 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:58:56.383 +03:00 [INF] Executed DbCommand (71ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-26 11:58:56.599 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-01-26 11:58:56.646 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-26 11:58:56.659 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-01-26 11:58:56.676 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-01-26 11:58:56.685 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-01-26 11:58:56.691 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-01-26 11:58:56.695 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI) in 1433.2069ms
+2024-01-26 11:58:56.698 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 11:58:56.706 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Login/Login - 200 0 null 1486.4354ms
+2024-01-26 12:01:10.732 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/api/Order/GetOrders - null null
+2024-01-26 12:01:10.754 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetOrders (BookSeller.WebAPI)'
+2024-01-26 12:01:10.759 +03:00 [INF] Route matched with {action = "GetOrders", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetOrders() on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 12:01:10.974 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookSeller.Entity.DTO.Order.CartDTO, BookSeller.Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-01-26 12:01:10.988 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.GetOrders (BookSeller.WebAPI) in 226.9094ms
+2024-01-26 12:01:10.991 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.GetOrders (BookSeller.WebAPI)'
+2024-01-26 12:01:10.992 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/api/Order/GetOrders - 200 null application/json; charset=utf-8 259.622ms
+2024-01-26 12:01:32.359 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Order/ApproveOrder?cartId=3213c15a-75cb-44f3-a96c-be4f6d1abc85 - null 0
+2024-01-26 12:01:32.367 +03:00 [INF] CORS policy execution successful.
+2024-01-26 12:01:32.369 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.ApproveOrder (BookSeller.WebAPI)'
+2024-01-26 12:01:32.374 +03:00 [INF] Route matched with {action = "ApproveOrder", controller = "Order", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ApproveOrder(System.Guid) on controller BookSeller.WebAPI.Controllers.Order.OrderController (BookSeller.WebAPI).
+2024-01-26 12:01:32.486 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__get_Item_0
+2024-01-26 12:01:32.692 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-01-26 12:01:32.694 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Order.OrderController.ApproveOrder (BookSeller.WebAPI) in 318.193ms
+2024-01-26 12:01:32.695 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Order.OrderController.ApproveOrder (BookSeller.WebAPI)'
+2024-01-26 12:01:32.697 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Order/ApproveOrder?cartId=3213c15a-75cb-44f3-a96c-be4f6d1abc85 - 200 null text/plain; charset=utf-8 337.1964ms
+2024-01-26 13:38:05.898 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-26 13:38:06.527 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-26 13:38:06.529 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-26 13:38:06.532 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-26 13:38:06.533 +03:00 [INF] Hosting environment: Development
+2024-01-26 13:38:06.534 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-26 13:38:08.977 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-26 13:38:09.301 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 326.7766ms
+2024-01-26 13:38:09.324 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-26 13:38:09.333 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 9.4343ms
+2024-01-26 13:38:09.333 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-26 13:38:09.384 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.1601ms
+2024-01-26 13:38:09.445 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-26 13:38:09.541 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 96.8971ms
+2024-01-26 13:38:25.007 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Login/Login - application/json 63
+2024-01-26 13:38:25.014 +03:00 [INF] CORS policy execution successful.
+2024-01-26 13:38:25.026 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 13:38:25.044 +03:00 [INF] Route matched with {action = "Login", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BookSeller.Entity.DTO.Login.LoginDTO) on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-26 13:38:25.730 +03:00 [WRN] No store type was specified for the decimal property 'CartTotalPrice' on entity type 'Cart'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 13:38:25.732 +03:00 [WRN] No store type was specified for the decimal property 'CartLinePrice' on entity type 'CartLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 13:38:25.733 +03:00 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 13:38:26.118 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-26 13:38:26.317 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-01-26 13:38:26.345 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-26 13:38:26.355 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-01-26 13:38:26.372 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-01-26 13:38:26.380 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-01-26 13:38:26.564 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI) in 1514.3831ms
+2024-01-26 13:38:26.567 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 13:38:26.570 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: IDX12401: Expires: '1/26/2024 1:38:26 PM' must be after NotBefore: '1/26/2024 1:38:26 PM'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityToken..ctor(String issuer, String audience, IEnumerable`1 claims, Nullable`1 notBefore, Nullable`1 expires, SigningCredentials signingCredentials)
+   at BookSeller.Authentication.TokenHandler.CreateToken(IConfiguration configuration) in C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.Authentication\TokenHandler.cs:line 20
+   at BookSeller.Business.Concrete.LoginService.Login(LoginDTO loginDTO) in C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.Business\Concrete\LoginService.cs:line 25
+   at BookSeller.WebAPI.Controllers.Login.LoginController.Login(LoginDTO loginDTO) in C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI\Controllers\Login\LoginController.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-26 13:38:26.635 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Login/Login - 500 null text/plain; charset=utf-8 1627.9341ms
+2024-01-26 13:38:50.243 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Login/Login - application/json 63
+2024-01-26 13:38:50.248 +03:00 [INF] CORS policy execution successful.
+2024-01-26 13:38:50.251 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 13:38:50.251 +03:00 [INF] Route matched with {action = "Login", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BookSeller.Entity.DTO.Login.LoginDTO) on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-26 13:38:56.432 +03:00 [INF] Executed DbCommand (514ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-26 13:38:59.568 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-01-26 13:38:59.587 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-26 13:38:59.592 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-01-26 13:38:59.595 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-01-26 13:38:59.598 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-01-26 13:39:11.560 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI) in 21307.5837ms
+2024-01-26 13:39:11.562 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 13:39:11.563 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: IDX12401: Expires: '1/26/2024 1:39:09 PM' must be after NotBefore: '1/26/2024 1:39:11 PM'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityToken..ctor(String issuer, String audience, IEnumerable`1 claims, Nullable`1 notBefore, Nullable`1 expires, SigningCredentials signingCredentials)
+   at BookSeller.Authentication.TokenHandler.CreateToken(IConfiguration configuration) in C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.Authentication\TokenHandler.cs:line 20
+   at BookSeller.Business.Concrete.LoginService.Login(LoginDTO loginDTO) in C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.Business\Concrete\LoginService.cs:line 25
+   at BookSeller.WebAPI.Controllers.Login.LoginController.Login(LoginDTO loginDTO) in C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI\Controllers\Login\LoginController.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-26 13:39:11.572 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Login/Login - 500 null text/plain; charset=utf-8 21328.9589ms
+2024-01-26 13:39:42.320 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Login/Login - application/json 63
+2024-01-26 13:39:42.327 +03:00 [INF] CORS policy execution successful.
+2024-01-26 13:39:42.328 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 13:39:42.329 +03:00 [INF] Route matched with {action = "Login", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BookSeller.Entity.DTO.Login.LoginDTO) on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-26 13:39:47.262 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-26 13:39:48.419 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-01-26 13:39:48.437 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-26 13:39:48.439 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-01-26 13:39:48.453 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-01-26 13:39:48.455 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-01-26 13:40:06.167 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI) in 23837.4062ms
+2024-01-26 13:40:06.168 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 13:40:06.169 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: IDX12401: Expires: '1/26/2024 1:39:55 PM' must be after NotBefore: '1/26/2024 1:40:05 PM'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityToken..ctor(String issuer, String audience, IEnumerable`1 claims, Nullable`1 notBefore, Nullable`1 expires, SigningCredentials signingCredentials)
+   at BookSeller.Authentication.TokenHandler.CreateToken(IConfiguration configuration) in C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.Authentication\TokenHandler.cs:line 20
+   at BookSeller.Business.Concrete.LoginService.Login(LoginDTO loginDTO) in C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.Business\Concrete\LoginService.cs:line 25
+   at BookSeller.WebAPI.Controllers.Login.LoginController.Login(LoginDTO loginDTO) in C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI\Controllers\Login\LoginController.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-26 13:40:06.178 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Login/Login - 500 null text/plain; charset=utf-8 23859.0079ms
+2024-01-26 13:42:01.090 +03:00 [INF] User profile is available. Using 'C:\Users\10132884\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-26 13:42:01.629 +03:00 [INF] Now listening on: https://localhost:7086
+2024-01-26 13:42:01.630 +03:00 [INF] Now listening on: http://localhost:5191
+2024-01-26 13:42:01.632 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-26 13:42:01.634 +03:00 [INF] Hosting environment: Development
+2024-01-26 13:42:01.634 +03:00 [INF] Content root path: C:\Users\10132884\OneDrive - NTT DATA Business Solutions AG\Desktop\GitHub\BookSeller\BookSeller\BookSeller.WebAPI
+2024-01-26 13:42:03.852 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/index.html - null null
+2024-01-26 13:42:04.111 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/index.html - 200 null text/html;charset=utf-8 262.2483ms
+2024-01-26 13:42:04.128 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-26 13:42:04.134 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2024-01-26 13:42:04.143 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 15.1802ms
+2024-01-26 13:42:04.177 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.5751ms
+2024-01-26 13:42:04.230 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - null null
+2024-01-26 13:42:04.327 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 96.4972ms
+2024-01-26 13:42:19.476 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/api/Login/Login - application/json 63
+2024-01-26 13:42:19.482 +03:00 [INF] CORS policy execution successful.
+2024-01-26 13:42:19.495 +03:00 [INF] Executing endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 13:42:19.516 +03:00 [INF] Route matched with {action = "Login", controller = "Login", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BookSeller.Entity.DTO.Login.LoginDTO) on controller BookSeller.WebAPI.Controllers.Login.LoginController (BookSeller.WebAPI).
+2024-01-26 13:42:27.366 +03:00 [WRN] No store type was specified for the decimal property 'CartTotalPrice' on entity type 'Cart'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 13:42:27.369 +03:00 [WRN] No store type was specified for the decimal property 'CartLinePrice' on entity type 'CartLine'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 13:42:27.370 +03:00 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 13:42:27.732 +03:00 [INF] Executed DbCommand (35ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-26 13:42:27.971 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-01-26 13:42:27.995 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-01-26 13:42:28.006 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-01-26 13:42:28.025 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2024-01-26 13:42:28.033 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-01-26 13:42:28.040 +03:00 [INF] Executing OkObjectResult, writing value of type 'null'.
+2024-01-26 13:42:28.045 +03:00 [INF] Executed action BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI) in 8523.7449ms
+2024-01-26 13:42:28.046 +03:00 [INF] Executed endpoint 'BookSeller.WebAPI.Controllers.Login.LoginController.Login (BookSeller.WebAPI)'
+2024-01-26 13:42:28.055 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/api/Login/Login - 204 null null 8578.7518ms

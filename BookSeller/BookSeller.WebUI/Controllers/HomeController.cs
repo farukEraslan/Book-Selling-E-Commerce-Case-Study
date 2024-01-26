@@ -6,6 +6,7 @@ using BookSeller.WebUI.HttpHelpers.Abstract;
 using BookSeller.WebUI.Models.Product;
 using Newtonsoft.Json;
 using RestSharp;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 
@@ -32,19 +33,16 @@ namespace BookSeller.WebUI.Controllers
 
         public async Task<IActionResult> Login()
         {
-            var loginDTO = new LoginDTO
-            {
-                Email = "admin@bookseller.com",
-                Password = "3R4sl4n_"
-            };
-
-            var result = await SignIn(loginDTO);
-            return View(result.Data);
+            return View();
         }
 
         private async Task<DataResult<IEnumerable<string>>> SignIn(LoginDTO loginDto)
         {
-            HttpClient client = new HttpClient();
+            CookieContainer cookieContainer = new CookieContainer();
+            HttpClientHandler handler = new HttpClientHandler();
+            handler.CookieContainer = cookieContainer;
+
+            HttpClient client = new HttpClient(handler);
             client.BaseAddress = new Uri("https://localhost:7086/api/");
 
             var jsonData = JsonConvert.SerializeObject(loginDto);
@@ -58,8 +56,16 @@ namespace BookSeller.WebUI.Controllers
 
                 if (headers.Contains("Set-Cookie"))
                 {
-                    var cookie = headers.GetValues("Set-Cookie");
-                    return new SuccessDataResult<IEnumerable<string>>(cookie, Messages.FoundSuccess);
+                    // Set-Cookie baþlýðýnýn deðeri alýnýr
+                    var cookieValues = headers.GetValues("Set-Cookie");
+
+                    // Alýnan çerez deðeri CookieContainer'a eklenir
+                    foreach (var cookieValue in cookieValues)
+                    {
+                        cookieContainer.SetCookies(client.BaseAddress, cookieValue);
+                    }
+
+                    return new SuccessDataResult<IEnumerable<string>>(cookieValues, Messages.FoundSuccess);
                 }
                 else
                 {
@@ -76,6 +82,7 @@ namespace BookSeller.WebUI.Controllers
                 return new ErrorDataResult<IEnumerable<string>>(errorMessage);
             }
         }
+
 
         public IActionResult Logout()
         {
